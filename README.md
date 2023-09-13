@@ -1,5 +1,3 @@
-# PurpleSchool
+# purple-school
 
-A cool free course on Flexbox.. and more!
-
-https://purpleschool.ru/
+Let's get started!
