@@ -8,5 +8,8 @@
 *.url
 *.7z
 *.zip
+*.url
 	
 Additional_Material/
+AMR/
+.vscode/
