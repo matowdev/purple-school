@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deposit Calculator</title>
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <script src="./index.js"></script>
+</head>
+
+<body class="page">
+  <main class="main page__main">
+    <div class="main__logo">
+      <img src="./images/logo.svg" alt="Логотип PurpleSchool">
+    </div>
+
+    <h1 class="main__header">Калькулятор вклада</h1>
+
+    <form class="form main__form" action="#" onsubmit="submitData(event)">
+      <div class="form__field">
+        <img class="form__img" src="./images/sum.svg" alt="иконка суммы">
+        <label class="form__label" for="sum">Сумма</label>
+        <input id="sum" class="form__input" name="sum" type="number" value="100000" placeholder="Введите сумму вклада"
+          required>
+      </div>
+      <div class="form__field">
+        <img class="form__img" src="./images/clock.svg" alt="иконка часов">
+        <label class="form__label" for="day">Срок в днях</label>
+        <input id="day" class="form__input" name="day" type="number" value="365" placeholder="Срок в месяцах" required>
+      </div>
+      <div class="form__field">
+        <img class="form__img" src="./images/percent.svg" alt="иконка процента">
+        <label class="form__label" for="percent">Процентная ставка в %</label>
+        <input id="percent" class="form__input" name="percent" type="number" value="8" placeholder="Процентная ставка"
+          required>
+      </div>
+      <div class="form__field">
+        <img class="form__img" src="./images/question.svg" alt="иконка вопроса">
+        <label class="form__label" for="capital">Капитализация</label>
+        <select id="capital" class="form__select" name="isCapital">
+          <option class="form__option" value="yes" selected>Да</option>
+          <option class="form__option" value="no">Нет</option>
+        </select>
+      </div>
+      <button class="btn form__btn">Рассчитать!?</button>
+    </form>
+
+    <div class="main__result"></div>
+  </main>
+</body>
+
+</html>
