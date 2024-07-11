@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    margin: 30px;
+    font-family: "Fira Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #fafafa;
+    background-color: #0f0f14;
+}
+
+.main-block {
+    border: 1px solid #afb2bf;
+    padding: 15px;
+}
+
+.resizable {
+    overflow: auto;
+    resize: both;
+}
