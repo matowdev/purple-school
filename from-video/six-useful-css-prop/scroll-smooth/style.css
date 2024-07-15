@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* ! реализация (одна строка) */
+  scroll-behavior: smooth;
+}
+
+.page {
+  margin: 30px;
+  font-family: "Fira Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #fafafa;
+  background-color: #0f0f14;
+}
+
+.header__logo {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.main__anchor {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #3d0eaa;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.main__anchor:hover {
+  color: #fafafa;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 1000px;
+}
+
+.content__block {
+  border: 1px solid #afb2bf;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.content__block-header {
+  margin-top: 0;
+}
+
+.content__block-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

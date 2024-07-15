@@ -16,24 +16,26 @@
   text-align: center;
 }
 
-.main__block {
-  display: inline-block;
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+}
+
+.content__block {
   border: 1px solid #afb2bf;
   border-radius: 5px;
-  padding: 15px;
+  padding: 20px;
+  /* ! реализация (одна строчка) */
+  aspect-ratio: 1;
 }
 
-.resizable {
-  /* ! реализация (две строки) */
-  overflow: auto;
-  resize: both;
-}
-
-.main__block-header {
+.content__block-header {
   margin-top: 0;
 }
 
-.main__block-text {
+.content__block-text {
   margin-top: 0px;
   margin-bottom: 0px;
 }

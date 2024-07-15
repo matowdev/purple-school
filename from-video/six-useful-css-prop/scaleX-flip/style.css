@@ -21,12 +21,19 @@
   border: 1px solid #afb2bf;
   border-radius: 5px;
   padding: 15px;
+  max-width: 1000px;
 }
 
-.resizable {
-  /* ! реализация (две строки) */
-  overflow: auto;
-  resize: both;
+.flip {
+  cursor: help;
+  /* ! реализация (начало) */
+  transform: scaleX(-1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.flip:hover {
+  /* ! реализация (продолжение) */
+  transform: scaleX(1);
 }
 
 .main__block-header {

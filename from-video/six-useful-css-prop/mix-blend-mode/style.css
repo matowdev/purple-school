@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  margin: 30px;
+  font-family: "Fira Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #fafafa;
+  background-color: #0f0f14;
+}
+
+.header__logo {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.main__scroll-text {
+  /* ! реализация */
+  position: fixed;
+  top: 190px;
+  left: -45px;
+  font-size: 36px;
+  mix-blend-mode: difference;
+  transform: rotate(-90deg);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 1000px;
+}
+
+.content__block {
+  border: 1px solid #afb2bf;
+  border-radius: 5px;
+  padding: 20px;
+  padding-left: 150px;
+  background-color: #5f5fda;
+}
+
+.content__block-header {
+  margin-top: 0;
+}
+
+.content__block-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
