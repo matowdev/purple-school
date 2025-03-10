@@ -1,7 +1,25 @@
 # purple-school
 
-Let's get started!
+### Карьерный путь: Full-stack developer
 
-![Code](images/code.jpg)
+Очень большие надежды.. интенсивное обучение, практика.
 
-Photo by <a href="https://unsplash.com/@lucabravo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Luca Bravo</a> on <a href="https://unsplash.com/photos/XJXWbfSo2f0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+- **20 проектов**
+- **Индивидуальные занятия**
+- **Командная работа**
+
+### Let's do it!
+
+### Моё путешествие в мир Full-stack разработки.. начинается! 🚀
+
+---
+
+### Block: Git / основы, ветки, GitHub
+
+### Block: Html and CSS
+
+- [**proj. ...**]()
+
+---
+
+![purple-school]()
