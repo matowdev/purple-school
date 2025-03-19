@@ -5,11 +5,11 @@
 *.pptx
 *.mp4
 *.webm
-*.url
 *.7z
 *.zip
 *.url
 	
+.vscode/
 Additional_Material/
 AMR/
-.vscode/
+amr/
