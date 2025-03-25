@@ -1,6 +1,6 @@
 # On the topic: "Git"
 
-### Video-lesson / Terms of performance:
+### Video-lesson:
 
 [6.6. git rebase, changing commit history.](https://app.purpleschool.ru/courses/22/sections/327/lessons/2508)
 
