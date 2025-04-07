@@ -6,4 +6,4 @@
 
 ### A few words:
 
-`Теги <p /> и <br>`
+`Tags <p /> and <br>`
