@@ -17,6 +17,10 @@
   margin-right: 77px;
 }
 
+.header__logo:focus {
+  outline: 2px solid var(--orange);
+}
+
 .header__logo-img {
   display: block;
 }
@@ -24,6 +28,19 @@
 .header__nav-list {
   display: flex;
   column-gap: 50px;
+}
+
+.header__nav-link {
+  transition: color var(--short) ease;
+}
+
+.header__nav-link:focus {
+  outline: 2px solid var(--orange);
+  outline-offset: 8px;
+}
+
+.header__nav-link:hover {
+  color: var(--orange);
 }
 
 .header__search-input {
