@@ -11,7 +11,14 @@
 }
 
 .header__logo-wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
   margin-right: 77px;
+}
+
+.header__logo-img {
+  display: block;
 }
 
 .header__nav-list {
