@@ -30,13 +30,17 @@
   margin-left: auto;
   border: none;
   border-radius: 100px;
-  padding-left: 20px;
+  padding-left: 45px;
   width: 224px;
   height: 40px;
   color: var(--white);
   background: rgba(31, 41, 55, 0.60);
-  cursor: help;
+  background-image: url('../images/search.png');
+  background-repeat: no-repeat;
+  background-position: 18px center;
+  background-size: 20px;
   caret-color: var(--orange);
+  cursor: help;
 }
 
 .header__search-input:focus {
@@ -45,4 +49,5 @@
 
 .header__search-input::placeholder {
   color: var(--white);
+  opacity: 0.6;
 }
