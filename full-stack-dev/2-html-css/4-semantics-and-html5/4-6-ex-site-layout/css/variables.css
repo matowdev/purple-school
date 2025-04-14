@@ -1,0 +1,36 @@
+:root {
+  /* sizes */
+  --page-min-width: 320px;
+  --container-max-width: 1200px;
+  --container-padding: 50px;
+
+  /* fonts */
+  --roboto: "Roboto";
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --default-fs: 16px;
+  --default-lh: 32px;
+
+  /* colors */
+  --black: #050038;
+  --white: #fff;
+  --yellow: #ffdd33;
+  --bg-page: #fff;
+
+  /* transitions */
+  --short: 0.3s;
+}
+
+/* media queries */
+
+@media (max-width: 576px) {
+  :root {
+    --container-padding: 15px;
+    --default-fs: 14px;
+    --default-lh: 28px;
+  }
+}
