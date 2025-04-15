@@ -46,6 +46,7 @@ svg {
 
 .page {
   padding-top: 70px;
+  padding-bottom: 70px;
   min-width: var(--page-min-width);
   height: auto;
   min-height: 100vh;
@@ -57,6 +58,6 @@ svg {
 
 .page__container {
   margin: 0 auto;
-  padding: 0;
+  padding-inline: 180px;
   max-width: var(--container-max-width);
 }
