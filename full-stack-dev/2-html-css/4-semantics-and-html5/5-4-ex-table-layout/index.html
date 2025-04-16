@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+
+  <style>
+    body {
+      padding-top: 20px;
+      padding-left: 20px;
+    }
+
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 500px;
+      font-family: Verdana, sans-serif;
+    }
+
+    caption {
+      margin-bottom: 5px;
+      font-size: 22px;
+      text-align: center;
+      color: blueviolet;
+    }
+
+    tr {
+      height: 30px;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    tfoot {
+      border: 2px solid blueviolet;
+    }
+
+    .year,
+    .period,
+    .income,
+    .expense,
+    .total {
+      padding-left: 10px;
+      width: 120px;
+      text-align: start;
+    }
+
+    .total {
+      font-weight: bold;
+      color: blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <caption>Таблица расходов и доходов</caption>
+    <thead>
+      <tr>
+        <th class="year">Год</th>
+        <th colspan="2">2024</th>
+        <th colspan="2">2025</th>
+      </tr>
+      <tr>
+        <th class="period">Полугодие</th>
+        <th>1</th>
+        <th>2</th>
+        <th>1</th>
+        <th>2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="income">Доход</td>
+        <td>1500$</td>
+        <td>1800$</td>
+        <td>2000$</td>
+        <td>3000$</td>
+      </tr>
+      <tr>
+        <td class="expense">Расход</td>
+        <td>-500$</td>
+        <td>-600$</td>
+        <td>-700$</td>
+        <td>-1000$</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="total">Итог</td>
+        <td>1000$</td>
+        <td>1200$</td>
+        <td>1300$</td>
+        <td>2000$</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+</html>
