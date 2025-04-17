@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inputs for example</title>
+
+  <style>
+    .page {
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 15px;
+      width: min-content;
+    }
+
+    .inputs-wrap {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      padding: 15px;
+      border: 1px dashed purple;
+    }
+
+    .date-wrap {
+      width: 177px;
+    }
+
+    input {
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body class="page">
+  <div class="container">
+    <div class="inputs-wrap text-wrap">
+      <label for="text-input">Введите текст:</label>
+      <input id="text-input" type="text" placeholder="Введите текст">
+    </div>
+
+    <div class="inputs-wrap email-wrap">
+      <label for="email-input">Введите почту:</label>
+      <input id="email-input" type="email" placeholder="Введите почту">
+    </div>
+
+    <div class="inputs-wrap number-wrap">
+      <label for="number-input">Введите число:</label>
+      <input id="number-input" type="number" placeholder="Введите число">
+    </div>
+
+    <div class="inputs-wrap password-wrap">
+      <label for="password-input">Введите пароль:</label>
+      <input id="password-input" type="password" placeholder="Введите пароль">
+    </div>
+
+    <div class="inputs-wrap date-wrap">
+      <label for="date-input">Выберете дату:</label>
+      <input id="date-input" type="date">
+    </div>
+
+    <input type="submit" value="Отправить данные">
+  </div>
+</body>
+
+</html>
