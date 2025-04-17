@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+  <div class="container">
+    <form class="form" action="/test" method="get">
+      <div class="inputs-wrap text-wrap">
+        <label for="text-input">Введите текст:</label>
+        <input id="text-input" type="text" placeholder="Введите текст">
+      </div>
+
+      <div class="inputs-wrap email-wrap">
+        <label for="email-input">Введите почту:</label>
+        <input id="email-input" type="email" placeholder="Введите почту">
+      </div>
+
+      <div class="inputs-wrap number-wrap">
+        <label for="number-input">Введите число:</label>
+        <input id="number-input" type="number" placeholder="Введите число">
+      </div>
+
+      <div class="inputs-wrap password-wrap">
+        <label for="password-input">Введите пароль:</label>
+        <input id="password-input" type="password" placeholder="Введите пароль">
+      </div>
+
+      <div class="inputs-wrap date-wrap">
+        <label for="date-input">Выберете дату:</label>
+        <input id="date-input" type="date">
+      </div>
+
+      <input class="reset-btn btn input-btn" type="submit" value="Отправить данные">
+      <!-- или.. лучше через button -->
+      <div class="btns-wrap">
+        <button class="reset-btn btn btn-submit" type="submit">Отправить</button>
+        <button class="reset-btn btn btn-reset" type="reset">Очистить поля</button>
+      </div>
+    </form>
+
+    <!-- вне формы автоматический "submit" отрабатываться НЕ будет -->
+    <button class="reset-btn btn out-btn" type="submit">Кнопка в не формы..</button>
+  </div>
+</body>
+
+</html>
