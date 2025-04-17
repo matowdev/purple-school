@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buttons</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+  <div class="container">
+    <form class="form" action="/test" method="get">
+      <!-- передача скрытых данных -->
+      <input type="hidden" name="hidden" value="user-data">
+
+      <div class="inputs-wrap text-wrap">
+        <label for="text-input">Введите текст:</label>
+        <input class="form-input" id="text-input" type="text" name="text" placeholder="Введите текст">
+      </div>
+
+      <div class="inputs-wrap email-wrap">
+        <label for="email-input">Введите почту:</label>
+        <input class="form-input" id="email-input" type="email" name="email" placeholder="Введите почту">
+      </div>
+
+      <div class="inputs-wrap number-wrap">
+        <label for="number-input">Введите число:</label>
+        <input class="form-input" id="number-input" type="number" name="number" placeholder="Введите число">
+      </div>
+
+      <div class="inputs-wrap password-wrap">
+        <label for="password-input">Введите пароль:</label>
+        <input class="form-input" id="password-input" type="password" name="password" placeholder="Введите пароль">
+      </div>
+
+      <div class="inputs-wrap date-wrap">
+        <label for="date-input">Выберете дату:</label>
+        <input class="form-input" id="date-input" type="date" name="date">
+      </div>
+
+      <div class="btns-wrap">
+        <button class="reset-btn btn btn-submit" type="submit">Отправить</button>
+        <button class="reset-btn btn btn-reset" type="reset">Очистить поля</button>
+      </div>
+
+      <!-- пример из адресной строки (что в итоге отправляется/submit) -->
+      <!-- file:///C:/test?hidden=user-data&text=hello&email=example%40gmail.com&number=37&password=12345&date=2025-04-17 -->
+    </form>
+  </div>
+</body>
+
+</html>

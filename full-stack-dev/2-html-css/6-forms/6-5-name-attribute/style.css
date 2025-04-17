@@ -1,0 +1,64 @@
+.page {
+  padding: 20px;
+}
+
+.container {
+  width: min-content;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 15px;
+  margin-bottom: 15px;
+}
+
+.inputs-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  padding: 15px;
+  border: 1px dashed purple;
+}
+
+.date-wrap {
+  width: 177px;
+}
+
+.btns-wrap {
+  display: flex;
+  column-gap: 10px;
+}
+
+.reset-btn {
+  margin: 0;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 10px 10px;
+  color: white;
+  background-color: darkslateblue;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.btn:hover {
+  color: red;
+}
+
+.input-btn {
+  height: 35px;
+}
+
+.out-btn {
+  background-color: darkgray
+}
+
+.form-input {
+  height: 20px;
+}
