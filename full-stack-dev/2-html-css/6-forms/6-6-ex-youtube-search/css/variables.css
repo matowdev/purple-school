@@ -1,0 +1,30 @@
+:root {
+  /* sizes */
+  --page-min-width: 992px;
+  --container-max-width: 1600px;
+  --container-padding: 50px;
+
+  /* fonts */
+  --roboto: "Roboto";
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --default-fs: 16px;
+  --default-lh: 32px;
+
+  /* colors */
+  --black: #050038;
+  --gray: #c6c6c6;
+  --white: #fff;
+  --red: #ff0033;
+  --action-blue: #065fd4;
+  --bg-page: #fff;
+  --bg-form-btn: #f8f8f8;
+  --bg-btns: #f0efef;
+
+  /* transitions */
+  --short: 0.3s;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube search</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="page">
+  <div class="container page__container">
+    <header class="header page__header">
+      <h1 class="visually-hidden header__title">YouTube</h1>
+      <div class="header__logo-wrap">
+        <a class="header__logo-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+          <img class="header__logo" src="./images/logo-svg.svg" width="120" height="60" alt="Logo YouTube"
+            title="YouTube Home">
+        </a>
+      </div>
+      <form class="header__search-form" action="https://www.youtube.com/results" method="get">
+        <input class="header__search-input" type="text" name="search_query" placeholder="Search" required>
+        <button class="reset-btn header-btn header__reset-btn" type="reset"></button>
+        <button class="reset-btn header-btn header__search-btn" type="submit" title="Search"></button>
+      </form>
+      <div class="header__btns-wrap">
+        <button class="reset-btn header-btn header__btn-create" type="button">Create</button>
+        <button class="reset-btn header-btn header__btn-notification" type="button"></button>
+        <button class="reset-btn header-btn header__btn-profile" type="button">
+          <img class="header__btn-profile-img" src="./images/avatar.svg" width="40" height="40" alt="Avatar image">
+        </button>
+      </div>
+    </header>
+  </div>
+</body>
+
+</html>
