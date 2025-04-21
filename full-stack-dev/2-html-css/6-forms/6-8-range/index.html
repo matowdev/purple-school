@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio, checkbox, select</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+  <div class="container">
+    <form class="form" action="/test" method="get">
+      <!-- передача скрытых данных -->
+      <input type="hidden" name="hidden" value="user-data">
+
+      <!-- range -->
+      <div class="inputs-wrap range-wrap">
+        <label for="range-input">Определите громкость:</label>
+        <div class="range-inner-wrap">
+          <input class="form-input range-input" id="range-input" type="range" name="volume" min="0" max="12" step="2"
+            value="6">
+          <span class="range-value" id="range-value">6</span>
+        </div>
+      </div>
+
+      <!-- number (min, max) -->
+      <div class="inputs-wrap number-wrap">
+        <label for="number-input">Введите число:</label>
+        <input class="form-input" id="number-input" type="number" name="number" min="0" max="50" step="5" value="5"
+          placeholder="Введите число">
+      </div>
+
+      <!-- btns -->
+      <div class="btns-wrap">
+        <button class="reset-btn btn btn-submit" type="submit">Отправить</button>
+        <button class="reset-btn btn btn-reset" id="reset-btn" type="reset">Очистить поля</button>
+      </div>
+
+      <!-- пример из адресной строки (что в итоге отправляется/submit) -->
+      <!-- file:///C:/test?hidden=user-data&volume=6&number=5 -->
+    </form>
+  </div>
+
+  <script>
+    const range = document.getElementById("range-input");
+    const valueSpan = document.getElementById("range-value");
+    const resetBtn = document.getElementById("reset-btn");
+
+    range.addEventListener('input', function () {
+      // console.log(range.value);
+      valueSpan.textContent = this.value;
+    });
+
+    resetBtn.addEventListener('click', function () {
+      range.value = 6;
+      valueSpan.textContent = range.value;
+    });
+  </script>
+</body>
+
+</html>
