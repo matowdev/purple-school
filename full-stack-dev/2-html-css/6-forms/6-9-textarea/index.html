@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- !!! -->
+  <title>Textarea</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+  <div class="container">
+    <form class="form" action="/test" method="get">
+      <!-- передача скрытых данных -->
+      <input type="hidden" name="hidden" value="user-data">
+
+      <!-- textarea -->
+      <div class="textarea-wrap">
+        <label class="textarea-label" for="textarea">Ваш комментарий:</label>
+        <textarea class="form-textarea" id="textarea" name="textarea" placeholder="Введите текст.."></textarea>
+      </div>
+
+      <!-- btns -->
+      <div class="btns-wrap">
+        <button class="reset-btn btn btn-submit" type="submit">Отправить</button>
+        <button class="reset-btn btn btn-reset" id="reset-btn" type="reset">Очистить поля</button>
+      </div>
+
+      <!-- пример из адресной строки (что в итоге отправляется/submit) -->
+      <!-- file:///C:/test?hidden=user-data&textarea=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82+%D0%9C%D0%B8%D1%80%21 -->
+    </form>
+  </div>
+
+  <script>
+    // организация автоматически подстраиваемой высоты окна/textarea (согласно введённого количества/текста)
+    const textarea = document.getElementById('textarea');
+
+    function autoResize() {
+      textarea.style.height = 'auto';
+      textarea.style.height = textarea.scrollHeight + 'px';
+    }
+
+    textarea.addEventListener('input', autoResize);
+    window.addEventListener('DOMContentLoaded', autoResize);
+  </script>
+</body>
+
+</html>
