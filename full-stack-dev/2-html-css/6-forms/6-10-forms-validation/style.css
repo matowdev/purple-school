@@ -1,0 +1,110 @@
+.page {
+  padding: 20px;
+  min-width: 320px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.inputs-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  padding: 15px;
+  border: 1px dashed purple;
+}
+
+.date-wrap {
+  flex-shrink: 0;
+  width: 177px;
+}
+
+.checkbox-wrap {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 177px;
+  height: 20px;
+}
+
+.checkbox-label {
+  margin-right: 5px;
+}
+
+.radio-wrap {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.radio-input {
+  margin-top: 0;
+}
+
+.radio-input:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+.select-wrap {
+  display: flex;
+  row-gap: 5px;
+  padding: 15px;
+  border: 1px dashed purple;
+}
+
+.form-select {
+  height: 20px;
+}
+
+.select-label {
+  margin-right: 5px;
+}
+
+.btns-wrap {
+  display: flex;
+  column-gap: 10px;
+}
+
+.reset-btn {
+  margin: 0;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.btn {
+  flex-shrink: 0;
+  border-radius: 5px;
+  padding: 10px 10px;
+  color: white;
+  background-color: darkslateblue;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.btn:hover {
+  color: red;
+}
+
+.input-btn {
+  height: 35px;
+}
+
+.form-input {
+  height: 20px;
+}

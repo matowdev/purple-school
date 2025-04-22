@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- !!! -->
+  <title>Forms validation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page">
+  <div class="container">
+    <form class="form" action="/test" method="get">
+      <!-- передача скрытых данных -->
+      <input type="hidden" name="hidden" value="user-data">
+
+      <!-- basic Html validation, for example -->
+      <div class="inputs-wrap text-wrap">
+        <label for="text-input">Введите текст:</label>
+        <input class="form-input" id="text-input" type="text" name="text" minlength="5" maxlength="25"
+          pattern="^[a-zA-Zа-яА-ЯёЁ\s.,!?;:\-]+$" title="Только буквы (базовые символов)!" autocomplete="off"
+          placeholder="Введите текст" required>
+      </div>
+
+      <div class="inputs-wrap email-wrap">
+        <label for="email-input">Введите почту:</label>
+        <input class="form-input" id="email-input" type="email" name="email" autocomplete="email"
+          placeholder="Введите почту">
+      </div>
+
+      <div class="inputs-wrap number-wrap">
+        <label for="number-input">Введите число:</label>
+        <input class="form-input" id="number-input" type="number" name="number" placeholder="Введите число">
+      </div>
+
+      <div class="inputs-wrap password-wrap">
+        <label for="password-input">Введите пароль:</label>
+        <input class="form-input" id="password-input" type="password" name="password" placeholder="Введите пароль">
+      </div>
+
+      <div class="inputs-wrap date-wrap">
+        <label for="date-input">Выберете дату:</label>
+        <input class="form-input" id="date-input" type="date" name="date">
+      </div>
+
+      <!-- checkbox -->
+      <div class="inputs-wrap checkbox-wrap">
+        <label class="checkbox-label" for="checkbox-input">Обработка данных</label>
+        <input class="form-input" id="checkbox-input" type="checkbox" name="data-work" checked>
+      </div>
+
+      <!-- radio-group -->
+      <div class="inputs-wrap radio-wrap">
+        <label class="radio-label" for="radio-input-normal">Обычный поиск</label>
+        <input class="form-input radio-input" id="radio-input-normal" type="radio" name="search" value="normal-search">
+
+        <label class="radio-label" for="radio-input-advanced">Расширенный поиск</label>
+        <input class="form-input radio-input" id="radio-input-advanced" type="radio" name="search"
+          value="advanced-search">
+      </div>
+
+      <!-- select -->
+      <div class="select-wrap">
+        <label class="select-label" for="select">Выберите направление</label>
+        <select class="form-select" id="select" name="work-direction">
+          <option value="nothing">Ничего не выбрано</option>
+          <optgroup label="Development:">
+            <option value="Front-end">Front-end</option>
+            <option value="Back-end">Back-end</option>
+            <option value="Full-stack">Full-stack</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <!-- btns -->
+      <div class="btns-wrap">
+        <button class="reset-btn btn btn-submit" type="submit">Отправить</button>
+        <button class="reset-btn btn btn-reset" type="reset">Очистить поля</button>
+      </div>
+
+      <!-- пример из адресной строки (что в итоге отправляется/submit) -->
+      <!-- file:///C:/test?hidden=user-data&text=hello&email=example%40gmail.com&number=37&password=12345&date=2025-04-19&data-work=on&search=normal-search&work-direction=Full-stack -->
+    </form>
+  </div>
+</body>
+
+</html>
