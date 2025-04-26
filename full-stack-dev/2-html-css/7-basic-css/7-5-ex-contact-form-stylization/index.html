@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact form</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/textareaSize.js" defer></script>
+</head>
+
+<body class="page">
+  <main class="main page__main">
+    <h1 class="main__header">Свяжитесь со мной</h1>
+    <form class="form main__form" action="/test" method="get">
+      <!-- email input -->
+      <div class="form__input-wrap form-field">
+        <img class="form__input-img form-img" src="./images/email-icon.svg" width="24" height="24"
+          alt="Иконка почтового конверта">
+        <label class="form__input-label form-label" for="email">E-mail*</label>
+        <input class="form__input" id="email" type="email" name="email" value="user.name@gmail.com" minlength="16"
+          maxlength="254" pattern="^[a-zA-Z0-9.]+@gmail\.com$" title="Введите Gmail адрес" autocomplete="off"
+          placeholder="Введите почтовый ящик" required>
+      </div>
+      <!-- telegram input -->
+      <div class="form__input-wrap form-field">
+        <img class="form__input-img form-img" src="./images/telegram-icon.svg" width="24" height="24"
+          alt="Иконка Телеграм мессенджера">
+        <label class="form__input-label form-label" for="telegram">Telegram</label>
+        <input class="form__input" id="telegram" type="text" name="telegram" value="@username" minlength="6"
+          maxlength="33" pattern="^@[a-zA-Z0-9_]+$" title="Введите корректное @имя пользователя" autocomplete="off"
+          placeholder="Введите имя пользователя">
+      </div>
+      <!-- select -->
+      <div class="form__select-wrap form-field">
+        <img class="form__select-img form-img" src="./images/msg-icon.svg" width="24" height="24"
+          alt="Иконка сообщения">
+        <label class="form__select-label form-label" for="select">Тема*</label>
+        <select class="form__select" id="select" name="topic" title="Выберете тему" required>
+          <option class="form__select-option" value="" selected disabled hidden>Выберите тему</option>
+          <option class="form__select-option" value="payment">Приобретение курсов</option>
+          <option class="form__select-option" value="feedback">Обратная связь</option>
+        </select>
+      </div>
+      <!-- textarea -->
+      <div class="form__textarea-wrap form-field">
+        <label class="form__textarea-label form-label" for="textarea">Комментарий</label>
+        <textarea class="form__textarea" id="textarea" name="textarea"
+          placeholder="Введите текст..">Хочу купить ваши курсы для своих сотрудников и они станут очень умными. Направьте, пожалуйста, свои реквизиты для выставления счета.</textarea>
+      </div>
+      <!-- submit -->
+      <button class="form__btn" type="submit" title="Отправьте данные">Отправить</button>
+    </form>
+  </main>
+</body>
+
+</html>

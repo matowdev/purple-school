@@ -1,0 +1,30 @@
+:root {
+  /* sizes */
+  --page-min-width: 992px;
+
+  /* fonts */
+  --fira-sans: "Fira Sans";
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --default-fs: 16px;
+  --default-lh: 32px;
+
+  /* colors */
+  --black: #050038;
+  --dark: #4a4863;
+  --gray: #c6c6c6;
+  --specific-gray: #afb2bf;
+  --white: #FAFAFA;
+  --pink: #E47AD5;
+  --bg-page: #16171D;
+  --bg-form: #1E1F29;
+  --bg-field: #2E2D3D;
+  --bg-btn: #6C38CC;
+
+  /* transitions */
+  --short: 0.3s;
+}
