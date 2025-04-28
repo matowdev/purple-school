@@ -1,0 +1,36 @@
+:root {
+  /* sizes */
+  --page-min-width: 992px;
+  --container-max-width: 1440px;
+  --container-padding: 50px;
+
+  /* fonts */
+  --open-sans: "Open Sans";
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --default-fs: 16px;
+  --default-lh: 32px;
+
+  /* colors */
+  --black: #333;
+  --white: #fff;
+  --gray: #666;
+  --light-gray: #F5F5F5;
+  --specific-gray: #999;
+  --violet-gray: #4a4863;
+  --pink: #E47AD5;
+  --blue: #089FE0;
+  --bg-page: linear-gradient(243deg, #FDC5C5 25.45%, rgba(242, 152, 222, 0.00) 100%), linear-gradient(243deg, #FFA5A5 32.96%, rgba(255, 255, 255, 0.00) 82.03%), #F39494;
+  --border-color: #eee;
+  --bg-main: #FFFEFE;
+  --bg-form: #FFFEFE;
+  --bg-field: #F5F5F5;
+  --bg-btn: #089FE0;
+
+  /* transitions */
+  --short: 0.3s;
+}

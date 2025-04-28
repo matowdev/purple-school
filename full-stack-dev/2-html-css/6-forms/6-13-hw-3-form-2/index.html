@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration form</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/inputFocus.js" defer></script>
+</head>
+
+<body class="page">
+  <div class="container page__container">
+    <main class="main page__main">
+      <div class="form-wrap main__registration-form">
+        <h1 class="form-title">Регистрация</h1>
+        <div class="form-login-wrap">
+          <span class="form-login-span">Уже есть аккаунт?</span>
+          <a class="form-login-link form-link" href="#">Войти</a>
+        </div>
+        <form class="form" action="/test" method="get">
+          <!-- company name input -->
+          <input class="form__input company-input" id="company" type="text" name="company" value="Моя компания"
+            minlength="3" maxlength="35" pattern="^[a-zA-Zа-яА-ЯёЁ\s.,!?;:\-]+$" title="Введите название компании"
+            autocomplete="off" placeholder="Введите название компании" required>
+          <!-- fullname group inputs -->
+          <div class="form__inputs-wrap">
+            <input class="form__input name-input" id="name" type="text" name="name" minlength="2" maxlength="35"
+              pattern="^[a-zA-Zа-яА-ЯёЁ\s.,!?;:\-]+$" title="Введите корректное имя" autocomplete="off"
+              placeholder="Имя" required>
+            <input class="form__input surname-input" id="surname" type="text" name="surname" minlength="2"
+              pattern="^[a-zA-Zа-яА-ЯёЁ\s.,!?;:\-]+$" maxlength="35" title="Введите корректную фамилию"
+              autocomplete="off" placeholder="Фамилия" required>
+          </div>
+          <!-- email input -->
+          <input class="form__input email-input" id="email" type="email" name="email" minlength="10" maxlength="254"
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Добавьте почтовый ящик" autocomplete="off"
+            placeholder="E-mail" required>
+          <!-- submit btn -->
+          <button class="form__btn" type="submit" title="Отправить данные">Зарегистрироваться</button>
+          <!-- agreement group -->
+          <div class="form__agreement-wrap">
+            <input class="form__agreement-input visually-hidden" id="agreement" type="checkbox" name="term" required>
+            <label class="form__agreement-label" for="agreement">Я прочитал и принимаю</label>
+            <a class="form__agreement-link form-link" href="#">Условия использования</a>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
