@@ -1,0 +1,40 @@
+:root {
+  /* sizes */
+  --page-min-width: 1200px;
+  --container-max-width: 1200px;
+  --container-padding: 50px;
+
+  /* fonts */
+  --roboto: "Roboto";
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --default-fs: 16px;
+  --default-lh: 24px;
+
+  /* colors */
+  --black: #050038;
+  --light-gray: #F0F0F0;
+  --gray: #9B99AF;
+  --white: #fff;
+  --yellow: #ffdd33;
+  --blue: #4262FF;
+  --bg-page: #fff;
+  --bg-btn: #4262FF;
+
+  /* transitions */
+  --short: 0.3s;
+}
+
+/* media queries */
+
+/* @media (max-width: 992px) {
+  :root {
+    --container-padding: 50px;
+    --default-fs: 16px;
+    --default-lh: 24px;
+  }
+} */
