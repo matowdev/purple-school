@@ -1,0 +1,91 @@
+.page {
+  margin: 0;
+  padding: 30px;
+  font-family: "Roboto Mono", monospace;
+  font-style: normal;
+  font-optical-sizing: auto;
+}
+
+.title {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.hero {
+  color: black;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+/* styling with ::marker */
+
+.hero-marker {
+  text-shadow: 0 1px 10px red;
+}
+
+.marker-list {
+  padding-left: 30px;
+}
+
+.marker-item::marker {
+  content: '✔ ';
+  color: green;
+}
+
+/* styling with ::before */
+
+.hero-before {
+  text-shadow: 0 1px 10px green;
+}
+
+.before-item {
+  position: relative;
+  padding-left: 27px;
+}
+
+.before-item::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url('./images/check-icon.svg') no-repeat center / contain;
+}
+
+/* styling with ::before & flexbox */
+
+.hero-before-flex {
+  text-shadow: 0 1px 10px blue;
+}
+
+.before-flex-list {
+  padding-left: 3px;
+}
+
+.before-flex-item {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.before-flex-item::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: url('./images/checkbox-icon.svg') no-repeat center / contain;
+}
