@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miro</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page">
+  <h1 class="visually-hidden page__title">Miro - инновационное рабочее пространство!</h1>
+
+  <header class="header page__header" id="header" aria-label="Верхний колонтитул страницы (шапка сайта)">
+    <div class="container header__container" aria-labelledby="header">
+      <a class="header__logo">
+        <img class="header__logo-img" src="./images/logo.svg" width="91" height="32"
+          alt="Логотип: Miro - интерактивная онлайн-доска">
+      </a>
+      <nav class="header__nav">
+        <h2 class="visually-hidden header__nav-title">Навигация по сайту:</h2>
+        <ul class="header__list" title="Главное меню">
+          <li class="header__item"><a class="header__item-link" href="#hero">Продукт</a></li>
+          <li class="header__item"><a class="header__item-link" href="#workflow">Решения</a></li>
+          <li class="header__item"><a class="header__item-link" href="#integration">Ресурсы</a></li>
+          <li class="header__item"><a class="header__item-link" href="#">Предприятия</a></li>
+          <li class="header__item"><a class="header__item-link" href="#">Тарифы</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main page__main" aria-label="Контент страницы">:
+    <!-- 1. hero -->
+    <section class="hero main__hero" id="hero" aria-label="Секция: Презентация">
+      <div class="container hero__container">
+        <div class="hero__wrap">
+          <div class="hero__content-wrap">
+            <h2 class="section-title hero__content-title">Место для командной работы</h2>
+            <p class="hero__content-text">Интерактивная онлайн-доска для совместной работы команд — в любое время, в
+              любом месте.</p>
+            <form class="hero-form hero__content-form" action="/test" method="get">
+              <!-- email input -->
+              <div class="hero-form__input-wrap form-field">
+                <input class="hero-form__input email-input" id="hero-email" type="email" name="hero-email"
+                  minlength="10" maxlength="254" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                  title="Введите почтовый ящик" autocomplete="off" placeholder="Введите ваш почтовый ящик" required>
+              </div>
+              <!-- submit btn -->
+              <button class="hero-form__btn" type="submit" title="Зарегистрироваться">Начать бесплатно</button>
+            </form>
+            <span class="hero__content-form-span">Всегда бесплатно — кредитная карта не нужна</span>
+            <div class="hero-users hero__content-users">
+              <span class="hero-users__quantity">90M+ пользователей</span>
+              <ul class="hero-users__companies-list" title="Известные пользователи">
+                <li class="hero-users__companies-item">
+                  <img class="hero-users__companies-logo" src="./images/walmart-logo.svg" width="66" height="33"
+                    alt="Логотип: Компания Walmart">
+                </li>
+                <li class="hero-users__companies-item">
+                  <img class="hero-users__companies-logo" src="./images/cisco-logo.svg" width="39" height="33"
+                    alt="Логотип: Компания Cisco">
+                </li>
+                <li class="hero-users__companies-item">
+                  <img class="hero-users__companies-logo" src="./images/deloitte-logo.svg" width="45" height="33"
+                    alt="Логотип: Компания Deloitte">
+                </li>
+                <li class="hero-users__companies-item">
+                  <img class="hero-users__companies-logo" src="./images/volvo-logo.svg" width="27" height="33"
+                    alt="Логотип: Компания Volvo">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hero__img-wrap">
+            <img class="hero__img" src="./images/hero.jpg" width="604" height="461"
+              alt="Изображение: Онлайн-доска Miro">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 2. workflow -->
+    <section class="workflow main__workflow" id="workflow" aria-label="Секция: Рабочий процесс">
+      <div class="container workflow__container">
+        <div class="workflow__wrap">
+          <div class="workflow__content-wrap">
+            <h2 class="section-title workflow__content-title">Работайте вместе, где бы вы ни находились</h2>
+            <p class="workflow__content-text">Работая в офисе, удалённо или в гибридном формате, с Miro ваша команда
+              может общаться, сотрудничать и совместно заниматься творчеством в одном пространстве, из любой точки мира.
+            </p>
+            <a class="workflow__content-link" href="#">Узнать больше</a>
+          </div>
+          <div class="workflow__img-wrap">
+            <img class="workflow__img" src="./images/work-together.jpg" width="550" height="535"
+              alt="Изображение: Командная работа в Miro">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 3. integration -->
+    <section class="integration main__integration" id="integration" aria-label="Секция: Интеграции">
+      <div class="container integration__container">
+        <div class="integration__wrap">
+          <div class="integration__img-wrap">
+            <img class="integration__img" src="./images/all-in-one.jpg" width="550" height="498"
+              alt="Изображение: Всё в одном месте в Miro">
+          </div>
+          <div class="integration__content-wrap">
+            <h2 class="section-title integration__content-title">Закройте лишние вкладки — всё уже здесь</h2>
+            <p class="integration__content-text">Редактируете ли вы документы в Google Docs, работаете над задачами в
+              Jira или созваниваетесь в Zoom, Miro предлагает более 100 интеграций с уже известными и полюбившимися вам
+              инструментами.</p>
+            <a class="integration__content-link" href="#">Узнать больше</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 4. teams -->
+    <section class="teams main__teams" id="teams" aria-label="Секция: Типы команд">
+      <div class="container teams__container">
+        <div class="teams__wrap">
+          <h2 class="section-title teams__title">Создан для всех типов команд</h2>
+          <ul class="teams__type-list tabs-list" role="tablist" aria-label="Список типов команд" title="Типы команд">
+            <li class="teams__type-item" role="presentation">
+              <button class="teams__type-btn active" id="ux-design" data-path="one" role="tab" aria-selected="true">UX и
+                дизайн</button>
+            </li>
+            <li class="teams__type-item" role="presentation">
+              <button class="teams__type-btn" id="marketing" data-path="two" role="tab">Маркетинг</button>
+            </li>
+            <li class="teams__type-item" role="presentation">
+              <button class="teams__type-btn" id="product" data-path="three" role="tab">Управление продуктом</button>
+            </li>
+            <li class="teams__type-item" role="presentation">
+              <button class="teams__type-btn" id="development" data-path="four" role="tab">Разработка</button>
+            </li>
+            <li class="teams__type-item" role="presentation">
+              <button class="teams__type-btn" id="consulting" data-path="five" role="tab">Консалтинг</button>
+            </li>
+            <li class="teams__type-item" role="presentation">
+              <button class="teams__type-btn" id="agile" data-path="six" role="tab">Agile-коучинг</button>
+            </li>
+            <li class="teams__type-item" role="presentation">
+              <button class="teams__type-btn" id="sales" data-path="seven" role="tab">Продажи</button>
+            </li>
+          </ul>
+          <div class="teams__type-content-wrap active" data-target="one">
+            <div class="teams-content teams__type-content">
+              <!-- через ::marker и url() в уроке -->
+              <ul class="teams-content__feature-list" title="Список возможностей">
+                <li class="teams-content__feature-item">Создавайте вайрфреймы</li>
+                <li class="teams-content__feature-item">Подключайте заказчиков к процессу дизайна</li>
+                <li class="teams-content__feature-item">Проводите вовлекающие дизайн-воркшопы</li>
+              </ul>
+              <a class="teams-content__feature-link" href="#">Узнать больше</a>
+              <div class="teams-tools teams-content__tools-wrap">
+                <p class="teams-tools__text">Интегрируйте ваши любимые инструменты</p>
+                <ul class="teams-tools__list" title="Любимые инструменты">
+                  <li class="teams-tools__item">
+                    <a class="teams-tools__link" href="https://www.sketch.com/" target="_blank"
+                      rel="noopener noreferrer">
+                      <img class="teams-tools__img" src="./images/sketch-icon.svg" width="26" height="26"
+                        alt="Логотип: Инструмент Sketch" title="Sketch">
+                    </a>
+                  </li>
+                  <li class="teams-tools__item">
+                    <a class="teams-tools__link" href="https://adobexdplatform.com/" target="_blank"
+                      rel="noopener noreferrer">
+                      <img class="teams-tools__img" src="./images/adobe-xd-icon.svg" width="26" height="26"
+                        alt="Логотип: Инструмент Adobe XD" title="Adobe XD">
+                    </a>
+                  </li>
+                  <li class="teams-tools__item">
+                    <a class="teams-tools__link" href="https://www.figma.com/" target="_blank"
+                      rel="noopener noreferrer">
+                      <img class="teams-tools__img" src="./images/figma-icon.svg" width="32" height="27"
+                        alt="Логотип: Инструмент Figma" title="Figma">
+                    </a>
+                  </li>
+                  <li class="teams-tools__item">
+                    <a class="teams-tools__link" href="https://www.notion.com/" target="_blank"
+                      rel="noopener noreferrer">
+                      <img class="teams-tools__img" src="./images/notion-icon.svg" width="26" height="26"
+                        alt="Логотип: Инструмент Notion" title="Notion">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="teams__type-img-wrap">
+              <img class="teams__type-img" src="./images/ux-design.jpg" width="700" height="517"
+                alt="Изображение: Разработка UX-дизайна в Miro">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer page__footer" id="footer" aria-label="Нижний колонтитул страницы (подвал сайта)">
+    <div class="container footer__container" aria-labelledby="footer">
+      <span class="footer__copyright">&copy; 2025 Miro</span>
+      <ul class="footer__list" title="Информация">
+        <li class="footer__item"><a class="footer__item-link" href="#" target="_blank" rel="noopener noreferrer">Условия
+            пользования</a></li>
+        <li class="footer__item"><a class="footer__item-link" href="#" target="_blank"
+            rel="noopener noreferrer">Политика конфиденциальности</a></li>
+        <li class="footer__item"><a class="footer__item-link" href="#" target="_blank"
+            rel="noopener noreferrer">Управление файлами cookies</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
