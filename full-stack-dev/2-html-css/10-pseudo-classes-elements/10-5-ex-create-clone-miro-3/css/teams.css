@@ -1,0 +1,73 @@
+.teams {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.teams__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.teams__title {
+  margin-bottom: 45px;
+  width: 100%;
+  max-width: 760px;
+}
+
+.teams__type-list {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  column-gap: 8px;
+  margin-bottom: 25px;
+}
+
+.teams__type-btn {
+  border: 1px solid var(--faint-gray);
+  border-radius: 24px;
+  padding: 14px 18px;
+  width: 100%;
+  max-width: 205px;
+  font-family: var(--roboto);
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--black);
+  background: transparent;
+  opacity: 1;
+  outline: none;
+  cursor: pointer;
+  transition-property: color, background-color, opacity;
+  transition-duration: var(--short);
+  transition-timing-function: ease;
+}
+
+.teams__type-btn:focus-visible {
+  border-color: var(--light-gray);
+  background-color: var(--light-gray);
+  opacity: 0.8;
+  outline: 2px solid var(--gray);
+}
+
+.teams__type-btn:active {
+  color: var(--gray);
+}
+
+.teams__type-btn.active {
+  background-color: var(--bg-active);
+}
+
+.teams-tools__img,
+.teams__type-img {
+  display: block
+}
+
+/* media queries, any-hover */
+
+@media (any-hover: hover) {
+  .teams__type-btn:hover:not(:active):not(.active) {
+    background-color: var(--light-gray);
+    opacity: 0.8;
+  }
+}

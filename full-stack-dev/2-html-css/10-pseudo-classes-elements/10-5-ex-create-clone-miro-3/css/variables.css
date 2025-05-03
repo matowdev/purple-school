@@ -18,12 +18,14 @@
   /* colors */
   --black: #050038;
   --light-gray: #F0F0F0;
+  --faint-gray: #F2F2F2;
   --gray: #9B99AF;
   --white: #fff;
   --yellow: #ffdd33;
   --blue: #4262FF;
   --bg-page: #fff;
   --bg-btn: #4262FF;
+  --bg-active: #F1F3FD;
 
   /* transitions */
   --short: 0.3s;
