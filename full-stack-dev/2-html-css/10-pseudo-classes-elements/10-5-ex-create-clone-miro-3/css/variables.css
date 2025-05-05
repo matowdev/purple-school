@@ -17,6 +17,7 @@
 
   /* colors */
   --black: #050038;
+  --opacity-black: rgba(5, 0, 56, 0.60);
   --light-gray: #F0F0F0;
   --faint-gray: #F2F2F2;
   --gray: #9B99AF;

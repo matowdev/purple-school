@@ -5,8 +5,8 @@
 
 .integration__wrap {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  column-gap: 115px;
 }
 
 .integration__content-wrap {

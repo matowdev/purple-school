@@ -5,8 +5,8 @@
 
 .hero__wrap {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  column-gap: 56px;
 }
 
 .hero__content-wrap {
