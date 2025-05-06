@@ -1,0 +1,135 @@
+.hero {
+  padding-top: 30px;
+  padding-bottom: 65px;
+}
+
+.hero__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__content-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 440px;
+}
+
+.hero__content-title {
+  margin-bottom: 17px;
+  width: 100%;
+  max-width: 285px;
+}
+
+.hero__content-text {
+  margin-bottom: 55px;
+  width: 100%;
+  max-width: 425px;
+  font-size: 18px;
+}
+
+.hero-form__input-wrap {
+  margin-bottom: 10px;
+}
+
+.hero-form__input {
+  border: none;
+  border-radius: 32px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 440px;
+  font-family: var(--roboto);
+  font-size: var(--default-fs);
+  line-height: var(--default-lh);
+  color: var(--black);
+  background: var(--white);
+  outline: 1px solid var(--gray);
+  text-align: center;
+  caret-color: var(--blue);
+}
+
+.hero-form__input::placeholder {
+  font-size: var(--default-fs);
+  color: var(--dark);
+  opacity: 0.3;
+}
+
+.hero-form__input:focus-visible {
+  outline: 2px solid var(--blue);
+}
+
+.hero-form__btn {
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 32px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 440px;
+  font-family: var(--roboto);
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--bg-btn);
+  cursor: pointer;
+  transition-property: color, background-color;
+  transition-duration: var(--short);
+  transition-timing-function: ease;
+}
+
+.hero-form__btn:focus-visible {
+  outline: 2px solid var(--black);
+}
+
+.hero__content-form-span {
+  margin-bottom: 45px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.hero-users {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.hero-users__quantity {
+  font-size: 18px;
+  letter-spacing: 0.25px;
+}
+
+.hero-users__companies-list {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  column-gap: 20px
+}
+
+.hero-users__companies-logo {
+  display: block;
+}
+
+.hero__img-wrap {
+  flex-shrink: 0;
+  border-radius: 5px;
+  width: 604px;
+  font-size: 18px;
+  text-align: center;
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+
+.hero__img {
+  display: block
+}
+
+/* media queries, any-hover */
+
+@media (any-hover: hover) {
+  .hero-form__btn:hover:not(:active) {
+    background-color: var(--gray);
+  }
+}

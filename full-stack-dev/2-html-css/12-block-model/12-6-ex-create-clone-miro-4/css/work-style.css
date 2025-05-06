@@ -1,0 +1,131 @@
+.work-style {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.work-style__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.work-style__title {
+  margin-bottom: 45px;
+  width: 100%;
+  max-width: 880px;
+}
+
+.work-style__type-list {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  column-gap: 8px;
+  margin-bottom: 25px;
+}
+
+.work-style__type-btn {
+  border: 1px solid var(--faint-gray);
+  border-radius: 24px;
+  padding: 14px 18px;
+  width: 100%;
+  max-width: 205px;
+  font-family: var(--roboto);
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--black);
+  background: transparent;
+  opacity: 1;
+  outline: none;
+  cursor: pointer;
+  transition-property: color, background-color, opacity;
+  transition-duration: var(--short);
+  transition-timing-function: ease;
+}
+
+.work-style__type-btn:focus-visible {
+  border-color: var(--light-gray);
+  background-color: var(--light-gray);
+  opacity: 0.8;
+  outline: 2px solid var(--gray);
+}
+
+.work-style__type-btn:active {
+  color: var(--gray);
+}
+
+.work-style__type-btn.active {
+  background-color: var(--bg-active);
+}
+
+.work-style__type-content-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.work-style-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 25px;
+  width: 295px;
+}
+
+.work-style-content__title {
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.work-style-content__text {
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 290px;
+  font-size: 18px;
+  color: var(--black);
+}
+
+.work-style-content__link {
+  align-self: start;
+  padding: 2px 2px;
+  font-size: 18px;
+  color: var(--blue);
+  outline: none;
+  transition-property: color, background-color;
+  transition-duration: var(--short);
+  transition-timing-function: ease;
+}
+
+.work-style-content__link:focus-visible:not(:hover) {
+  color: var(--black);
+  background-color: var(--yellow);
+}
+
+.work-style-content__link:active {
+  color: var(--black);
+}
+
+.work-style__type-img-wrap {
+  flex-shrink: 0;
+  border-radius: 5px;
+  width: 700px;
+  font-size: 18px;
+  text-align: center;
+  background-color: var(--light-gray);
+  overflow: hidden;
+}
+
+.work-style__type-img {
+  display: block
+}
+
+/* media queries, any-hover */
+
+@media (any-hover: hover) {
+  .work-style__type-btn:hover:not(:active):not(.active) {
+    background-color: var(--light-gray);
+    opacity: 0.8;
+  }
+
+  .work-style-content__link:hover:not(:active) {
+    color: var(--gray);
+  }
+}
