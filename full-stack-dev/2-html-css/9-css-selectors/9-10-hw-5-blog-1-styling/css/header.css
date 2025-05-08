@@ -1,0 +1,133 @@
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.page__header {
+  margin-bottom: 70px;
+}
+
+.header__logo-wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-right: 77px;
+}
+
+.header__logo {
+  flex-shrink: 0;
+  outline: none;
+  transition: box-shadow var(--short) ease;
+}
+
+.header__logo:focus-visible:not(:hover) {
+  box-shadow: 0 0 0 2px var(--orange);
+}
+
+.header__logo:hover+.header__logo-text {
+  color: var(--orange);
+}
+
+.header__logo-img {
+  display: block;
+}
+
+.header__logo-text {
+  flex-shrink: 0;
+  font-size: 17px;
+  transition: color var(--short) ease;
+}
+
+.header__nav-list {
+  display: flex;
+  column-gap: 50px;
+}
+
+.header__nav-item {
+  flex-shrink: 0;
+}
+
+.header__nav-link {
+  padding: 6px 10px;
+  outline: none;
+  transition-property: color, box-shadow;
+  transition-duration: var(--short);
+  transition-timing-function: ease;
+}
+
+.header__nav-link:focus-visible:not(:active):not(:hover) {
+  box-shadow: 0 0 0 2px var(--orange);
+}
+
+.header__nav-link:focus-visible:hover {
+  color: var(--orange);
+}
+
+.header__nav-link:focus-visible:active {
+  color: var(--orange);
+}
+
+.header__nav-link:hover:not(:focus-visible) {
+  color: var(--orange);
+}
+
+.header__nav-link:active:not(:focus-visible) {
+  color: var(--orange);
+}
+
+.header__search-form {
+  margin-left: auto;
+}
+
+.header__search-label {
+  margin-right: 10px;
+}
+
+.header__search-input {
+  border: none;
+  border-radius: 100px;
+  padding-left: 47px;
+  padding-right: 10px;
+  width: 224px;
+  height: 40px;
+  color: var(--white);
+  background: rgba(31, 41, 55, 0.60);
+  background-image: url('../images/search.png');
+  background-repeat: no-repeat;
+  background-position: 18px center;
+  background-size: 20px;
+  caret-color: var(--orange);
+  cursor: help;
+}
+
+.header__search-input:focus {
+  outline: none;
+}
+
+.header__search-input::placeholder {
+  color: var(--white);
+  opacity: 0.6;
+}
+
+.header__search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 24px;
+  width: 24px;
+  background-image: url('../images/x.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity var(--short) ease;
+}
+
+/* media queries, any-hover */
+
+@media (any-hover: hover) {
+  .header__search-input::-webkit-search-cancel-button:hover {
+    opacity: 1;
+  }
+}
