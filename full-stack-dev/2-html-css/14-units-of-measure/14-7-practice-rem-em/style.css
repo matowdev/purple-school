@@ -1,0 +1,151 @@
+html {
+  box-sizing: border-box;
+  /* начальный базовый размер шрифта для больших экранов (>= 1200px) */
+  /* 1rem = 16px по умолчанию */
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  margin: 0;
+  /* используем rem для отступов body */
+  padding: 2rem;
+  min-width: 320px;
+  /* чтобы карточка была сверху, если она маленькая */
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f0f4f8;
+}
+
+.card {
+  margin: 0 auto;
+  border: 1px solid #d1d9e6;
+  /* используем rem для border-radius, чтобы он масштабировался с базовым шрифтом */
+  /* 0.5 * 16px = 8px */
+  border-radius: .5rem;
+  /* используем rem для padding, чтобы он масштабировался с базовым шрифтом */
+  /* 1.5 * 16px = 24px */
+  padding: 1.5rem;
+  /* максимальная ширина карточки в rem, чтобы она тоже адаптировалась */
+  /* например, 500px / 16px = 31.25rem */
+  max-width: 31.25rem;
+  /* font-size самой карточки.
+       пусть он будет равен 1rem, т.е. наследует масштабирование от html.
+       элементы внутри с 'em' будут отталкиваться от этого значения. */
+  font-size: 1rem;
+  text-align: justify;
+  background-color: #fff;
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .1);
+}
+
+.card__title {
+  margin-top: 0;
+  /* ! размер margin отступа берётся относительно СВОЕГО font-size */
+  margin-bottom: .5em;
+  /* ! A ВОТ.. размер шрифта для заголовка берётся относительно от font-size карточки (.card) */
+  /* т.е. 1.75 * на font-size карточки (т.е. на 16px = 28px) */
+  font-size: 1.75em;
+  color: #2c3e50;
+}
+
+/* ? это одна из тонкостей работы em, которая часто вызывает вопросы. em в "своём" font-size относится к родителю, а em в других свойствах (у себя же.. таких как margin, padding) — относится УЖЕ.. к font-size САМОГО элемента. */
+
+.card__text {
+  margin: 0;
+  /* по аналогии с title, т.е. от собственного font-size, т.е. 16px * 1.25em = 20px */
+  margin-bottom: 1.25em;
+  /* по аналогии с title, т.е. от font-size карточки (.card), т.е. 1em = 16px */
+  font-size: 1em;
+  /* высота строки, от собственного font-size, т.е. 16px * 1.6em = 25.6px (в DevTools) */
+  line-height: 1.6em;
+}
+
+.card__button {
+  display: inline-block;
+  border: none;
+  /* эти em, т.е. из border-radius и padding берутся от своего font-size */
+  border-radius: .3em;
+  padding: .6em 1.2em;
+  font-size: 1em;
+  color: white;
+  background-color: #3498db;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out;
+}
+
+.card__button:hover {
+  background-color: #2980b9;
+}
+
+/* media query's */
+
+@media (max-width: 1200px) {
+  html {
+    /* уменьшение размера шрифт, 1rem теперь = 15px */
+    font-size: 15px;
+  }
+
+  /* карточка и ее содержимое автоматически уменьшатся из-за корректировки rem и как следствие em */
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .card__title {
+    font-size: 1.6em;
+  }
+
+  .card__text {
+    font-size: .95em;
+  }
+
+  .card__button {
+    /* увеличение размеров кнопки, для удобства прожатия */
+    padding: .7em 1.4em;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 13px;
+  }
+
+  .page {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card__title {
+    margin-bottom: .3em;
+    font-size: 1.3em;
+  }
+
+  .card__text {
+    margin-bottom: 1em;
+  }
+
+  .card__button {
+    display: block;
+    padding: .8em 1em;
+    /* на всю ширину для удобства */
+    width: 100%;
+    text-align: center;
+  }
+}
