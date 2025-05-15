@@ -1,0 +1,13 @@
+.main {
+  padding-right: 1.875rem;
+  padding-left: 1.875rem;
+}
+
+/* media queries */
+
+@media (max-width: 576px) {
+  .main {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
