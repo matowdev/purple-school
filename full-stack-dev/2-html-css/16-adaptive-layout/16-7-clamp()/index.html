@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>clamp()</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      /*
+        MIN: 1.5rem (примерно 24px, если базовый шрифт 16px)
+        VAL: 1rem + 2vw (базовый размер + 2% от ширины вьюпорта)
+        MAX: 3rem (примерно 48px)
+      */
+      font-size: clamp(1.5rem, 1rem + 2vw, 3rem);
+      color: #333;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: clamp(0.5em, 1vw, 1em);
+      /* И для отступа тоже! */
+    }
+
+    p {
+      /* Для сравнения, текст с фиксированным размером и обычный адаптивный */
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .responsive-text {
+      /*
+        VAL здесь vw - будет очень сильно меняться с шириной экрана,
+        пока не упрется в MIN или MAX.
+        Обычно такое прямое использование vw без сложения с rem/px
+        приводит к слишком большому диапазону изменений,
+        но для демонстрации работы clamp() это наглядно.
+      */
+      font-size: clamp(12px, 3vw, 36px);
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Это адаптивный заголовок</h1>
+  <p>Этот текст имеет фиксированный размер (1rem).</p>
+  <p class="responsive-text">Этот текст использует clamp(12px, 5vw, 22px) и будет масштабироваться более заметно.</p>
+  <p>Попробуйте изменить размер окна браузера, чтобы увидеть, как меняется размер заголовка и зеленого текста.</p>
+</body>
+
+</html>
