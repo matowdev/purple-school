@@ -32,7 +32,7 @@
 }
 
 .trust__content-link:focus-visible:not(:hover) {
-  color: var(--gray);
+  color: var(--blue);
 }
 
 .trust__content-link:active {
