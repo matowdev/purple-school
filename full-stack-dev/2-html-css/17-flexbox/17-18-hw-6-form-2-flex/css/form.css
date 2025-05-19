@@ -1,0 +1,227 @@
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 72px 95px 90px;
+  max-width: 585px;
+  min-height: 560px;
+  background-color: var(--bg-main);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.form-title {
+  margin-top: 0;
+  margin-bottom: 2px;
+  font-weight: var(--bold);
+  font-size: 36px;
+}
+
+.form-login-wrap {
+  margin-bottom: 45px;
+}
+
+.form-login-text {
+  margin-right: 10px;
+  font-size: 18px;
+  color: var(--gray);
+}
+
+.form-login-link {
+  font-size: 18px;
+  color: var(--blue);
+  text-decoration: underline 1px solid currentColor;
+  transition-property: color, text-decoration;
+  transition-duration: var(--short);
+  transition-timing-function: ease;
+  will-change: color, text-decoration;
+}
+
+.form-login-link:focus-visible {
+  outline-color: var(--blue);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+  width: 100%;
+  max-width: 395px;
+  min-height: 285px;
+  background-color: var(--bg-form);
+}
+
+.form__input-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.form__label,
+.form__input-hint {
+  font-weight: var(--medium);
+  font-size: 14px;
+  color: var(--violet-gray);
+}
+
+.form__input-hint {
+  color: var(--pink);
+}
+
+.form__input {
+  border: none;
+  border-radius: 5px;
+  padding: 9px 11px;
+  width: 100%;
+  min-height: 44px;
+  font-family: var(--open-sans);
+  font-size: var(--default-fs);
+  line-height: 19px;
+  color: var(--black);
+  background: var(--bg-field);
+  caret-color: var(--pink);
+}
+
+.form__input::placeholder {
+  font-size: var(--default-fs);
+  font-style: italic;
+  color: var(--specific-gray);
+}
+
+.form__input:focus-visible {
+  outline-color: var(--blue);
+
+}
+
+.company-input {
+  border: 1px solid var(--light-gray);
+  font-weight: var(--semi-bold);
+  background: var(--white);
+}
+
+.company-input::placeholder {
+  font-weight: var(--regular);
+  opacity: 0.6;
+}
+
+.form__inputs-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  column-gap: 2px;
+}
+
+.form__btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 50px;
+  width: 100%;
+  min-height: 47px;
+  font-family: var(--open-sans);
+  font-size: 18px;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--bg-btn);
+  background-image: url('../images/arrow-icon.svg');
+  background-repeat: no-repeat;
+  background-position: right 25px center;
+  background-size: 22px;
+  cursor: pointer;
+  transition: background-color var(--short) ease;
+  will-change: background-color;
+}
+
+.form__btn:focus-visible {
+  outline-color: var(--pink);
+}
+
+.form__agreement-wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-top: -5px;
+}
+
+.form__agreement-label {
+  position: relative;
+  padding-left: 22px;
+  font-size: 14px;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.form__agreement-link {
+  font-size: 14px;
+  color: var(--blue);
+  transition: color var(--short) ease;
+  will-change: color;
+}
+
+.form__agreement-link:focus-visible {
+  outline-color: var(--blue);
+}
+
+/* создание "custom" checkbox */
+.form__agreement-label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--light-gray);
+  transition-property: border-color, background-color;
+  transition-duration: var(--short);
+  transition-timing-function: ease;
+  transform: translateY(-50%);
+}
+
+/* создание "галочки/птички" */
+.form__agreement-label::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  width: 5px;
+  height: 10px;
+  opacity: 0;
+  transition: opacity var(--short) ease;
+  transform: translateY(-60%) rotate(45deg);
+}
+
+/* стилизация checkbox при выборе */
+.form__agreement-input:checked+.form__agreement-label::before {
+  border-color: var(--blue);
+  background-color: var(--blue);
+}
+
+/* отображения галочки при взаимодействии с checkbox/label */
+.form__agreement-input:checked+.form__agreement-label::after {
+  opacity: 1;
+}
+
+/* обводка checkbox при повторном прожатии/при отмене (пока не перейдёт focus) */
+.form__agreement-input:focus:not(:checked)+.form__agreement-label::before {
+  border-color: var(--blue);
+}
+
+/* media queries, any-hover */
+
+@media (any-hover: hover) {
+  .form-login-link:hover:not(:active) {
+    color: var(--pink);
+  }
+
+  .form__btn:hover:not(:active) {
+    background-color: var(--violet-gray);
+  }
+
+  .form__agreement-link:hover:not(:active) {
+    color: var(--pink);
+  }
+}
