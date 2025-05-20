@@ -63,31 +63,31 @@
   justify-content: space-between;
 }
 
-.teams-content {
+.teams__type-content {
   display: flex;
   flex-direction: column;
   padding-top: 25px;
   width: 285px;
 }
 
-.teams-content__feature-list {
+.teams__type-feature-list {
   margin-bottom: 32px;
   width: 100%;
   max-width: 270px;
 }
 
-.teams-content__feature-item {
+.teams__type-feature-item {
   position: relative;
   padding-left: 38px;
   font-size: 18px;
   color: var(--opacity-black)
 }
 
-.teams-content__feature-item:not(:last-of-type) {
+.teams__type-feature-item:not(:last-of-type) {
   margin-bottom: 18px;
 }
 
-.teams-content__feature-item::before {
+.teams__type-feature-item::before {
   content: '';
   position: absolute;
   top: 0;
@@ -98,7 +98,7 @@
   background-size: 24px;
 }
 
-.teams-content__feature-link {
+.teams__type-feature-more-link {
   align-self: start;
   margin-bottom: 70px;
   padding: 2px 2px;
@@ -110,62 +110,62 @@
   transition-timing-function: ease;
 }
 
-.teams-content__feature-link:focus-visible:not(:hover) {
+.teams__type-feature-more-link:focus-visible:not(:hover) {
   color: var(--black);
   background-color: var(--yellow);
 }
 
-.teams-content__feature-link:active {
+.teams__type-feature-more-link:active {
   color: var(--black);
 }
 
-.teams-content__tools-wrap {
+.teams__type-tools-wrap {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   row-gap: 22px;
 }
 
-.teams-tools__text {
+.teams__type-tools-text {
   width: 100%;
   max-width: 270px;
   font-size: 18px;
   color: var(--opacity-black);
 }
 
-.teams-tools__list {
+.teams__type-tools-list {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   column-gap: 20px;
 }
 
-.teams-tools__item {
+.teams__type-tools-item {
   display: flex;
   align-items: center;
 }
 
-.teams-tools__link {
+.teams__type-tools-link {
   display: inline-block;
   border-radius: 5px;
 }
 
-.teams-tools__link:focus-visible {
+.teams__type-tools-link:focus-visible {
   outline: 2px solid var(--gray);
 }
 
-.teams-tools__img {
+.teams__type-tools-img {
   box-sizing: content-box;
   padding: 5px;
 }
 
-.teams-tools__img_figma {
+.teams__type-tools-img_figma {
   padding: 4px 2px;
   width: 32px;
   height: 27px;
 }
 
-.teams-tools__img,
+.teams__type-tools-img,
 .teams__type-img {
   display: block
 }
@@ -188,7 +188,7 @@
     opacity: 0.8;
   }
 
-  .teams-content__feature-link:hover:not(:active) {
+  .teams__type-feature-more-link:hover:not(:active) {
     color: var(--gray);
   }
 }

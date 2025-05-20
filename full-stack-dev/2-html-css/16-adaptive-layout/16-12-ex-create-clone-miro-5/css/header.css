@@ -39,6 +39,7 @@
   display: flex;
   align-items: center;
   column-gap: 18px;
+  margin-right: 45px;
 }
 
 .header__item-link {

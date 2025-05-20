@@ -16,21 +16,21 @@
   width: 454px;
 }
 
-.workflow__content-title {
+.workflow__title {
   margin-bottom: 19px;
   width: 100%;
   max-width: 436px;
 }
 
-.workflow__content-text {
+.workflow__text {
   margin-bottom: 39px;
   width: 100%;
   max-width: 436px;
   font-size: 18px;
-  opacity: 0.6;
+  color: var(--opacity-black);
 }
 
-.workflow__content-link {
+.workflow__more-link {
   align-self: start;
   border-bottom: 1px solid currentColor;
   padding: 2px 2px;
@@ -42,12 +42,12 @@
   transition-timing-function: ease;
 }
 
-.workflow__content-link:focus-visible:not(:hover) {
+.workflow__more-link:focus-visible:not(:hover) {
   color: var(--black);
   background-color: var(--yellow);
 }
 
-.workflow__content-link:active {
+.workflow__more-link:active {
   color: var(--black);
 }
 
@@ -69,7 +69,7 @@
 /* media queries, any-hover */
 
 @media (any-hover: hover) {
-  .workflow__content-link:hover:not(:active) {
+  .workflow__more-link:hover:not(:active) {
     color: var(--gray);
   }
 }

@@ -1,0 +1,107 @@
+.feedback {
+  padding-top: 118px;
+  padding-bottom: 40px;
+}
+
+.feedback__content-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback__title {
+  margin-bottom: 27px;
+  width: 100%;
+  max-width: 840px;
+  text-align: center;
+}
+
+.feedback__history-link {
+  margin-bottom: 35px;
+  border: 2px solid currentColor;
+  border-radius: 32px;
+  padding: 17px 27px;
+  width: 100%;
+  max-width: 265px;
+  font-family: var(--roboto);
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--blue);
+  background-color: transparent;
+  cursor: pointer;
+  transition-property: border, color, background-color;
+  transition-duration: var(--short);
+  transition-timing-function: ease;
+}
+
+.feedback__history-link:focus-visible {
+  border-color: currentColor;
+  color: var(--gray);
+  outline: none;
+}
+
+.feedback__list {
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 30px;
+  width: 100%;
+}
+
+.feedback__item {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: calc(100% / 3 - 30px * 2 / 3);
+  min-height: 480px;
+}
+
+.feedback__item-logo {
+  margin-bottom: 23px;
+}
+
+.feedback__item-text {
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: var(--opacity-black);
+}
+
+.feedback__person-wrap {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 15px;
+  margin-top: auto;
+  min-height: 70px;
+}
+
+.feedback__person-img-wrap {
+  flex-shrink: 0;
+}
+
+.feedback__person-img {
+  display: block;
+}
+
+.feedback__person-info-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+}
+
+.feedback__person-name,
+.feedback__person-position {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--opacity-black);
+}
+
+/* media queries, any-hover */
+
+@media (any-hover: hover) {
+  .feedback__history-link:hover:not(:active) {
+    border-color: var(--gray);
+    color: var(--white);
+    background-color: var(--gray);
+  }
+}
