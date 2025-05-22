@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PurpleSchool</title>
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/headerNavLink.js" defer></script>
+</head>
+
+<body class="page">
+  <header class="header page__header" id="header" aria-label="Верхний колонтитул страницы (шапка сайта)">
+    <div class="container header__container" aria-labelledby="header">
+      <div class="header__wrap">
+        <a class="header__link-logo" href="#" aria-label="Вернуться/обновить страницу"
+          title="Вернуться/обновить страницу">
+          <img class="header__logo" src="./images/logo.svg" width="233" height="61" alt="Логотип: PurpleSchool">
+        </a>
+        <nav class="header__nav" aria-label="Основное меню" title="Основное меню">
+          <ul class="header__nav-list">
+            <li class="header__nav-item header__nav-item_active" data-status="active" tabindex="0"><a
+                class="header__nav-link" tabindex="-1" href="#">Курсы</a></li>
+            <li class="header__nav-item" tabindex="0"><a class="header__nav-link" tabindex="-1" href="#">О школе</a>
+            </li>
+            <li class="header__nav-item" tabindex="0"><a class="header__nav-link" tabindex="-1" href="#">Блог</a></li>
+            <li class="header__nav-item" tabindex="0"><a class="header__nav-link" tabindex="-1" href="#">База знаний</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__btns-wrap">
+          <button class="header__login-btn reset-btn" id="login-btn" type="button" aria-label="Войти в аккаунт"
+            title="Войти в аккаунт">
+            <svg class="header__login-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="9.5" r="3" stroke-width="1.5" />
+              <circle cx="12" cy="12.5" r="10" stroke-width="1.5" />
+              <path d="M17.9691 20.5C17.81 17.6085 16.9247 15.5 11.9999 15.5C7.07521 15.5 6.18991 17.6085 6.03076 20.5"
+                stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <span class="header__login-btn-text" id="login-text">Вход</span>
+          </button>
+          <button class="header__burger-btn reset-btn" id="burger-btn" type="button" aria-label="Открыть меню"
+            title="Открыть меню">
+            <svg class="header__burger-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <path d="M20 7L4 7" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M20 12L4 12" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M20 17L4 17" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main page__main">
+  </main>
+</body>
+
+</html>
