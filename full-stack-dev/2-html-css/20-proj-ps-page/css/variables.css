@@ -29,8 +29,11 @@
   --bg-btn: #6C38CC;
 
   /* style */
-  --main-radius: 8px;
-  --main-shadow: 0 0 0 3px var(--stroke-gray);
+  --main-br-radius: 10px;
+  --secondary-br-radius: 8px;
+  --white-shadow: 0 0 0 2px var(--white);
+  --gray-shadow: 0 0 0 2px var(--stroke-gray);
+  --main-gradient: linear-gradient(93deg, #D77BE5 9.26%, #BE63E5 42.32%, #6C38CC 104.58%);
 
   /* transitions */
   --short: 0.3s;

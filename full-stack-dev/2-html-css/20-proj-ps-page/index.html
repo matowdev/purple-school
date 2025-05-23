@@ -31,7 +31,7 @@
           </ul>
         </nav>
         <div class="header__btns-wrap">
-          <button class="header__login-btn reset-btn" id="login-btn" type="button" aria-label="Войти в аккаунт"
+          <button class="btn-reset header__login-btn" id="login-btn" type="button" aria-label="Войти в аккаунт"
             title="Войти в аккаунт">
             <svg class="header__login-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
               <circle cx="12" cy="9.5" r="3" stroke-width="1.5" />
@@ -41,7 +41,7 @@
             </svg>
             <span class="header__login-btn-text" id="login-text">Вход</span>
           </button>
-          <button class="header__burger-btn reset-btn" id="burger-btn" type="button" aria-label="Открыть меню"
+          <button class="btn-reset header__burger-btn" id="burger-btn" type="button" aria-label="Открыть меню"
             title="Открыть меню">
             <svg class="header__burger-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
               <path d="M20 7L4 7" stroke-width="1.5" stroke-linecap="round" />
@@ -54,7 +54,37 @@
     </div>
   </header>
 
-  <main class="main page__main">
+  <main class="main page__main" aria-label="Контент страницы">
+    <!-- 1. hero -->
+    <section class="hero main__hero" id="hero" aria-label="Секция: Презентация">
+      <div class="container hero__container">
+        <div class="hero__wrap">
+          <div class="hero__content-wrap">
+            <h1 class="hero__title">Доступные курсы по <span class="hero__title_gradient">Разработке и DevOps</span>
+            </h1>
+            <div class="hero__btns-wrap">
+              <a class="btn btn-fill hero__select-btn" href="#" role="button" aria-label="Выбрать курс">Выбрать
+                курс</a>
+              <a class="btn btn-stroke hero__about-btn" href="#" role="button" aria-label="Информация о школе">О
+                школе</a>
+            </div>
+          </div>
+          <div class="hero__img-video-wrap">
+            <img class="hero__img" src="./images/hero-img.jpg" width="458" height="258"
+              alt="Изображение/превью: Руководитель школы - Антон Ларичев">
+            <button class="btn-reset hero__img-btn" id="img-btn" type="button" aria-label="Посмотреть видео о школе"
+              title="Запустить видео">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20.4086 9.35258C22.5305 10.5065 22.5305 13.4935 20.4086 14.6474L7.59662 21.6145C5.53435 22.736 3 21.2763 3 18.9671L3 5.0329C3 2.72368 5.53435 1.26402 7.59661 2.38548L20.4086 9.35258Z"
+                  stroke-width="1.5" />
+              </svg>
+              <span class="hero__img-btn-text">О школе</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 

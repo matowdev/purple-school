@@ -73,12 +73,6 @@ svg {
   clip: rect(0, 0, 0, 0);
 }
 
-.reset-btn {
-  border: none;
-  padding: 0;
-  background-color: transparent;
-}
-
 .section-title {
   margin-bottom: 32px;
   font-weight: var(--regular);

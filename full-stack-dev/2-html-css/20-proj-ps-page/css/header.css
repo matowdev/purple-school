@@ -15,7 +15,7 @@
   flex-shrink: 0;
   margin-right: 40px;
   margin-left: -10px;
-  border-radius: var(--main-radius);
+  border-radius: var(--secondary-br-radius);
   padding-left: 10px;
   outline: none;
   transition-property: box-shadow;
@@ -25,7 +25,7 @@
 }
 
 .header__link-logo:focus-visible:not(:hover) {
-  box-shadow: var(--main-shadow);
+  box-shadow: var(--gray-shadow);
 }
 
 .header__logo {
@@ -44,7 +44,7 @@
 
 .header__nav-item {
   flex-shrink: 0;
-  border-radius: var(--main-radius);
+  border-radius: var(--secondary-br-radius);
   padding: 8px 16px;
   cursor: pointer;
   outline: none;
@@ -55,7 +55,7 @@
 }
 
 .header__nav-item:focus-visible:not(:hover):not([data-status="active"]) {
-  box-shadow: var(--main-shadow);
+  box-shadow: var(--gray-shadow);
 }
 
 .header__nav-item:active {
@@ -63,7 +63,7 @@
 }
 
 .header__nav-item_active:not(:hover) {
-  box-shadow: var(--main-shadow);
+  box-shadow: var(--gray-shadow);
 }
 
 .header__nav-link {
@@ -82,10 +82,10 @@
   flex-shrink: 0;
   column-gap: 8px;
   border: none;
-  border-radius: var(--main-radius);
+  border-radius: var(--secondary-br-radius);
   padding: 8px 16px;
   width: 100%;
-  max-width: 100px;
+  max-width: 110px;
   font-family: var(--fira-sans);
   color: var(--white);
   cursor: pointer;
@@ -97,7 +97,7 @@
 }
 
 .header__login-btn:focus-visible:not(:hover) {
-  box-shadow: var(--main-shadow);
+  box-shadow: var(--gray-shadow);
 }
 
 .header__login-btn:active {
@@ -122,7 +122,7 @@
   align-items: center;
   flex-shrink: 0;
   border: none;
-  border-radius: var(--main-radius);
+  border-radius: var(--secondary-br-radius);
   padding: 8px 16px;
   width: 100%;
   max-width: 60px;
@@ -137,7 +137,7 @@
 }
 
 .header__burger-btn:focus-visible:not(:hover) {
-  box-shadow: var(--main-shadow);
+  box-shadow: var(--gray-shadow);
 }
 
 .header__burger-btn:active {
