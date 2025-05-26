@@ -23,7 +23,8 @@
           <ul class="header__nav-list">
             <li class="header__nav-item header__nav-item_active" data-status="active" tabindex="0"><a
                 class="header__nav-link" tabindex="-1" href="#">Курсы</a></li>
-            <li class="header__nav-item" tabindex="0"><a class="header__nav-link" tabindex="-1" href="#">О школе</a>
+            <li class="header__nav-item" tabindex="0"><a class="header__nav-link" tabindex="-1"
+                href="#">О&nbsp;школе</a>
             </li>
             <li class="header__nav-item" tabindex="0"><a class="header__nav-link" tabindex="-1" href="#">Блог</a></li>
             <li class="header__nav-item" tabindex="0"><a class="header__nav-link" tabindex="-1" href="#">База знаний</a>
@@ -42,7 +43,7 @@
             <span class="header__login-btn-text" id="login-text">Вход</span>
           </button>
           <button class="btn-reset btn header__burger-btn" id="burger-btn" type="button" aria-label="Открыть меню"
-            title="Открыть меню">
+            aria-expanded="false" aria-haspopup="true" title="Открыть меню">
             <svg class="header__burger-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
               <path d="M20 7L4 7" stroke-width="1.5" stroke-linecap="round" />
               <path d="M20 12L4 12" stroke-width="1.5" stroke-linecap="round" />
@@ -65,8 +66,8 @@
             <div class="hero__btns-wrap">
               <a class="btn btn-fill hero__select-btn" href="#" role="button" aria-label="Выбрать курс">Выбрать
                 курс</a>
-              <a class="btn btn-stroke hero__about-btn" href="#" role="button" aria-label="Информация о школе">О
-                школе</a>
+              <a class="btn btn-stroke hero__about-btn" href="#" role="button"
+                aria-label="Информация о школе">О&nbsp;школе</a>
             </div>
           </div>
           <div class="hero__img-video-wrap">
@@ -79,13 +80,85 @@
                   d="M20.4086 9.35258C22.5305 10.5065 22.5305 13.4935 20.4086 14.6474L7.59662 21.6145C5.53435 22.736 3 21.2763 3 18.9671L3 5.0329C3 2.72368 5.53435 1.26402 7.59661 2.38548L20.4086 9.35258Z"
                   stroke-width="1.5" />
               </svg>
-              <span class="hero__img-btn-text">О школе</span>
+              <span class="hero__img-btn-text">О&nbsp;школе</span>
             </button>
           </div>
         </div>
       </div>
     </section>
+    <!-- 2. -->
   </main>
+
+  <footer class="footer page__footer" id="footer" aria-label="Нижний колонтитул страницы (подвал сайта)">
+    <div class="container footer__container" aria-labelledby="footer">
+      <div class="footer__wrap">
+        <div class="footer__logo-links-wrap">
+          <a class="footer__link-logo" href="#" aria-label="Вернуться/обновить страницу"
+            title="Вернуться/обновить страницу">
+            <img class="footer__logo" src="./images/logo.svg" width="233" height="61" alt="Логотип: PurpleSchool">
+          </a>
+          <ul class="footer__social-list social-links" aria-label="Социальные ссылки PurpleSchool">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://www.youtube.com/@PurpleSchool/videos" target="_blank"
+                rel="noopener noreferrer">
+                <img class="footer__social-img" src="./images/youtube-icon.svg" width="24" height="24"
+                  alt="Логотип: Youtube" aria-label="Youtube канал PurpleSchool">
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://t.me/s/purple_code_channel" target="_blank"
+                rel="noopener noreferrer">
+                <img class="footer__social-img" src="./images/telegram-icon.svg" width="24" height="24"
+                  alt="Логотип: Telegram" aria-label="Telegram канал PurpleSchool">
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="https://vk.com/purpleschool_ru" target="_blank"
+                rel="noopener noreferrer">
+                <img class="footer__social-img" src="./images/vk-icon.svg" width="24" height="24" alt="Логотип: VK"
+                  aria-label="VKontakte PurpleSchool">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__columns-wrap">
+          <div class="footer__column first-column">
+            <h3 class="footer__column-title">Меню</h3>
+            <ul class="footer__column-list nav-list" role="navigation"
+              aria-label="Дополнительное меню сайта (дублирование основного)">
+              <li class="footer__column-item"><a class="footer__column-item-link" href="#">Курсы</a></li>
+              <li class="footer__column-item"><a class="footer__column-item-link" href="#">О&nbsp;школе</a></li>
+              <li class="footer__column-item"><a class="footer__column-item-link" href="#">Блог</a></li>
+              <li class="footer__column-item"><a class="footer__column-item-link" href="#">База знаний</a></li>
+            </ul>
+          </div>
+          <div class="footer__column second-column">
+            <h3 class="footer__column-title">Документы</h3>
+            <ul class="footer__column-list" aria-label="Документы для пользователей (Оферта, конфиденциальность)">
+              <li class="footer__column-item"><a class="footer__column-item-link" href="#">Договор Оферта</a></li>
+              <li class="footer__column-item"><a class="footer__column-item-link" href="#">Политика
+                  конфиденциальности</a></li>
+            </ul>
+          </div>
+          <div class="footer__column third-column">
+            <h3 class="footer__column-title">Реквизиты</h3>
+            <ul class="footer__column-list" aria-label="Реквизиты для пользователей (ФИО, ИНН, почта)">
+              <li class="footer__column-item"><span class="footer__column-item-text">ИП&nbsp;Ларичев Антон
+                  Андреевич</span></li>
+              <li class="footer__column-item"><span class="footer__column-item-text">ИНН 773373765379</span>
+              </li>
+              <li class="footer__column-item"><a class="footer__column-item-link"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@purpleschool.ru">contact@purpleschool.ru</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright-wrap">
+          <span class="footer__copyright-text">PurpleSchool &copy; 2020 - 2025 Все права защищены</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
