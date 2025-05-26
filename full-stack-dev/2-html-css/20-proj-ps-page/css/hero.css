@@ -16,6 +16,7 @@
   flex-direction: column;
   flex-shrink: 0;
   row-gap: 32px;
+  margin-right: 40px;
   width: 550px;
 }
 
@@ -24,7 +25,7 @@
   max-width: 545px;
   font-weight: var(--bold);
   font-size: 54px;
-  line-height: 100%;
+  line-height: 110%;
 }
 
 .hero__title_gradient {
@@ -35,16 +36,18 @@
 
 .hero__btns-wrap {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  column-gap: 32px;
+  gap: 20px 32px;
+}
+
+.hero__select-btn,
+.hero__about-btn {
+  flex-shrink: 0;
 }
 
 .hero__select-btn {
   max-width: 190px;
-  transition-property: color, box-shadow;
-  transition-duration: var(--short);
-  transition-timing-function: ease;
-  will-change: color, box-shadow;
 }
 
 .hero__select-btn:focus-visible:not(:hover) {
@@ -57,10 +60,6 @@
 
 .hero__about-btn {
   max-width: 150px;
-  transition-property: color, box-shadow;
-  transition-duration: var(--short);
-  transition-timing-function: ease;
-  will-change: color, box-shadow;
 }
 
 .hero__about-btn:focus-visible:not(:hover) {
@@ -73,7 +72,6 @@
 
 .hero__img-video-wrap {
   position: relative;
-  flex-shrink: 0;
   border-radius: var(--main-br-radius);
   width: 458px;
   text-align: center;
@@ -84,19 +82,14 @@
 
 .hero__img-video-wrap::before {
   content: "";
-  /* Обязательное свойство для псевдо-элементов */
   position: absolute;
-  /* Позиционируем относительно .image-container */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 30%;
-  /* Высота оверлея (например, 50% от высоты изображения). Настройте по вкусу. */
-
-  /* Альтернатива: лёгкий тёмный оверлей */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
-
   z-index: 1;
+  width: 100%;
+  /* высота оверлея (например, 30% от высоты изображения). */
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
 
@@ -104,13 +97,166 @@
   display: block
 }
 
+.hero__img-btn {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  column-gap: 8px;
+  max-width: 170px;
+  background-color: var(--bg-section);
+}
+
+.hero__img-btn:focus-visible:not(:hover) {
+  box-shadow: var(--white-shadow);
+}
+
+.hero__img-btn:active {
+  color: var(--white);
+}
+
+.hero__img-btn-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.hero__img-btn-text {
+  margin-bottom: -2px;
+  text-align: center;
+  color: currentColor;
+}
+
 /* media queries, any-hover */
 
-@media (max-width: 1200px) {}
+@media (max-width: 1400px) {
+  .hero__wrap {
+    justify-content: center;
+  }
 
-@media (max-width: 992px) {}
+  .hero__content-wrap {
+    margin-right: 50px;
+  }
+}
 
-@media (max-width: 576px) {}
+@media (max-width: 1200px) {
+  .hero__wrap {
+    justify-content: center;
+  }
+
+  .hero__content-wrap {
+    flex-shrink: 1;
+    margin-right: 40px;
+    max-width: 500px;
+  }
+
+  .hero__title {
+    max-width: 450px;
+    font-size: 45px;
+  }
+
+  .hero__img-video-wrap {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    min-height: auto;
+  }
+
+  .hero__wrap {
+    flex-direction: column;
+  }
+
+  .hero__content-wrap {
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .hero__title {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero__btns-wrap {
+    justify-content: center;
+    width: 100%;
+    max-width: 390px;
+  }
+
+  .hero__select-btn,
+  .hero__about-btn {
+    padding: 12px 24px;
+  }
+
+  .hero__img-video-wrap {
+    border-radius: 15px;
+    width: 95%;
+  }
+
+  .hero__img {
+    width: auto;
+  }
+
+  .hero__img-btn {
+    flex-shrink: 0;
+    padding: 12px 24px;
+    max-width: 155px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background: var(--bg-section);
+  }
+
+  .hero__content-wrap {
+    row-gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .hero__title {
+    font-size: 30px;
+  }
+
+  .hero__btns-wrap {
+    column-gap: 16px;
+  }
+
+  .hero__select-btn {
+    max-width: 165px;
+  }
+
+  .hero__about-btn {
+    max-width: 130px;
+  }
+
+  .hero__img-video-wrap {
+    width: 100%
+  }
+
+  .hero__img-btn {
+    max-width: 145px;
+  }
+}
 
 @media (any-hover: hover) {
   .hero__select-btn:hover:not(:active) {
@@ -121,7 +267,7 @@
     color: var(--specific-gray);
   }
 
-  .header__burger-btn:hover:not(:active) {
+  .hero__img-btn:hover:not(:active) {
     color: var(--specific-gray);
   }
 }
