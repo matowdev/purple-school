@@ -61,7 +61,7 @@
       <div class="container hero__container">
         <div class="hero__wrap">
           <div class="hero__content-wrap">
-            <h1 class="hero__title">Доступные курсы по <span class="hero__title_gradient">Разработке и DevOps</span>
+            <h1 class="hero__title">Доступные курсы по <span class="hero__title-gradient">Разработке и DevOps</span>
             </h1>
             <div class="hero__btns-wrap">
               <a class="btn btn-fill hero__select-btn" href="#" role="button" aria-label="Выбрать курс">Выбрать
@@ -86,7 +86,6 @@
         </div>
       </div>
     </section>
-    <!-- 2. -->
   </main>
 
   <footer class="footer page__footer" id="footer" aria-label="Нижний колонтитул страницы (подвал сайта)">
@@ -124,7 +123,8 @@
         <div class="footer__columns-wrap">
           <div class="footer__column first-column">
             <h3 class="footer__column-title">Меню</h3>
-            <ul class="footer__column-list nav-list" role="navigation"
+            <!-- именно role="menu" а не "navigation" (для валидатора) -->
+            <ul class="footer__column-list nav-list" role="menu"
               aria-label="Дополнительное меню сайта (дублирование основного)">
               <li class="footer__column-item"><a class="footer__column-item-link" href="#">Курсы</a></li>
               <li class="footer__column-item"><a class="footer__column-item-link" href="#">О&nbsp;школе</a></li>
@@ -135,9 +135,11 @@
           <div class="footer__column second-column">
             <h3 class="footer__column-title">Документы</h3>
             <ul class="footer__column-list" aria-label="Документы для пользователей (Оферта, конфиденциальность)">
-              <li class="footer__column-item"><a class="footer__column-item-link" href="#">Договор Оферта</a></li>
-              <li class="footer__column-item"><a class="footer__column-item-link" href="#">Политика
-                  конфиденциальности</a></li>
+              <li class="footer__column-item"><a class="footer__column-item-link" href="#" target="_blank"
+                  rel="noopener noreferrer">Договор Оферта</a></li>
+              <li class="footer__column-item"><a class="footer__column-item-link"
+                  href="https://cdn-bucket.hb.bizmrg.com/purple-images/documents/polytics.pdf" target="_blank"
+                  rel="noopener noreferrer">Политика конфиденциальности</a></li>
             </ul>
           </div>
           <div class="footer__column third-column">

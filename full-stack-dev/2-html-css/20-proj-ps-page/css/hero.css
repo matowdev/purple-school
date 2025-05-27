@@ -28,7 +28,7 @@
   line-height: 110%;
 }
 
-.hero__title_gradient {
+.hero__title-gradient {
   background: var(--main-gradient);
   -webkit-text-fill-color: transparent;
   background-clip: text;
