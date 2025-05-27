@@ -1,5 +1,9 @@
 html {
   box-sizing: border-box;
+  /* оптимизация шрифта при рендеринге */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 *,
@@ -74,9 +78,9 @@ svg {
 }
 
 .section-title {
-  margin-bottom: 32px;
   font-weight: var(--regular);
   font-size: 46px;
+  line-height: 100%;
 }
 
 /* media queries */

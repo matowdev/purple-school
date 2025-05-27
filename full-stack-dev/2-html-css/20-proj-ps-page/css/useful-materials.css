@@ -1,0 +1,10 @@
+.useful-materials {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.useful-materials__content-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
+}
