@@ -77,6 +77,10 @@ svg {
   clip: rect(0, 0, 0, 0);
 }
 
+.pre-section-title {
+  color: var(--pink);
+}
+
 .section-title {
   font-weight: var(--regular);
   font-size: 46px;
@@ -85,4 +89,18 @@ svg {
 
 /* media queries */
 
-/* @media (max-width: 1400px) {} */
+@media (max-width: 1200px) {
+  .section-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 34px;
+  }
+
+  .pre-section-title {
+    font-size: 16px;
+  }
+}
