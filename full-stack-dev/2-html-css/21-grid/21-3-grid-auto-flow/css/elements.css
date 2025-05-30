@@ -1,0 +1,25 @@
+.elements-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 65px;
+  /* row - идёт по умолчанию, т.е. поток элементов идёт вниз.. column - в право */
+  grid-auto-flow: column;
+  gap: 10px;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: grid;
+  place-items: center; */
+  border: 2px solid var(--purple);
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color var(--short) ease;
+}
+
+.element:hover {
+  color: var(--specific-gray);
+}
