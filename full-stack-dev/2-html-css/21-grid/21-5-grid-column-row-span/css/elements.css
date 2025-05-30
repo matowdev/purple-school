@@ -1,0 +1,31 @@
+.elements-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: grid;
+  place-items: center; */
+  border: 2px solid var(--purple);
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color var(--short) ease;
+}
+
+.el-eleven {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.el-eighteen {
+  grid-column: span 4;
+}
+
+.element:hover {
+  color: var(--specific-gray);
+}
