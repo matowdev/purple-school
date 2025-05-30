@@ -1,0 +1,25 @@
+.elements-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  /* ! без указания высоты (height/min-height) для grid-контейнера, единицы fr для grid-template-rows отрабатывать не будут */
+  height: 400px;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: grid;
+  place-items: center; */
+  border: 2px solid var(--purple);
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color var(--short) ease;
+}
+
+.element:hover {
+  color: var(--specific-gray);
+}
