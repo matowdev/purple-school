@@ -1,0 +1,28 @@
+.elements-wrap {
+  display: grid;
+  grid-template-columns: [s-left sidebar-start] 200px 200px [sidebar-end] 1fr 1fr [s-right];
+  grid-template-rows: [s-start] repeat(5, minmax(65px, auto)) [s-end];
+  gap: 10px;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: grid;
+  place-items: center; */
+  border: 2px solid var(--purple);
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color var(--short) ease;
+}
+
+.el-nine {
+  grid-column: s-left / sidebar-end;
+  grid-row: s-start / s-end;
+}
+
+.element:hover {
+  color: var(--specific-gray);
+}
