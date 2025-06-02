@@ -1,0 +1,23 @@
+.elements-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-template-columns: auto 100px 100px 100px; */
+  gap: 10px;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: grid;
+  place-items: center; */
+  border: 2px solid var(--purple);
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color var(--short) ease;
+}
+
+.element:hover {
+  color: var(--specific-gray);
+}
