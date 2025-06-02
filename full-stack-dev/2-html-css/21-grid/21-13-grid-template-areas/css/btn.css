@@ -1,0 +1,31 @@
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: var(--main-br-radius);
+  padding: 16px 32px;
+  width: 100%;
+  max-width: 160px;
+  font-family: var(--fira-sans);
+  text-align: center;
+  color: var(--white);
+  cursor: pointer;
+  outline: none;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: var(--short);
+  transition-timing-function: ease;
+  will-change: color, background-color, box-shadow;
+}
+
+.btn-fill {
+  background-color: var(--bg-btn);
+}
+
+.btn-stroke {
+  box-shadow: var(--gray-shadow);
+}
