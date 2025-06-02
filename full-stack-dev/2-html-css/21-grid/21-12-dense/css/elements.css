@@ -1,0 +1,35 @@
+.elements-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-auto-flow: dense;
+  gap: 10px;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: grid;
+  place-items: center; */
+  border: 2px solid var(--purple);
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color var(--short) ease;
+}
+
+.el-three {
+  grid-column: 1 / -1;
+}
+
+.el-four {
+  grid-column: span 2;
+}
+
+.el-five {
+  grid-column: span 2;
+}
+
+.element:hover {
+  color: var(--specific-gray);
+}
