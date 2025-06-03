@@ -1,0 +1,5 @@
+.course-card {
+  display: flex;
+  border-radius: var(--main-br-radius);
+  background: var(--bg-card);
+}
