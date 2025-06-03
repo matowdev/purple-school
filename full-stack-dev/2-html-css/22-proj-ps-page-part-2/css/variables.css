@@ -1,0 +1,70 @@
+:root {
+  /* sizes */
+  --page-min-width: 360px;
+  --container-max-width: 1520px;
+  --container-padding: 150px;
+
+  /* fonts */
+  --fira-sans: "Fira Sans";
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --default-fs: 18px;
+  --default-lh: 120%;
+
+  /* colors */
+  --black: #050038;
+  --dark: #4a4863;
+  --gray: #c6c6c6;
+  --specific-gray: #afb2bf;
+  --stroke-gray: #4D5064;
+  --white: #FAFAFA;
+  --pink: #E47AD5;
+  --bg-page: #16171D;
+  --bg-section: #1E1F29;
+  --bg-post: #1E1F29;
+  --bg-field: #2E2D3D;
+  --bg-btn: #6C38CC;
+  --bg-stroke-btn: #2E2D3D;
+  --bg-footer: #101114;
+
+  /* style */
+  --main-br-radius: 10px;
+  --secondary-br-radius: 8px;
+  --white-shadow: 0 0 0 2px var(--white);
+  --gray-shadow: 0 0 0 2px var(--stroke-gray);
+  --main-gradient: linear-gradient(93deg, #D77BE5 9.26%, #BE63E5 42.32%, #6C38CC 104.58%);
+
+  /* transitions */
+  --short: 0.3s;
+}
+
+/* media queries */
+
+@media (max-width: 1400px) {
+  :root {
+    --container-padding: 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --container-padding: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --default-fs: 16px;
+    --default-lh: 100%;
+  }
+}

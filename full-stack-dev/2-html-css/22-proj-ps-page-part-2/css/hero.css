@@ -1,0 +1,273 @@
+.hero {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  min-height: 420px;
+  background: var(--bg-section);
+}
+
+.hero__content-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__heading-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  row-gap: 32px;
+  margin-right: 40px;
+  width: 550px;
+}
+
+.hero__title {
+  width: 100%;
+  max-width: 545px;
+  font-weight: var(--bold);
+  font-size: 54px;
+  line-height: 110%;
+}
+
+.hero__title-gradient {
+  background: var(--main-gradient);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__btns-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px 32px;
+}
+
+.hero__select-btn,
+.hero__about-btn {
+  flex-shrink: 0;
+}
+
+.hero__select-btn {
+  max-width: 190px;
+}
+
+.hero__select-btn:focus-visible:not(:hover) {
+  box-shadow: var(--white-shadow);
+}
+
+.hero__select-btn:active {
+  color: var(--white);
+}
+
+.hero__about-btn {
+  max-width: 150px;
+}
+
+.hero__about-btn:focus-visible:not(:hover) {
+  box-shadow: var(--white-shadow);
+}
+
+.hero__about-btn:active {
+  color: var(--white);
+}
+
+.hero__img-video-wrap {
+  position: relative;
+  border-radius: var(--main-br-radius);
+  width: 458px;
+  text-align: center;
+  background-color: var(--dark);
+  box-shadow: 0px 15px 35px 5px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.hero__img-video-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  /* высота оверлея (например, 30% от высоты изображения). */
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+}
+
+.hero__img {
+  display: block
+}
+
+.hero__img-btn {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  column-gap: 8px;
+  max-width: 170px;
+  background-color: var(--bg-section);
+}
+
+.hero__img-btn:focus-visible:not(:hover) {
+  box-shadow: var(--white-shadow);
+}
+
+.hero__img-btn:active {
+  color: var(--white);
+}
+
+.hero__img-btn-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.hero__img-btn-text {
+  margin-bottom: -2px;
+  text-align: center;
+  color: currentColor;
+}
+
+/* media queries, any-hover */
+
+@media (max-width: 1400px) {
+  .hero__content-wrap {
+    justify-content: center;
+  }
+
+  .hero__heading-wrap {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero__content-wrap {
+    justify-content: center;
+  }
+
+  .hero__heading-wrap {
+    flex-shrink: 1;
+    margin-right: 40px;
+    max-width: 500px;
+  }
+
+  .hero__title {
+    max-width: 450px;
+    font-size: 45px;
+  }
+
+  .hero__img-video-wrap {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    min-height: auto;
+  }
+
+  .hero__content-wrap {
+    flex-direction: column;
+  }
+
+  .hero__heading-wrap {
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .hero__title {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero__btns-wrap {
+    justify-content: center;
+    width: 100%;
+    max-width: 390px;
+  }
+
+  .hero__select-btn,
+  .hero__about-btn {
+    padding: 12px 24px;
+  }
+
+  .hero__img-video-wrap {
+    border-radius: 15px;
+    width: 95%;
+  }
+
+  .hero__img {
+    width: auto;
+  }
+
+  .hero__img-btn {
+    flex-shrink: 0;
+    padding: 12px 24px;
+    max-width: 155px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background: var(--bg-section);
+  }
+
+  .hero__heading-wrap {
+    row-gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .hero__title {
+    font-size: 30px;
+  }
+
+  .hero__btns-wrap {
+    column-gap: 16px;
+  }
+
+  .hero__select-btn {
+    max-width: 165px;
+  }
+
+  .hero__about-btn {
+    max-width: 130px;
+  }
+
+  .hero__img-video-wrap {
+    width: 100%
+  }
+
+  .hero__img-btn {
+    max-width: 145px;
+  }
+}
+
+@media (any-hover: hover) {
+  .hero__select-btn:hover:not(:active) {
+    color: var(--specific-gray);
+  }
+
+  .hero__about-btn:hover:not(:active) {
+    color: var(--specific-gray);
+  }
+
+  .hero__img-btn:hover:not(:active) {
+    color: var(--specific-gray);
+  }
+}
