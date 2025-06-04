@@ -148,7 +148,7 @@
 
 @media (any-hover: hover) {
   .useful-post__read-btn:hover:not(:active) {
-    color: var(--specific-gray);
+    color: var(--pink);
     background-color: var(--bg-stroke-btn);
   }
 }

@@ -52,6 +52,11 @@
 /* media queries, any-hover */
 
 @media (max-width: 1200px) {
+  .useful-materials {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
   .useful-materials__title {
     margin-top: -20px;
   }
@@ -100,7 +105,7 @@
 
 @media (any-hover: hover) {
   .useful-materials__all-btn:hover:not(:active) {
-    color: var(--specific-gray);
+    color: var(--pink);
     background-color: var(--bg-stroke-btn);
   }
 }

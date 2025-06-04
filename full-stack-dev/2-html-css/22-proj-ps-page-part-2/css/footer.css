@@ -104,10 +104,17 @@
 
 /* media queries, any-hover */
 
+@media (max-width: 1200px) {
+  .footer {
+    padding-bottom: 60px;
+  }
+
+}
+
 @media (max-width: 992px) {
   .footer {
     padding-top: 35px;
-    padding-bottom: 60px;
+    padding-bottom: 35px;
   }
 
   .footer__columns-wrap {
@@ -116,10 +123,6 @@
 }
 
 @media (max-width: 768px) {
-  .footer {
-    padding-bottom: 35px;
-  }
-
   .footer__wrap {
     row-gap: 35px;
   }

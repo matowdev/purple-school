@@ -55,7 +55,7 @@
 }
 
 .hero__select-btn:active {
-  color: var(--white);
+  color: var(--specific-gray);
 }
 
 .hero__about-btn {
@@ -73,7 +73,6 @@
 .hero__img-video-wrap {
   position: relative;
   border-radius: var(--main-br-radius);
-  width: 458px;
   text-align: center;
   background-color: var(--dark);
   box-shadow: 0px 15px 35px 5px rgba(0, 0, 0, 0.35);
@@ -144,6 +143,10 @@
 }
 
 @media (max-width: 1200px) {
+  .hero {
+    padding-bottom: 75px;
+  }
+
   .hero__content-wrap {
     justify-content: center;
   }
@@ -260,14 +263,16 @@
 
 @media (any-hover: hover) {
   .hero__select-btn:hover:not(:active) {
-    color: var(--specific-gray);
+    background-color: var(--bg-btn-hover);
   }
 
   .hero__about-btn:hover:not(:active) {
-    color: var(--specific-gray);
+    color: var(--pink);
+    background-color: var(--bg-stroke-btn);
   }
 
   .hero__img-btn:hover:not(:active) {
-    color: var(--specific-gray);
+    color: var(--pink);
+    background-color: var(--bg-stroke-btn);
   }
 }
