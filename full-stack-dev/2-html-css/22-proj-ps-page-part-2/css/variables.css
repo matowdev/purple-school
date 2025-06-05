@@ -45,6 +45,7 @@
 
   /* transitions */
   --short: 0.3s;
+  --short-stars: 0.1s;
 }
 
 /* media queries */

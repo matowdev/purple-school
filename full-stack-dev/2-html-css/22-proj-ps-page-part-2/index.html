@@ -95,32 +95,32 @@
             <h2 class="section-title catalog__title">Каталог курсов</h2>
             <ul class="catalog__type-list tabs-list" role="tablist" aria-label="Список возможных направлений"
               title="Выбрать направление">
-              <li class="catalog__type-item" role="presentation">
+              <li class="catalog__type-item type-item-all">
                 <button class="btn-reset btn btn-fill catalog__type-btn active" id="all" data-path="one"
                   data-status="active" role="tab" aria-selected="true">Все</button>
               </li>
-              <li class="catalog__type-item" role="presentation">
+              <li class="catalog__type-item type-item-frontend">
                 <button class="btn-reset btn btn-stroke catalog__type-btn" id="frontend" data-path="two"
                   role="tab">Frontend</button>
               </li>
-              <li class="catalog__type-item" role="presentation">
+              <li class="catalog__type-item type-item-backend">
                 <button class="btn-reset btn btn-stroke catalog__type-btn" id="backend" data-path="three"
                   role="tab">Backend</button>
               </li>
-              <li class="catalog__type-item" role="presentation">
+              <li class="catalog__type-item type-item-devops">
                 <button class="btn-reset btn btn-stroke catalog__type-btn" id="devops" data-path="four"
                   role="tab">DevOps</button>
               </li>
-              <li class="catalog__type-item" role="presentation">
+              <li class="catalog__type-item type-item-soft-kills">
                 <button class="btn-reset btn btn-stroke catalog__type-btn" id="soft-kills" data-path="five"
                   role="tab">Soft Skills</button>
               </li>
             </ul>
           </div>
           <div class="catalog__cards-wrap active" data-target="one">
-            <ul class="catalog__cards-list">
+            <ul class="catalog__cards-list" aria-label="Презентация курсов">
               <li class="catalog__cards-item">
-                <article class="course-card catalog__cards-article">
+                <article class="course-card catalog__cards-article" aria-label="Превью/карточка курса">
                   <div class="course-card__content-wrap">
                     <div class="course-card__img-wrap">
                       <img class="course-card__img" src="./images/card-img.jpg" width="360" height="194"
@@ -146,7 +146,7 @@
                 </article>
               </li>
               <li class="catalog__cards-item">
-                <article class="course-card catalog__cards-article">
+                <article class="course-card catalog__cards-article" aria-label="Превью/карточка курса">
                   <div class="course-card__content-wrap">
                     <div class="course-card__img-wrap">
                       <img class="course-card__img" src="./images/card-img.jpg" width="360" height="194"
@@ -172,7 +172,7 @@
                 </article>
               </li>
               <li class="catalog__cards-item">
-                <article class="course-card catalog__cards-article">
+                <article class="course-card catalog__cards-article" aria-label="Превью/карточка курса">
                   <div class="course-card__content-wrap">
                     <div class="course-card__img-wrap">
                       <img class="course-card__img" src="./images/card-img.jpg" width="360" height="194"
@@ -198,7 +198,7 @@
                 </article>
               </li>
               <li class="catalog__cards-item">
-                <article class="course-card catalog__cards-article">
+                <article class="course-card catalog__cards-article" aria-label="Превью/карточка курса">
                   <div class="course-card__content-wrap">
                     <div class="course-card__img-wrap">
                       <img class="course-card__img" src="./images/card-img.jpg" width="360" height="194"
@@ -224,7 +224,7 @@
                 </article>
               </li>
               <li class="catalog__cards-item">
-                <article class="course-card catalog__cards-article">
+                <article class="course-card catalog__cards-article" aria-label="Превью/карточка курса">
                   <div class="course-card__content-wrap">
                     <div class="course-card__img-wrap">
                       <img class="course-card__img" src="./images/card-img.jpg" width="360" height="194"
@@ -254,6 +254,99 @@
         </div>
       </div>
     </section>
+    <!-- 3. trust -->
+    <section class="trust main__trust" id="trust" aria-label="Секция: Доверие/рейтинг школы">
+      <div class="container trust__container">
+        <div class="trust__content-wrap">
+          <div class="trust__heading-wrap">
+            <span class="pre-section-title trust__pre-title">О&nbsp;школе</span>
+            <h2 class="section-title trust__title">Нам доверяют</h2>
+            <p class="trust__info-text">Основатель школы и автор Антон Ларичев занимается разработкой уже более 13 лет и
+              прошёл путь от разработчика до CTO. В курсах даются актуальные материалы без воды с опытом реальных
+              проектов и практическим закреплением материала.</p>
+          </div>
+          <div class="trust__features-rating-wrap">
+            <div class="trust__features-wrap">
+              <ul class="features features-list trust__features-list" aria-label="Список особенностей школы">
+                <li class="features__item">
+                  <span class="features__info">15 000</span>
+                  <p class="features__text">учеников по всему миру</p>
+                </li>
+                <li class="features__item">
+                  <span class="features__info">30 дней</span>
+                  <p class="features__text">гарантия возврата денег</p>
+                </li>
+                <li class="features__item">
+                  <span class="features__info">90%</span>
+                  <p class="features__text">студентов рекомендуют курсы</p>
+                </li>
+              </ul>
+            </div>
+            <div class="trust__rating-wrap">
+              <h3 class="trust__rating-title">Рейтинги на независимых платформах</h3>
+              <ul class="rating rating-list trust__rating-list" aria-label="Рейтинг школы">
+                <li class="rating__item rating-courses-top" aria-label="Рейтинг на платформе CoursesTop">
+                  <span class="rating__score">4.8</span>
+                  <div class="rating__platform-wrap">
+                    <img class="rating__logo" src="./images/courses-top-logo.svg" width="124" height="28"
+                      alt="Логотип: КурсесТоп">
+                    <div class="rating__stars-wrap">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Рейтинг 5 из 5" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                    </div>
+                  </div>
+                </li>
+                <li class="rating__item rating-stepik" aria-label="Рейтинг на платформе Stepik">
+                  <span class="rating__score">4.8</span>
+                  <div class="rating__platform-wrap">
+                    <img class="rating__logo" src="./images/stepik-logo.svg" width="114" height="29"
+                      alt="Логотип: Stepik">
+                    <div class="rating__stars-wrap">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Рейтинг 5 из 5" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                    </div>
+                  </div>
+                </li>
+                <li class="rating__item rating-udemy" aria-label="Рейтинг на платформе Udemy">
+                  <span class="rating__score">4.7</span>
+                  <div class="rating__platform-wrap">
+                    <img class="rating__logo" src="./images/udemy-logo.svg" width="99" height="34" alt="Логотип: Udemy">
+                    <div class="rating__stars-wrap">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Рейтинг 5 из 5" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                      <img class="rating__star-img" src="./images/star-icon.svg" alt="Иконка: Полная звезда" width="16"
+                        height="17">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- 4. useful-materials -->
     <section class="useful-materials main__useful-materials" id="useful-materials"
       aria-label="Секция: Полезные материалы">
@@ -264,7 +357,8 @@
             <h2 class="section-title useful-materials__title">Полезные материалы</h2>
             <p class="useful-materials__info-text">Каждую неделю мы публикуем новости, обновления, а так же
               дополнительные полезные материалы в социальных сетях:</p>
-            <ul class="social-links useful-materials__social-list" aria-label="Социальные ссылки PurpleSchool">
+            <ul class="social-links social-links-list useful-materials__social-list"
+              aria-label="Социальные ссылки PurpleSchool">
               <li class="social-links__item useful-materials__social-item">
                 <a class="social-links__link useful-materials__social-link"
                   href="https://www.youtube.com/@PurpleSchool/videos" target="_blank" rel="noopener noreferrer">
@@ -289,9 +383,9 @@
             </ul>
           </div>
           <div class="useful-materials__posts-wrap">
-            <ul class="useful-materials__posts-list">
+            <ul class="useful-materials__posts-list" aria-label="Список полезных постов">
               <li class="useful-materials__posts-item">
-                <article class="useful-post useful-materials__article">
+                <article class="useful-post useful-materials__article" aria-label="Полезный пост">
                   <div class="useful-post__content-wrap">
                     <div class="useful-post__info-wrap">
                       <span class="useful-post__date">06 мая 2025</span>
@@ -313,7 +407,7 @@
                 </article>
               </li>
               <li class="useful-materials__posts-item">
-                <article class="useful-post useful-materials__article">
+                <article class="useful-post useful-materials__article" aria-label="Полезный пост">
                   <div class="useful-post__content-wrap">
                     <div class="useful-post__info-wrap">
                       <span class="useful-post__date">06 мая 2025</span>
@@ -335,7 +429,7 @@
                 </article>
               </li>
               <li class="useful-materials__posts-item">
-                <article class="useful-post useful-materials__article">
+                <article class="useful-post useful-materials__article" aria-label="Полезный пост">
                   <div class="useful-post__content-wrap">
                     <div class="useful-post__info-wrap">
                       <span class="useful-post__date">06 мая 2025</span>
