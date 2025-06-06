@@ -17,7 +17,10 @@
       <div class="header__wrap">
         <a class="header__link-logo" href="#" aria-label="Вернуться/обновить страницу"
           title="Вернуться/обновить страницу">
-          <img class="header__logo" src="./images/logo.svg" width="233" height="61" alt="Логотип: PurpleSchool">
+          <picture class="header__picture-logo">
+            <source srcset="./images/logo-mobile.svg" media="(max-width: 576px)">
+            <img class="header__logo" src="./images/logo.svg" width="233" height="61" alt="Логотип: PurpleSchool">
+          </picture>
         </a>
         <nav class="header__nav" aria-label="Основное меню" title="Основное меню">
           <ul class="header__nav-list">
@@ -71,8 +74,11 @@
             </div>
           </div>
           <div class="hero__img-video-wrap">
-            <img class="hero__img" src="./images/hero-img.jpg" width="458" height="258"
-              alt="Изображение/превью: Руководитель школы - Антон Ларичев">
+            <picture class="hero__picture-img">
+              <source srcset="./images/hero-img-mobile.jpg" media="(max-width: 576px)">
+              <img class="hero__img" src="./images/hero-img.jpg" width="458" height="258"
+                alt="Изображение/превью: Руководитель школы - Антон Ларичев">
+            </picture>
             <button class="btn-reset btn hero__img-btn" id="img-btn" type="button" aria-label="Посмотреть видео о школе"
               title="Запустить видео">
               <svg class="hero__img-btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">

@@ -93,7 +93,8 @@
 }
 
 .hero__img {
-  display: block
+  display: block;
+  object-fit: cover;
 }
 
 .hero__img-btn {

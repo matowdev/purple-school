@@ -30,6 +30,7 @@
 
 .header__logo {
   display: block;
+  object-fit: cover;
 }
 
 .header__nav {
