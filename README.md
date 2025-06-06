@@ -18,7 +18,8 @@
 
 ### Block: Html and CSS
 
-- [**proj. ...**]()
+- [**proj. Miro's clone (without @daptive)**](https://matowdev.github.io/purple-school/full-stack-dev/2-html-css/16-adaptive-layout/16-12-ex-create-clone-miro-5)
+- [**proj. PurpleSchool page**](https://matowdev.github.io/purple-school/full-stack-dev/2-html-css/22-proj-ps-page-part-2)
 
 ---
 
