@@ -13,8 +13,8 @@ html {
 }
 
 *::selection {
-  color: var(--white);
-  background-color: var(--pink);
+  color: var(--main-color);
+  background-color: var(--selection-bg-color);
 }
 
 body,
@@ -87,12 +87,6 @@ svg {
 }
 
 /* media queries */
-
-@media (max-width: 1200px) {
-  /* .section-title {
-    font-size: 40px;
-  } */
-}
 
 @media (max-width: 576px) {
   /* .section-title {

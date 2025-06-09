@@ -17,6 +17,38 @@
 </head>
 
 <body class="page">
+  <header class="header page__header" id="header" aria-label="Верхний колонтитул страницы (шапка сайта)">
+    <div class="container header__container" aria-labelledby="header">
+      <div class="header__content-wrap">
+        <a class="header__link-logo">
+          <picture class="header__picture-logo">
+            <source srcset="./images/logo.svg" media="(min-width: 576px)">
+            <img class="header__logo" src="./images/logo-small.svg" width="65" height="34" alt="Логотип: Finio">
+          </picture>
+        </a>
+        <nav class="header__nav" aria-label="Основное меню" title="Основное меню">
+          <ul class="header__nav-list">
+            <li class="header__nav-item"><a class="header__nav-link" href="#">Возможности</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#">Тарифы</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#">Отзывы</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#">Поддержка&nbsp;клиентов</a></li>
+          </ul>
+          <button class="btn-reset btn header__nav-burger-btn" id="burger-btn" type="button" aria-label="Открыть меню"
+            aria-expanded="false" aria-haspopup="true" title="Открыть меню">
+            <svg class="header__nav-burger-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+              <path d="M17 6L4 6" stroke-width="1.7" stroke-linecap="round" />
+              <path d="M20 12L4 12" stroke-width="1.7" stroke-linecap="round" />
+              <path d="M14 18L4 18" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+          </button>
+        </nav>
+        <div class="header__btns-wrap">
+          <a class="btn-reset btn btn_white header__user-btn" href="#" role="button" aria-label="Личный кабинет">Личный
+            кабинет</a>
+        </div>
+      </div>
+    </div>
+  </header>
 </body>
 
 </html>

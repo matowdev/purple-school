@@ -13,20 +13,24 @@
   --bold: 700;
   --extra-bold: 800;
   --default-fs: 18px;
+  --default-btn-fs: 17px;
   --default-lh: 120%;
+  --default-btn-lh: 140%;
 
   /* colors */
   --main-color: #000;
   --secondary-color: #fff;
-  --selection-color: #f0f0f0;
+  --selection-bg-color: #f0f0f0;
   --main-bg-color: #357EFE;
   --bg-page: #fff;
   --add-color-1: #FFC736;
   --add-color-2: #1ABC9C;
+  --add-color-3: #357EFE;
+  --add-color-4: #9b59b6;
 
   /* style */
-  --default-br: 8px;
-  --secondary-br: 16px;
+  --default-br: 34px;
+  --secondary-br: 47px;
 
   /* transitions */
   --short: 0.3s;
