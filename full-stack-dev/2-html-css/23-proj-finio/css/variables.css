@@ -1,0 +1,67 @@
+:root {
+  /* sizes */
+  --page-min-width: 375px;
+  --container-max-width: 1920px;
+  --container-padding: 24px;
+
+  /* fonts */
+  --default-ff: "Inter";
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --default-fs: 18px;
+  --default-lh: 120%;
+
+  /* colors */
+  --main-color: #000;
+  --secondary-color: #fff;
+  --selection-color: #f0f0f0;
+  --main-bg-color: #357EFE;
+  --bg-page: #fff;
+  --add-color-1: #FFC736;
+  --add-color-2: #1ABC9C;
+
+  /* style */
+  --default-br: 8px;
+  --secondary-br: 16px;
+
+  /* transitions */
+  --short: 0.3s;
+}
+
+/* media queries */
+
+@media (max-width: 1400px) {
+  /* :root {
+    --container-padding: 100px;
+    --card-br-radius: 15px;
+  } */
+}
+
+@media (max-width: 1200px) {
+  /* :root {
+    --container-padding: 50px;
+  } */
+}
+
+@media (max-width: 768px) {
+  /* :root {
+    --container-padding: 24px;
+  } */
+}
+
+@media (max-width: 992px) {
+  /* :root {
+    --card-br-radius: 20px;
+  } */
+}
+
+@media (max-width: 576px) {
+  /* :root {
+    --default-fs: 16px;
+    --default-lh: 100%;
+  } */
+}
