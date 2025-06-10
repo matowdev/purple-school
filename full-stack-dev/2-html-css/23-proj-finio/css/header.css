@@ -1,6 +1,5 @@
 .header {
   padding-top: 30px;
-  padding-bottom: 20px;
   background: var(--main-bg-color);
 }
 
@@ -8,6 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid var(--border-bottom-color);
+  padding-bottom: 20px;
 }
 
 .header__link-logo {
@@ -26,10 +27,10 @@
   color: var(--secondary-color);
   outline: none;
   opacity: 0.8;
-  transition-property: color, background-color, opacity;
+  transition-property: color, background-color, opacity, text-shadow;
   transition-duration: var(--short);
   transition-timing-function: ease;
-  will-change: color, background-color, opacity;
+  will-change: color, background-color, opacity, text-shadow;
 }
 
 .header__nav-link:focus-visible:not(:hover) {
@@ -44,7 +45,7 @@
   flex-shrink: 0;
   border-radius: 0;
   padding: 4px 6px;
-  max-width: 40px;
+  max-width: 60px;
   color: var(--secondary-color);
   opacity: 0.8;
   transition-property: color, background-color, opacity;
@@ -84,11 +85,71 @@
     height: 50px;
     object-fit: contain;
   }
+
+  .header__nav-burger-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 992px) {
+  .header__content-wrap {
+    padding-bottom: 30px;
+  }
+
+  .header__nav-list {
+    display: flex;
+  }
+
+  .header__nav-link {
+    font-size: 16px;
+  }
+
+  .header__nav-burger-btn {
+    display: none;
+  }
+
+  .header__btns-wrap {
+    display: flex;
+  }
+
+  .header__user-btn {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding-top: 50px;
+  }
+
+  .header__content-wrap {
+    padding-bottom: 50px;
+  }
+
+  .header__nav-link {
+    font-size: var(--default-fs);
+  }
+
+  .header__user-btn {
+    font-size: var(--default-fs);
+  }
+}
+
+@media (min-width: 1400px) {
+  .header__nav-link {
+    font-weight: var(--medium);
+  }
+
+  .header__user-btn {
+    font-weight: var(--extra-bold);
+  }
 }
 
 @media (any-hover: hover) {
   .header__nav-link:hover:not(:active) {
     opacity: 1;
+    text-shadow: 0 0 1px var(--secondary-color);
   }
 
   .header__nav-burger-btn:hover:not(:active) {

@@ -23,6 +23,7 @@
   --selection-bg-color: #f0f0f0;
   --main-bg-color: #357EFE;
   --bg-page: #fff;
+  --border-bottom-color: rgba(255, 255, 255, 0.16);
   --add-color-1: #FFC736;
   --add-color-2: #1ABC9C;
   --add-color-3: #357EFE;
@@ -38,34 +39,44 @@
 
 /* media queries */
 
-@media (max-width: 1400px) {
-  /* :root {
-    --container-padding: 100px;
-    --card-br-radius: 15px;
-  } */
+@media (min-width: 576px) {
+  :root {
+    --default-fs: 18px;
+  }
 }
 
-@media (max-width: 1200px) {
-  /* :root {
-    --container-padding: 50px;
-  } */
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 32px;
+  }
 }
 
-@media (max-width: 768px) {
-  /* :root {
-    --container-padding: 24px;
-  } */
-}
-
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   /* :root {
     --card-br-radius: 20px;
   } */
 }
 
-@media (max-width: 576px) {
-  /* :root {
-    --default-fs: 16px;
-    --default-lh: 100%;
-  } */
+@media (min-width: 1200px) {
+  :root {
+    --container-padding: 64px;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --container-padding: 94px;
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --container-padding: 164px;
+  }
+}
+
+@media (min-width: 1800px) {
+  :root {
+    --container-padding: 264px;
+  }
 }
