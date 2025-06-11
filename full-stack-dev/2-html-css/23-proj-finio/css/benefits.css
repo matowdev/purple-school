@@ -1,0 +1,13 @@
+.benefits {
+  padding-top: 40px;
+}
+
+.benefits__content-wrap {
+  border-bottom: 1px solid var(--border-bottom-color-2);
+  padding-bottom: 45px;
+}
+
+.benefits__picture-icon {
+  font-size: 9px;
+  text-align: center;
+}

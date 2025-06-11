@@ -13,7 +13,7 @@ html {
 }
 
 *::selection {
-  color: var(--main-color);
+  color: var(--add-color-4);
   background-color: var(--selection-bg-color);
 }
 
