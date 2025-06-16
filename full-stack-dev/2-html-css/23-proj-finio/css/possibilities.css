@@ -30,12 +30,9 @@
 
 .possibilities__title {
   font-weight: var(--semi-bold);
-  font-size: 32px;
 }
 
 .possibilities__text {
-  font-weight: 500;
-  line-height: 140%;
   color: var(--add-color-5);
 }
 

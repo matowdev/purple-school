@@ -15,6 +15,7 @@
   --default-fs: 18px;
   --default-btn-fs: 17px;
   --default-lh: 120%;
+  --extra-lh: 140%;
   --default-btn-lh: 140%;
 
   /* colors */
@@ -25,16 +26,17 @@
   --bg-page: #fff;
   --border-bottom-color-1: rgba(255, 255, 255, 0.16);
   --border-bottom-color-2: rgba(78, 93, 124, 0.08);
-  --btn-box-shadow: rgba(78, 93, 124, 0.35);
   --add-color-1: #FFC736;
   --add-color-2: #1ABC9C;
   --add-color-3: #357EFE;
   --add-color-4: #9b59b6;
   --add-color-5: #4E5D7C80;
+  --add-color-6: #FFFFFFCC;
 
   /* style */
   --default-br: 34px;
   --secondary-br: 47px;
+  --btn-box-shadow: rgba(78, 93, 124, 0.35);
 
   /* transitions */
   --short: 0.3s;
@@ -52,12 +54,6 @@
   :root {
     --container-padding: 32px;
   }
-}
-
-@media (min-width: 992px) {
-  /* :root {
-    --card-br-radius: 20px;
-  } */
 }
 
 @media (min-width: 1200px) {
