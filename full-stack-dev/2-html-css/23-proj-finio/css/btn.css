@@ -19,10 +19,10 @@
   color: var(--add-color-3);
   cursor: pointer;
   outline: none;
-  transition-property: color, background-color;
+  transition-property: color, background-color, box-shadow, transform;
   transition-duration: var(--short);
   transition-timing-function: ease;
-  will-change: color, background-color;
+  will-change: color, background-color, box-shadow, transform;
 }
 
 .btn_white {

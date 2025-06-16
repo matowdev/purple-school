@@ -86,11 +86,3 @@ svg {
   line-height: 120%;
   color: var(--main-color);
 }
-
-/* media queries */
-
-@media (max-width: 576px) {
-  /* .section-title {
-    font-size: 34px;
-  } */
-}
