@@ -36,10 +36,18 @@
   color: var(--add-color-5);
 }
 
+.possibilities__img-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
 .possibilities__picture-img {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 10px;
   border-radius: 5px;
+  width: 100%;
   font-size: 14px;
   text-align: center;
   overflow: hidden;
@@ -157,5 +165,13 @@
   .possibilities__item:nth-child(even) {
     padding-right: 120px;
     padding-left: 0;
+  }
+
+  .possibilities__text_short {
+    max-width: 485px;
+  }
+
+  .possibilities__img_left {
+    margin-left: -50px;
   }
 }
