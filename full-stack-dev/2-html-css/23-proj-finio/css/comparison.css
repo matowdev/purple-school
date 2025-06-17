@@ -58,6 +58,7 @@
   flex-wrap: wrap;
   row-gap: 10px;
   border-radius: 5px;
+  width: 100%;
   font-size: 14px;
   text-align: center;
   overflow: hidden;
@@ -65,6 +66,7 @@
 
 .comparison__img {
   width: clamp(327px, 100%, 655px);
+  background: var(--add-color-5);
 }
 
 .comparison__switch-btn {
