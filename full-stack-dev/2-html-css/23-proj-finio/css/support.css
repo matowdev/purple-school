@@ -1,0 +1,20 @@
+.support {
+  padding-bottom: 50px;
+}
+
+.support__content-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  margin-right: -24px;
+  margin-left: -24px;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 50px;
+  background: var(--main-bg-color);
+}
+
+.support__heading-wrap {
+  display: flex;
+  flex-direction: column;
+}
