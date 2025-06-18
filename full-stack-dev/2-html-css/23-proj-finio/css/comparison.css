@@ -258,6 +258,10 @@
     padding-top: 100px;
     padding-bottom: 100px;
   }
+
+  .comparison__title {
+    font-size: 48px;
+  }
 }
 
 @media (any-hover: hover) {

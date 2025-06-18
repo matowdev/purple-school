@@ -22,8 +22,8 @@
 .protection__icon-wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   flex-shrink: 0;
+  gap: 10px;
 }
 
 .protection__picture-icon {
