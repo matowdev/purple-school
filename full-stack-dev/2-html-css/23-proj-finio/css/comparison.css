@@ -84,6 +84,14 @@
   background-color: var(--secondary-color);
   box-shadow: 0px 5px 15px var(--btn-box-shadow);
   transform: translate(-52%, -50%);
+  transition-property: background-color, box-shadow, transform;
+  transition-duration: var(--short);
+  transition-timing-function: ease;
+  will-change: background-color, box-shadow, transform;
+}
+
+.comparison__switch-btn:focus-visible:not(:hover) {
+  background-color: var(--add-color-2);
 }
 
 .comparison__switch-arrow {
@@ -94,6 +102,7 @@
   width: 9px;
   height: 9px;
   transition: border-color var(--short) ease;
+  will-change: border-color;
 }
 
 .comparison__switch-arrow_left {
