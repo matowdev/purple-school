@@ -28,10 +28,10 @@
         </a>
         <nav class="header__nav" aria-label="Основное меню" title="Основное меню">
           <ul class="header__nav-list">
-            <li class="header__nav-item"><a class="header__nav-link" href="#">Возможности</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">Тарифы</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">Отзывы</a></li>
-            <li class="header__nav-item"><a class="header__nav-link" href="#">Поддержка&nbsp;клиентов</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#possibilities">Возможности</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#tariffs">Тарифы</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#reviews">Отзывы</a></li>
+            <li class="header__nav-item"><a class="header__nav-link" href="#support">Поддержка&nbsp;клиентов</a></li>
           </ul>
           <button class="btn-reset btn header__nav-burger-btn" id="burger-btn" type="button" aria-label="Открыть меню"
             aria-expanded="false" aria-haspopup="true" title="Открыть меню">
@@ -554,6 +554,93 @@
       </div>
     </section>
   </main>
+
+  <footer class="footer page__footer" id="footer" aria-label="Нижний колонтитул страницы (подвал сайта)">
+    <div class="container footer__container" aria-labelledby="footer">
+      <div class="footer__content-wrap">
+        <div class="footer__heading-wrap">
+          <div class="footer__logo-text-wrap">
+            <a class="footer__link-logo">
+              <picture class="footer__picture-logo">
+                <source srcset="./images/logo.svg" media="(min-width: 576px)">
+                <img class="footer__logo" src="./images/logo-small.svg" width="65" height="34" alt="Логотип: Finio">
+              </picture>
+            </a>
+            <p class="text footer__logo-text">Простой финансовый учёт для продавцов на маркетплейсах</p>
+          </div>
+          <div class="footer__nav-info-wrap">
+            <div class="footer__nav-wrap first-column">
+              <!-- именно role="menu" а не "navigation" (для валидатора) -->
+              <ul class="footer__list nav-list" role="menu" aria-label="Дополнительное меню"
+                title="Дополнительное меню">
+                <li class="footer__item"><a class="footer__link" href="#possibilities">Возможности</a></li>
+                <li class="footer__item"><a class="footer__link" href="#tariffs">Тарифы</a></li>
+                <li class="footer__item"><a class="footer__link" href="#reviews">Отзывы</a></li>
+                <li class="footer__item"><a class="footer__link" href="#support">Поддержка&nbsp;клиентов</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__info-wrap second-column">
+              <ul class="footer__list info-list" aria-label="Документы для пользователей (Оферта, конфиденциальность)">
+                <li class="footer__item"><a class="footer__link" href="#" target="_blank"
+                    rel="noopener noreferrer">Политика конфиденциальности</a></li>
+                <li class="footer__item"><a class="footer__link" href="#" target="_blank"
+                    rel="noopener noreferrer">Пользовательское соглашение</a></li>
+                <li class="footer__item"><a class="footer__link" href="#" target="_blank"
+                    rel="noopener noreferrer">Оплата и возврат</a></li>
+                <li class="footer__item"><a class="footer__link" href="#" target="_blank"
+                    rel="noopener noreferrer">Договор оферта</a></li>
+              </ul>
+            </div>
+            <div class="footer__address-wrap third-column">
+              <address class="footer__address">
+                <ul class="footer__list address-list" aria-label="Реквизиты для пользователей (ФИО, ИНН, почта)">
+                  <li class="footer__item"><span class="footer__text">ИП&nbsp;Ларичев Антон
+                      Андреевич</span></li>
+                  <li class="footer__item"><span class="footer__text">ИНН 773373765379</span></li>
+                  <li class="footer__item"><span class="footer__text">ОГРИП 322774600208776</span></li>
+                  <li class="footer__item footer__item_email">
+                    <span class="footer__text">Эл. почта:</span>
+                    <a class="footer__link" href="mailto:alarichev@gmail.com">alarichev@gmail.com</a>
+                  </li>
+                  <li class="footer__item footer__item_phone">
+                    <span class="footer__text">Тел.:</span>
+                    <a class="footer__link" href="tel:+79104357592">+7 (910) 435-75-92</a>
+                  </li>
+                  <li class="footer__item footer__item_address"><span class="footer__text">Москва, Вилиса Лациса
+                      25</span></li>
+                </ul>
+              </address>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright-pay-wrap">
+          <span class="text footer__copyright-text">&copy; 2025 Finio. Все права защищены.</span>
+          <ul class="footer__pay-list" aria-label="Список/варианты платёжных систем">
+            <li class="footer__pay-item">
+              <a class="footer__pay-link" href="https://usa.visa.com/" target="_blank" rel="noopener noreferrer">
+                <img class="footer__visa-img" src="./images/visa-icon.svg" width="80" height="27" alt="Логотип: Visa"
+                  title="Платёжная система Visa">
+              </a>
+            </li>
+            <li class="footer__pay-item">
+              <a class="footer__pay-link" href="https://www.mastercard.com/us/en.html" target="_blank"
+                rel="noopener noreferrer">
+                <img class="footer__mastercard-img" src="./images/mastercard-icon.svg" width="48" height="37"
+                  alt="Логотип: Mastercard" title="Платёжная система Mastercard">
+              </a>
+            </li>
+            <li class="footer__pay-item">
+              <a class="footer__pay-link" href="https://www.nspk.ru/" target="_blank" rel="noopener noreferrer">
+                <img class="footer__mir-img" src="./images/mir-icon.svg" width="78" height="23" alt="Логотип: Mir"
+                  title="Платёжная система Mir">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

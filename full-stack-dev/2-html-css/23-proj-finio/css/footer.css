@@ -1,0 +1,13 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: var(--bg-footer);
+}
+
+.footer__heading-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+  border-bottom: 1px solid var(--border-bottom-color-2);
+  padding-bottom: 42px;
+}

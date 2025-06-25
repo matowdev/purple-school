@@ -24,6 +24,7 @@
   --selection-bg-color: #f0f0f0;
   --main-bg-color: #357EFE;
   --bg-page: #fff;
+  --bg-footer: #1A1D25;
   --border-bottom-color-1: rgba(255, 255, 255, 0.16);
   --border-bottom-color-2: rgba(78, 93, 124, 0.08);
   --add-color-1: #FFC736;
@@ -42,7 +43,7 @@
   --secondary-br: 47px;
   --btn-box-shadow: rgba(78, 93, 124, 0.35);
   --card-box-shadow: rgba(78, 93, 124, 0.16);
-  --slider-box-shadow: rgba(78, 93, 124, 0.16);
+  --slider-box-shadow: rgba(78, 93, 124, 0.32);
 
   /* transitions */
   --short: 0.3s;
