@@ -51,21 +51,23 @@
   display: flex;
   flex-wrap: wrap;
   row-gap: 10px;
+  border-radius: 5px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .comparison__picture-img {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   row-gap: 10px;
-  border-radius: 5px;
   width: 100%;
   font-size: 14px;
   text-align: center;
-  overflow: hidden;
 }
 
 .comparison__img {
-  width: clamp(327px, 100%, 655px);
+  width: clamp(327px, 100%, 809px);
   background: var(--add-color-5);
 }
 
@@ -92,6 +94,10 @@
 
 .comparison__switch-btn:focus-visible:not(:hover) {
   background-color: var(--add-color-2);
+}
+
+.comparison__switch-btn:active .comparison__switch-arrow {
+  border-color: var(--add-color-1);
 }
 
 .comparison__switch-arrow {
@@ -217,7 +223,7 @@
   }
 
   .comparison__img {
-    width: clamp(655px, 100%, 1156px);
+    width: clamp(809px, 100%, 1156px);
   }
 
   .comparison__lists-wrap {

@@ -71,7 +71,9 @@
   flex-wrap: wrap;
   align-self: center;
   gap: 10px;
+  border-radius: 5px;
   width: 100%;
+  overflow: hidden;
 }
 
 .support__picture-img {
@@ -79,11 +81,9 @@
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 10px;
-  border-radius: 5px;
   width: 100%;
   font-size: 14px;
   text-align: center;
-  overflow: hidden;
 }
 
 .support__img {

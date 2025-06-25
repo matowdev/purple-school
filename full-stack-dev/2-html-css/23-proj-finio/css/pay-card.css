@@ -28,7 +28,7 @@
   padding: 4px 16px;
   font-weight: var(--medium, 500);
   font-size: 15px;
-  line-height: 140%;
+  line-height: var(--extra-lh, 140%);
   color: var(--secondary-color, #fff);
   background: var(--add-color-2, #1ABC9C);
 }
@@ -51,7 +51,7 @@
 .pay-card__text {
   font-weight: var(--medium, 500);
   font-size: 17px;
-  line-height: 140%;
+  line-height: var(--extra-lh, 140%);
   color: var(--add-color-5, rgba(78, 93, 124, 0.50));
 }
 

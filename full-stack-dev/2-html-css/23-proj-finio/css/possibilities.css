@@ -40,17 +40,17 @@
   display: flex;
   flex-wrap: wrap;
   row-gap: 10px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .possibilities__picture-img {
   display: flex;
   flex-wrap: wrap;
   row-gap: 10px;
-  border-radius: 5px;
   width: 100%;
   font-size: 14px;
   text-align: center;
-  overflow: hidden;
 }
 
 .possibilities__img {
