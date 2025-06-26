@@ -1,0 +1,84 @@
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: var(--default-br, 34px);
+  padding: 12px 32px;
+  width: 100%;
+  max-width: 220px;
+  font-family: var(--default-ff, sans-serif);
+  font-weight: var(--extra-bold, 800);
+  font-size: var(--default-btn-fs, 17px);
+  line-height: var(--default-btn-lh, 140%);
+  text-align: center;
+  color: var(--add-color-3, #357EFE);
+  cursor: pointer;
+  outline: none;
+  transition-property: color, background-color, box-shadow, transform;
+  transition-duration: var(--short, 0.3s);
+  transition-timing-function: ease;
+  will-change: color, background-color, box-shadow, transform;
+}
+
+.btn_white {
+  background-color: var(--secondary-color, #fff);
+}
+
+.btn_white:focus-visible:not(:hover) {
+  color: var(--secondary-color, #fff);
+  background-color: var(--add-color-2, #1ABC9C);
+}
+
+.btn_white:active {
+  color: var(--add-color-4, #9b59b6);
+}
+
+.btn_blue {
+  color: var(--secondary-color, #fff);
+  background-color: var(--main-bg-color, #357EFE);
+}
+
+.btn_blue:focus-visible:not(:hover) {
+  background-color: var(--add-color-2, #1ABC9C);
+}
+
+.btn_blue:active {
+  color: var(--add-color-1, #FFC736);
+  background-color: var(--main-bg-color, #357EFE);
+}
+
+.btn_blue-yellow {
+  color: var(--secondary-color, #fff);
+  background-color: var(--main-bg-color, #357EFE);
+}
+
+.btn_blue-yellow:focus-visible:not(:hover) {
+  background-color: var(--add-color-2, #1ABC9C);
+}
+
+.btn_blue-yellow:active {
+  color: var(--add-color-4, #9b59b6);
+  background-color: var(--add-color-1, #FFC736);
+}
+
+/* media queries, any-hover */
+
+@media (any-hover: hover) {
+  .btn_white:hover:not(:active) {
+    color: var(--secondary-color, #fff);
+    background-color: var(--add-color-4, #9b59b6);
+  }
+
+  .btn_blue:hover:not(:active) {
+    background-color: var(--add-color-4, #9b59b6);
+  }
+
+  .btn_blue-yellow:hover:not(:active) {
+    background-color: var(--add-color-4, #9b59b6);
+  }
+}

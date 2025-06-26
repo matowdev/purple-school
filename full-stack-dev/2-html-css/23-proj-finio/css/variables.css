@@ -1,0 +1,93 @@
+:root {
+  /* sizes */
+  --page-min-width: 375px;
+  --container-max-width: 1920px;
+  --container-padding: 24px;
+
+  /* fonts */
+  --default-ff: "Inter";
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --default-fs: 18px;
+  --default-btn-fs: 17px;
+  --default-lh: 120%;
+  --extra-lh: 140%;
+  --default-btn-lh: 140%;
+
+  /* colors */
+  --main-color: #000;
+  --secondary-color: #fff;
+  --selection-bg-color: #f0f0f0;
+  --main-bg-color: #357EFE;
+  --bg-page: #fff;
+  --bg-footer: #1A1D25;
+  --border-bottom-color-1: rgba(255, 255, 255, 0.16);
+  --border-bottom-color-2: rgba(78, 93, 124, 0.08);
+  --add-color-1: #FFC736;
+  --add-color-2: #1ABC9C;
+  --add-color-3: #357EFE;
+  --add-color-4: #9b59b6;
+  /* rgba(78, 93, 124, 0.50); - это, add-color-5 */
+  --add-color-5: #4E5D7C80;
+  /* rgba(255, 255, 255, 0.80); - это, add-color-6 */
+  --add-color-6: #FFFFFFCC;
+  --add-color-7: #4E5D7C;
+  /* rgba(255, 255, 255, 0.50) - это, add-color-8 */
+  --add-color-8: #FFFFFF80;
+  /* rgba(255, 255, 255, 0.70) - это, add-color-9 */
+  --add-color-9: #FFFFFFB3;
+
+  /* style */
+  --default-br: 34px;
+  --secondary-br: 47px;
+  --btn-box-shadow: rgba(78, 93, 124, 0.35);
+  --card-box-shadow: rgba(78, 93, 124, 0.16);
+  --slider-box-shadow: rgba(78, 93, 124, 0.32);
+  --pay-link-shadow-1: 0 0 0 2px var(--add-color-2);
+  --pay-link-shadow-2: 0 2px 0 0 var(--add-color-1);
+
+  /* transitions */
+  --short: 0.3s;
+}
+
+/* media queries */
+
+@media (min-width: 576px) {
+  :root {
+    --default-fs: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --container-padding: 64px;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --container-padding: 94px;
+  }
+}
+
+@media (min-width: 1600px) {
+  :root {
+    --container-padding: 164px;
+  }
+}
+
+@media (min-width: 1800px) {
+  :root {
+    --container-padding: 264px;
+  }
+}
