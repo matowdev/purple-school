@@ -31,12 +31,15 @@
   --add-color-2: #1ABC9C;
   --add-color-3: #357EFE;
   --add-color-4: #9b59b6;
-  /* rgba(78, 93, 124, 0.50); --add-color-5 */
+  /* rgba(78, 93, 124, 0.50); - это, add-color-5 */
   --add-color-5: #4E5D7C80;
-  /* rgba(255, 255, 255, 0.80); --add-color-6 */
+  /* rgba(255, 255, 255, 0.80); - это, add-color-6 */
   --add-color-6: #FFFFFFCC;
   --add-color-7: #4E5D7C;
+  /* rgba(255, 255, 255, 0.50) - это, add-color-8 */
   --add-color-8: #FFFFFF80;
+  /* rgba(255, 255, 255, 0.70) - это, add-color-9 */
+  --add-color-9: #FFFFFFB3;
 
   /* style */
   --default-br: 34px;
@@ -44,6 +47,8 @@
   --btn-box-shadow: rgba(78, 93, 124, 0.35);
   --card-box-shadow: rgba(78, 93, 124, 0.16);
   --slider-box-shadow: rgba(78, 93, 124, 0.32);
+  --pay-link-shadow-1: 0 0 0 2px var(--add-color-2);
+  --pay-link-shadow-2: 0 2px 0 0 var(--add-color-1);
 
   /* transitions */
   --short: 0.3s;

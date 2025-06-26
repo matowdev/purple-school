@@ -21,6 +21,10 @@
   text-align: center;
 }
 
+.header__logo:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
 .header__nav-list {
   display: none;
   flex-wrap: wrap;
@@ -95,8 +99,8 @@
 
 @media (min-width: 768px) {
   .header__logo {
-    width: 97px;
-    height: 50px;
+    width: 95px;
+    height: 30px;
     object-fit: contain;
   }
 
