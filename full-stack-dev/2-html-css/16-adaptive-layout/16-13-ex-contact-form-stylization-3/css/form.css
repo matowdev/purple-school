@@ -80,6 +80,7 @@
   background-repeat: no-repeat;
   background-position: right 25px center;
   background-size: 16px 16px;
+  cursor: pointer
 }
 
 .form__textarea {
