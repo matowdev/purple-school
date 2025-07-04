@@ -1,0 +1,232 @@
+.pay-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  border-radius: 8px;
+  padding: 60px 24px;
+  height: 100%;
+  background: var(--secondary-color, #fff);
+  box-shadow: 0px 0px 32px var(--card-box-shadow, rgba(78, 93, 124, 0.16));
+}
+
+.pay-card_highlight {
+  background: var(--main-bg-color, #357EFE);
+}
+
+.pay-card__header {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.pay-card__benefit {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  border-radius: 8px;
+  padding: 4px 16px;
+  font-weight: var(--medium, 500);
+  font-size: 15px;
+  line-height: var(--extra-lh, 140%);
+  color: var(--secondary-color, #fff);
+  background: var(--add-color-2, #1ABC9C);
+}
+
+.pay-card__benefit-percent {
+  font-weight: var(--extra-bold, 800);
+}
+
+.pay-card__title {
+  font-weight: var(--extra-bold, 800);
+  font-size: 32px;
+  line-height: var(--default-lh, 120%);
+  color: var(--main-color, #000);
+}
+
+.pay-card_highlight .pay-card__title {
+  color: var(--secondary-color, #fff);
+}
+
+.pay-card__text {
+  font-weight: var(--medium, 500);
+  font-size: 17px;
+  line-height: var(--extra-lh, 140%);
+  color: var(--add-color-5, rgba(78, 93, 124, 0.50));
+}
+
+.pay-card_highlight .pay-card__text {
+  color: var(--add-color-6, rgba(255, 255, 255, 0.80));
+}
+
+.pay-card__body {
+  margin-top: auto;
+}
+
+.pay-card__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+.pay-card__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-height: 53px;
+}
+
+.pay-card__item:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-bottom-color-2, rgba(78, 93, 124, 0.08));
+}
+
+.pay-card_highlight .pay-card__item:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-bottom-color-1, rgba(255, 255, 255, 0.16));
+}
+
+.pay-card__text-cost,
+.pay-card__cost {
+  font-weight: var(--medium, 500);
+  font-size: 17px;
+  line-height: 120%;
+  color: var(--add-color-7, #4E5D7C);
+}
+
+.pay-card__text-cost {
+  width: 60%;
+}
+
+.pay-card_highlight .pay-card__text-cost {
+  color: var(--secondary-color, #fff);
+}
+
+.pay-card_highlight .pay-card__cost {
+  color: var(--secondary-color, #fff);
+}
+
+.pay-card__cost_highlight {
+  margin-top: -14px;
+  margin-bottom: -8px;
+  margin-left: -16px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: var(--bold, 700);
+  color: var(--secondary-color, #fff);
+  background: var(--add-color-1, #FFC736);
+}
+
+.pay-card__footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 8px;
+}
+
+.pay-card__btn {
+  border-radius: var(--secondary-br, 47px);
+  padding-right: 53px;
+  padding-left: 53px;
+  max-width: 100%;
+}
+
+/* media queries, any-hover */
+
+@media (min-width: 576px) {
+  .pay-card__item {
+    column-gap: 48px;
+  }
+
+  .pay-card__text-cost {
+    padding-left: 50px;
+  }
+
+  .pay-card__btn {
+    max-width: 85%;
+  }
+}
+
+@media (min-width: 768px) {
+  .pay-card__item {
+    column-gap: 8px;
+  }
+
+  .pay-card_highlight .pay-card__item {
+    column-gap: 48px;
+  }
+
+  .pay-card__text-cost {
+    padding-left: 15px;
+  }
+
+  .pay-card_highlight .pay-card__text-cost {
+    padding-left: 125px;
+  }
+
+  .pay-card__btn {
+    max-width: 100%;
+  }
+
+  .pay-card_highlight .pay-card__btn {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .pay-card__item {
+    column-gap: 12px;
+  }
+
+  .pay-card_highlight .pay-card__item {
+    column-gap: 12px;
+  }
+
+  .pay-card__text-cost {
+    padding-left: 0;
+    max-width: 55%;
+  }
+
+  .pay-card_highlight .pay-card__text-cost {
+    padding-left: 0;
+  }
+
+  .pay-card__btn {
+    padding-right: 33px;
+    padding-left: 33px;
+  }
+
+  .pay-card_highlight .pay-card__btn {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pay-card__item {
+    column-gap: 24px;
+  }
+
+  .pay-card_highlight .pay-card__item {
+    column-gap: 24px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .pay-card {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .pay-card__benefit {
+    left: 40px;
+  }
+
+  .pay-card__item {
+    column-gap: 36px;
+  }
+
+  .pay-card_highlight .pay-card__item {
+    column-gap: 36px;
+  }
+}

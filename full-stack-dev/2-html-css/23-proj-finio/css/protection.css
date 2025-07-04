@@ -1,0 +1,156 @@
+.protection {
+  padding-top: 50px;
+}
+
+.protection__content-wrap {
+  border-bottom: 1px solid var(--border-bottom-color-2);
+  padding-bottom: 50px;
+}
+
+.protection__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.protection__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.protection__icon-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.protection__picture-icon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 9px;
+  text-align: center;
+  cursor: help;
+}
+
+.protection__icon {
+  justify-self: flex-start;
+}
+
+.protection__heading-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.protection__title {
+  font-size: 24px;
+}
+
+.protection__text {
+  font-size: 17px;
+  color: var(--add-color-5);
+}
+
+/* media queries, any-hover */
+
+@media (min-width: 576px) {
+  .protection__item {
+    flex-direction: row;
+    column-gap: 24px;
+  }
+
+  .protection__picture-icon {
+    height: 100%;
+  }
+
+  .protection__icon {
+    align-self: center;
+  }
+
+  .protection__heading-wrap {
+    row-gap: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .protection__list {
+    align-items: center;
+  }
+
+  .protection__heading-wrap {
+    max-width: 565px;
+  }
+}
+
+@media (min-width: 992px) {
+  .protection {
+    padding-top: 60px;
+  }
+
+  .protection__content-wrap {
+    padding-bottom: 60px;
+  }
+
+  .protection__icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .protection__icon_hight {
+    height: 86px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .protection__list {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 64px;
+  }
+
+  .protection__item {
+    flex-direction: column;
+    max-width: 350px;
+  }
+
+  .protection__heading-wrap {
+    row-gap: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .protection {
+    padding-top: 80px;
+  }
+
+  .protection__content-wrap {
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .protection {
+    padding-top: 100px;
+  }
+
+  .protection__content-wrap {
+    padding-bottom: 100px;
+  }
+
+  .protection__list {
+    justify-content: space-evenly;
+    column-gap: 32px;
+  }
+
+  .protection__item {
+    max-width: 390px;
+  }
+
+  .protection__title {
+    font-size: 30px;
+  }
+}
