@@ -4,9 +4,8 @@
 // - Отработать через switch/case.
 
 const userLang = 'RU';
-const userLangLower = userLang.toLowerCase(); // к нижнему регистру
 
-switch (userLangLower) {
+switch (userLang.toLowerCase()) {
   case 'ru':
     console.log('Привет!');
     break;
@@ -14,9 +13,9 @@ switch (userLangLower) {
     console.log('Hello!');
     break;
   case 'de':
-    console.log('Gutten tag!');
+    console.log('Guten tag!');
     break;
   default:
-    console.log('Не известный язык..');
+    console.log('Неизвестный язык..');
     break;
 }
