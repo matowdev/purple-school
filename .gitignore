@@ -1,3 +1,4 @@
+# логи и временные файлы
 *.log
 *.ini
 *.pdf
@@ -9,6 +10,10 @@
 *.zip
 *.url
 	
+# зависимости
+node_modules/
+
+# разное
 .vscode/
 Additional_Material/
 AMR/
