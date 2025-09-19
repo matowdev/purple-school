@@ -1,0 +1,10 @@
+  .done {
+    text-decoration: line-through;
+    color: grey;
+    cursor: default;
+  }
+
+  #todoList li {
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
