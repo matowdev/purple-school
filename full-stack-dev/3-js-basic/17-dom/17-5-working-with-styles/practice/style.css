@@ -1,0 +1,43 @@
+.card {
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.tab-btn {
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  color: white;
+  background-color: #007bff;
+}
+
+.tab-pane {
+  display: none;
+  border: 1px solid #cccccc;
+  padding: 10px;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+.accordion-header {
+  border-bottom: 1px solid #dddddd;
+  padding: 15px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.accordion-header.active+.accordion-content {
+  max-height: 100px;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease-out;
+}
