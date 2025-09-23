@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM - practice</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./practice.js" defer></script>
+</head>
+
+<body>
+  <div class="counter-container">
+    <button id="decreaseBtn">-</button>
+    <span id="counter" data-value="0">0</span>
+    <button id="increaseBtn">+</button>
+  </div>
+
+  <div>
+    <button id="toggleBtn">Показать</button>
+    <div id="spoiler" data-state="hidden" style="display: none;">
+      Этот текст изначально скрыт.
+    </div>
+  </div>
+
+  <div>
+    <h4>Категории:</h4>
+    <div id="filter-controls">
+      <button data-filter="all">Все</button>
+      <button data-filter="fruit">Фрукты</button>
+      <button data-filter="vegetable">Овощи</button>
+    </div>
+
+    <h4>Список:</h4>
+    <ul id="item-list">
+      <li data-category="fruit">Апельсин</li>
+      <li data-category="vegetable">Картофель</li>
+      <li data-category="fruit">Банан</li>
+      <li data-category="vegetable">Помидор</li>
+      <li data-category="fruit">Киви</li>
+    </ul>
+  </div>
+</body>
+
+</html>
