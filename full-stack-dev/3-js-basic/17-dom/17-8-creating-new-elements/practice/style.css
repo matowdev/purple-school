@@ -1,0 +1,13 @@
+.notification {
+  font-weight: bold;
+  font-size: 18px;
+  color: blueviolet;
+}
+
+.root__item {
+  color: darkgreen;
+}
+
+.info__span {
+  font-size: 18px;
+}
