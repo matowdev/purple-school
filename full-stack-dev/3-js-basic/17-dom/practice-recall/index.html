@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recall - DOM</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./practice.js" defer></script>
+</head>
+
+<body>
+  <div id="app">
+    <p>Количество кликов: <span id="counter-value">0</span></p>
+    <button id="increment-btn">Кликни меня!</button>
+  </div>
+
+  <div class="form-group">
+    <label for="password-input">Пароль (мин. 6 символов):</label>
+    <input id="password-input" type="text" placeholder="Введите пароль">
+    <p class="error-text" id="error-message">Пароль слишком короткий</p>
+  </div>
+
+  <h2>Мой список дел</h2>
+  <div class="input-group">
+    <input id="todo-input" type="text" placeholder="Добавить новое дело...">
+    <button id="add-btn">Добавить</button>
+  </div>
+  <ul id="todo-list">
+  </ul>
+
+  <div class="shop">
+    <h2>Наши товары</h2>
+    <ul id="product-list">
+      <li>
+        <span class="item-desc">Яблоко (50р)</span>
+        <button class="add-to-cart-btn" data-id="1" data-name="Яблоко" data-price="50">Добавить</button>
+      </li>
+      <li>
+        <span class="item-desc">Банан (70р)</span>
+        <button class="add-to-cart-btn" data-id="2" data-name="Банан" data-price="70">Добавить</button>
+      </li>
+      <li>
+        <span class="item-desc">Апельсин (90р)</span>
+        <button class="add-to-cart-btn" data-id="3" data-name="Апельсин" data-price="90">Добавить</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="cart">
+    <h2>Корзина</h2>
+    <ul id="cart-items">
+    </ul>
+    <p>Итого: <span id="total-price">0</span> р</p>
+    <button id="clear-cart-btn">Очистить корзину</button>
+  </div>
+</body>
+
+</html>

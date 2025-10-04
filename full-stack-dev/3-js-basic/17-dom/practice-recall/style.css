@@ -1,0 +1,42 @@
+#app {
+  margin-bottom: 10px;
+}
+
+.form-group {
+  font-family: sans-serif;
+}
+
+#password-input {
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* Стили для поля с ошибкой */
+#password-input.error {
+  border-color: red;
+}
+
+/* Стили для корректно заполненного поля */
+#password-input.success {
+  border-color: green;
+}
+
+/* Стили для текста ошибки (изначально скрыт) */
+.error-text {
+  display: none;
+  font-size: 12px;
+  color: red;
+  /* Скрываем по умолчанию */
+}
+
+/* Класс, который делает текст ошибки видимым */
+.error-text.visible {
+  display: block;
+}
+
+.item-desc {
+  display: inline-block;
+  width: 100%;
+  max-width: 120px;
+}
