@@ -164,22 +164,50 @@ todoInput.addEventListener('keydown', (event) => {
 // - При клике он должен очищать массив в localStorage и снова вызывать renderCart().
 
 const productList = document.getElementById('product-list');
+const cartList = document.getElementById('cart-items');
 const totalPrice = document.getElementById('total-price');
 const clearBtn = document.getElementById('clear-cart-btn');
-let currentCart = JSON.parse(localStorage.getItem('Cart')) || [];
+let currentCart = JSON.parse(localStorage.getItem('Cart')) || []; // хорошее решение.. если в storage нет ничего создаём "пустой" массив (далее с ним работаем)
 
-function renderCart() {}
+function renderCart() {
+  let totalSum = 0;
 
-function clearStorage() {
-  // if (currentCart.length === 0) {
-  //   return;
-  // }
+  cartList.innerHTML = ''; // очистка списка "корзины" перед отрисовкой (последующей)
 
-  totalPrice.textContent = 0;
-  localStorage.setItem('Cart', JSON.stringify([]));
+  if (currentCart.length > 0) {
+    currentCart.forEach((cartItem) => {
+      const { id, name, price } = cartItem;
+      const listItem = document.createElement('li');
+
+      listItem.textContent = `${name} (${price} р.)`;
+      cartList.append(listItem);
+
+      totalSum += Number(price);
+    });
+  }
+
+  totalPrice.textContent = totalSum;
 }
 
 renderCart();
 
-productList.addEventListener('click', renderCart);
-clearBtn.addEventListener('click', clearStorage);
+function clearData() {
+  cartList.innerHTML = ''; // очистка списка товаров в корзине
+  totalPrice.textContent = '0'; // сброс итоговой суммы
+  localStorage.setItem('Cart', JSON.stringify([])); // очистка storage массива
+  currentCart = []; // очистка глобального массива
+}
+
+productList.addEventListener('click', (event) => {
+  const target = event.target;
+
+  if (target.classList.contains('add-to-cart-btn')) {
+    const itemData = target.dataset;
+
+    currentCart.push(itemData);
+    localStorage.setItem('Cart', JSON.stringify(currentCart));
+
+    renderCart();
+  }
+});
+clearBtn.addEventListener('click', clearData);
