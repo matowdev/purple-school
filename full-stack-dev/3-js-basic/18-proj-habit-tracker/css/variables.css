@@ -1,0 +1,45 @@
+:root {
+  /* !! нужно будет ещё уточнить.. внести альтернативу в page */
+  /* sizes */
+  --page-min-width: 375px;
+  --container-max-width: 1920px;
+  --container-padding: 24px;
+
+  /* fonts */
+  --default-ff: "Comfortaa";
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --default-fs: 14px;
+  --default-lh: 120%;
+
+  /* colors */
+  --main-color: #000;
+  --secondary-color: #23235F;
+  --selection-color: #fff;
+  --selection-bg-color: #5051F9;
+  --bg-page: #F3F6FD;
+  --main-border-color: #E7EBFB;
+  --add-color-1: #8899A8;
+  --add-color-2: #94A3BD;
+  --add-color-3: #768396;
+  --add-color-4: #EDECFE;
+  --add-color-5: #5051F9;
+  --add-color-6: #232360;
+
+  /* style */
+  --default-br: 10px;
+  --secondary-br: 14px;
+  --icon-shadow: 0 8px 14px 0 rgba(62, 107, 224, 0.12);
+  --pop-up-shadow: 0 8px 14px 12px rgba(56, 56, 56, 0.05);
+
+  /* transitions */
+  --short: 0.3s;
+}
+
+/* media queries */
+
+@media (min-width: 576px) {}

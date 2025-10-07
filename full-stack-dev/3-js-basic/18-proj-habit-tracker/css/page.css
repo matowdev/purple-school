@@ -1,0 +1,84 @@
+html {
+  box-sizing: border-box;
+  /* плавная прокрутка */
+  scroll-behavior: smooth;
+  /* оптимизация шрифта при рендеринге */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*::selection {
+  color: var(--selection-color, #fff);
+  background-color: var(--selection-bg-color, #5051F9);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.page {
+  min-width: var(--page-min-width);
+  height: auto;
+  min-height: 100vh;
+  font-family: var(--default-ff), sans-serif;
+  font-weight: var(--regular, 400);
+  font-size: var(--default-fs, 14px);
+  line-height: var(--default-lh, 120%);
+  color: var(--main-color, #000);
+  background: var(--bg-page, #F3F6FD);
+}
+
+/* !! нужно будет ещё уточнить.. внести альтернативу */
+.container {
+  margin: 0 auto;
+  padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+  max-width: var(--container-max-width);
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
