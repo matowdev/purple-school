@@ -15,7 +15,7 @@ html {
 }
 
 *::selection {
-  color: var(--selection-color, #fff);
+  color: var(--selection-color, #FBFAFF);
   background-color: var(--selection-bg-color, #5051F9);
 }
 
@@ -61,24 +61,4 @@ svg {
   font-size: var(--default-fs, 14px);
   line-height: var(--default-lh, 120%);
   color: var(--main-color, #000);
-  background: var(--bg-page, #F3F6FD);
-}
-
-/* !! нужно будет ещё уточнить.. внести альтернативу */
-.container {
-  margin: 0 auto;
-  padding-right: var(--container-padding);
-  padding-left: var(--container-padding);
-  max-width: var(--container-max-width);
-}
-
-.visually-hidden {
-  position: absolute;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
 }
