@@ -1,0 +1,7 @@
+.content {
+  border-top-right-radius: var(--default-br, 10px);
+  border-bottom-right-radius: var(--default-br, 10px);
+  padding: 45px;
+  width: 100%;
+  background: var(--bg-main-page, #F3F6FD);
+}

@@ -1,0 +1,106 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  border-top-left-radius: var(--default-br, 10px);
+  border-bottom-left-radius: var(--default-br, 10px);
+  padding: 30px;
+  min-height: 600px;
+  background: var(--bg-aside, #FBFAFF);
+}
+
+.sidebar__logo-wrap {
+  margin-bottom: 50px;
+}
+
+.sidebar__nav {
+  margin-bottom: 25px;
+}
+
+.sidebar__nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+}
+
+.sidebar__nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: var(--secondary-br, 14px);
+  padding: 10px;
+  background: var(--add-color-0, #fff);
+  box-shadow: var(--icon-shadow, 0 8px 14px 0 rgba(62, 107, 224, 0.12));
+  cursor: pointer;
+  transition-property: background;
+  transition-duration: var(--short, 0.3s);
+  transition-timing-function: ease-in-out;
+  will-change: background;
+}
+
+.sidebar__nav-btn_active {
+  background: var(--add-color-5, #5051F9);
+}
+
+.sidebar__nav-btn_active .sidebar__nav-icon {
+  filter: brightness(0) invert(1);
+}
+
+.sidebar__nav-icon {
+  transition-property: filter;
+  transition-duration: var(--short, 0.3s);
+  transition-timing-function: ease-in-out;
+  will-change: filter;
+}
+
+.sidebar__add-btn-wrap {
+  align-self: center;
+}
+
+.sidebar__add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--secondary-border-color, #CAD5FF);
+  border-radius: var(--secondary-br, 14px);
+  padding: 12px;
+  background: transparent;
+  cursor: pointer;
+  transition-property: background;
+  transition-duration: var(--short, 0.3s);
+  transition-timing-function: ease-in-out;
+  will-change: background;
+}
+
+.sidebar__add-btn-icon {
+  transition-property: filter;
+  transition-duration: var(--short, 0.3s);
+  transition-timing-function: ease-in-out;
+  will-change: filter;
+}
+
+/* media queries, any-hover */
+
+@media (any-hover: hover) {
+  .sidebar__nav-btn:hover {
+    background: var(--add-color-7, #6A6AFB);
+  }
+
+  .sidebar__nav-btn:hover .sidebar__nav-icon {
+    filter: brightness(0) invert(1);
+  }
+
+  .sidebar__add-btn:hover {
+    background: var(--add-color-1, #8899A8);
+  }
+
+  .sidebar__add-btn:hover .sidebar__add-btn-icon {
+    filter: brightness(0) invert(1);
+  }
+}
