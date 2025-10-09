@@ -33,6 +33,9 @@
   --add-color-6: #232360;
   --add-color-7: #6A6AFB;
   --add-color-8: #E7EBFB;
+  --add-color-9: #E6E9ED;
+  --add-color-10: #FBFAFF;
+  --add-color-11: #a87ae4;
 
   /* style */
   --default-br: 10px;
@@ -46,4 +49,8 @@
 
 /* media queries */
 
-@media (min-width: 576px) {}
+@media (max-width: 768px) {
+  :root {
+    --app-padding: 10px;
+  }
+}

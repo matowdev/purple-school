@@ -42,6 +42,10 @@
   will-change: background;
 }
 
+.sidebar__nav-btn:focus-visible {
+  outline-color: var(--add-color-11, #a87ae4);
+}
+
 .sidebar__nav-btn_active {
   background: var(--add-color-5, #5051F9);
 }
@@ -78,6 +82,10 @@
   will-change: background;
 }
 
+.sidebar__add-btn:focus-visible {
+  outline-color: var(--add-color-11, #a87ae4);
+}
+
 .sidebar__add-btn-icon {
   transition-property: filter;
   transition-duration: var(--short, 0.3s);
@@ -86,6 +94,13 @@
 }
 
 /* media queries, any-hover */
+
+@media (max-width: 768px) {
+  .sidebar {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
 
 @media (any-hover: hover) {
   .sidebar__nav-btn:hover {
@@ -97,7 +112,7 @@
   }
 
   .sidebar__add-btn:hover {
-    background: var(--add-color-1, #8899A8);
+    background: var(--add-color-11, #a87ae4);
   }
 
   .sidebar__add-btn:hover .sidebar__add-btn-icon {
