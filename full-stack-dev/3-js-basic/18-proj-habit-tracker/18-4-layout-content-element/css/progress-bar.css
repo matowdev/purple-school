@@ -4,6 +4,7 @@
   row-gap: 12px;
   width: 100%;
   max-width: 235px;
+  cursor: help;
 }
 
 .progress-bar__heading-wrap {

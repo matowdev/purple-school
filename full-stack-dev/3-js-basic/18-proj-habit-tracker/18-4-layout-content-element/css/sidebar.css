@@ -82,6 +82,10 @@
   will-change: background;
 }
 
+.sidebar__add-btn:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
 .sidebar__add-btn:focus-visible {
   outline-color: var(--add-color-11, #a87ae4);
 }
