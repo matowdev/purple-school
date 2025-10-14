@@ -41,9 +41,12 @@
   position: absolute;
   left: 0;
   border-radius: 4px;
-  width: 80%;
   height: 5px;
   background: var(--add-color-5, #5051F9);
+  transition-property: width;
+  transition-duration: var(--short, 0.3s);
+  transition-timing-function: ease-in-out;
+  will-change: width;
 }
 
 /* media queries, any-hover */

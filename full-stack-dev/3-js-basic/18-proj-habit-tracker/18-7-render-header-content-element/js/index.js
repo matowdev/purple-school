@@ -6,6 +6,11 @@ const HABBITS_KEY = 'HABBITS';
 // app
 const app = {
   'menu-list': document.getElementById('sidebar-list'),
+  header: {
+    title: document.getElementById('header-title'),
+    progressPercent: document.getElementById('progress-percent'),
+    progressValue: document.getElementById('progress-value'),
+  },
 };
 
 // ** utility **
@@ -64,10 +69,31 @@ function rerenderMenu(activeHabbit) {
   }
 }
 
-// поиск элемента/привычки.. запуск отрисовки/переключение активности
+function rerenderHeaderContentEl(activeHabbit) {
+  if (!activeHabbit) {
+    return;
+  }
+
+  app.header.title.textContent = activeHabbit.title; // добавление/обновление заголовка
+
+  // подсчёт прогресса/выполнения (согласно "уже" отмеченных дней и "ранее" поставленной цели/дней)
+  const progress =
+    activeHabbit.days.length / activeHabbit.target > 1
+      ? 100
+      : (activeHabbit.days.length / activeHabbit.target) * 100;
+
+  app.header.progressPercent.textContent = `${progress.toFixed(0)}%`;
+  app.header.progressValue.setAttribute(
+    'style',
+    `width: ${progress.toFixed(0)}%`
+  );
+}
+
+// поиск/определение "активной" привычки.. запуск отрисовок элементов/переключение активностей
 function rerender(activeHabbitId) {
   const activeHabbit = habbits.find((habbit) => habbit.id === activeHabbitId);
   rerenderMenu(activeHabbit);
+  rerenderHeaderContentEl(activeHabbit);
 }
 
 // init
