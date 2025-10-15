@@ -11,6 +11,9 @@ const app = {
     progressPercent: document.getElementById('progress-percent'),
     progressValue: document.getElementById('progress-value'),
   },
+  'habbit-days': {
+    list: document.getElementById('habbit-days-list'),
+  },
 };
 
 // ** utility **
@@ -29,10 +32,6 @@ function saveData() {
 
 // ** render **
 function rerenderMenu(activeHabbit) {
-  if (!activeHabbit) {
-    return;
-  }
-
   for (const habbit of habbits) {
     const existed = document.querySelector(`[menu-habbit-id="${habbit.id}"]`); // определение/флаг.. есть уже элемент (создавался) или нет
 
@@ -70,10 +69,6 @@ function rerenderMenu(activeHabbit) {
 }
 
 function rerenderHeaderContentEl(activeHabbit) {
-  if (!activeHabbit) {
-    return;
-  }
-
   app.header.title.textContent = activeHabbit.title; // добавление/обновление заголовка
 
   // подсчёт прогресса/выполнения (согласно "уже" отмеченных дней и "ранее" поставленной цели/дней)
@@ -89,11 +84,65 @@ function rerenderHeaderContentEl(activeHabbit) {
   );
 }
 
+function rerenderHabbitDaysContentEl(activeHabbit) {
+  app['habbit-days'].list.innerHTML = ''; // предварительная очистка списка (всё будет создаваться заново)
+
+  const docFragment = document.createDocumentFragment(); // создание промежуточного/специального контейнера (сразу в него.. потом уже в document)
+
+  // создание/отрисовка уже существующих дней (согласно массива days)
+  for (let i = 0; i < activeHabbit.days.length; i++) {
+    const habbitDaysItem = document.createElement('li');
+    habbitDaysItem.classList.add('habbit-days__item');
+
+    habbitDaysItem.innerHTML = `<div class="habbit-days__label">День ${
+      i + 1
+    }</div>
+      <div class="habbit-days__comment-wrap">
+        <div class="habbit-days__comment">${activeHabbit.days[i].comment}</div>
+        <button class="habbit-days__delete-btn" type="button" aria-label="Удалить день" title="Удалить день">
+          <img class="habbit-days__delete-icon" src="./images/trash-icon.svg" width="24" height="24"
+            alt="Иконка: Мусорное ведро">
+        </button>
+      </div>`;
+
+    docFragment.append(habbitDaysItem); // сразу добавление в "docFragment"
+  }
+
+  // "отдельное" создание/отрисовка крайнего дня с комментарием (пустым)
+  const habbitDaysCommentItem = document.createElement('li');
+  habbitDaysCommentItem.classList.add(
+    'habbit-days__item',
+    'habbit-days__item-comment'
+  );
+
+  habbitDaysCommentItem.innerHTML = `<div class="habbit-days__label">День ${
+    activeHabbit.days.length + 1
+  }</div>
+  <form class="habbit-days__form" id="comment-form" onsubmit="addCommentDay(event)">
+    <input class="habbit-days__form-input" id="form-input" type="text" placeholder="Комментарий">
+    <button class="habbit-days__form-btn" type="submit">Готово</button>
+  </form>`;
+
+  docFragment.append(habbitDaysCommentItem);
+  app['habbit-days'].list.append(docFragment); // и всё за раз на страницу
+}
+
 // поиск/определение "активной" привычки.. запуск отрисовок элементов/переключение активностей
 function rerender(activeHabbitId) {
   const activeHabbit = habbits.find((habbit) => habbit.id === activeHabbitId);
+
+  if (!activeHabbit) {
+    return;
+  }
+
   rerenderMenu(activeHabbit);
   rerenderHeaderContentEl(activeHabbit);
+  rerenderHabbitDaysContentEl(activeHabbit);
+}
+
+// ** business **
+function addCommentDay(event) {
+  event.preventDefault();
 }
 
 // init
