@@ -119,12 +119,12 @@ function rerenderHabbitDaysContentEl(activeHabbit) {
     activeHabbit.days.length + 1
   }</div>
   <form class="habbit-days__form" id="comment-form" onsubmit="addCommentDay(event)">
-    <input class="habbit-days__form-input" id="form-input" type="text" placeholder="Комментарий">
-    <button class="habbit-days__form-btn" type="submit">Готово</button>
+    <input class="habbit-days__form-input" id="comment-input" type="text" name="comment-day" placeholder="Комментарий">
+    <button class="habbit-days__form-btn" type="submit" title="Добавить комментарий">Готово</button>
   </form>`;
 
   docFragment.append(habbitDaysCommentItem);
-  app['habbit-days'].list.append(docFragment); // и всё за раз на страницу
+  app['habbit-days'].list.append(docFragment); // и всё за раз на страницу/в DOM-дерево
 }
 
 // поиск/определение "активной" привычки.. запуск отрисовок элементов/переключение активностей
@@ -142,7 +142,12 @@ function rerender(activeHabbitId) {
 
 // ** business **
 function addCommentDay(event) {
-  event.preventDefault();
+  event.preventDefault(); // отмена default отправки/перезагрузки страницы
+
+  const formData = new FormData(event.target); // создание объекта данных/возможностей согласно искомой формы (полученной через onsubmit/event.target)
+  const comment = formData.get('comment-day'); // получение значения/комментария из инпута согласно его имени/name
+
+  console.log(comment); // Уже лучше!
 }
 
 // init
