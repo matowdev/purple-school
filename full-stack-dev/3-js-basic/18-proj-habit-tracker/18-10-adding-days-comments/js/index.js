@@ -1,6 +1,7 @@
 'use strict';
 
 let habbits = [];
+let globalActiveHabbitId;
 const HABBITS_KEY = 'HABBITS';
 
 // app
@@ -115,6 +116,7 @@ function rerenderHabbitDaysContentEl(activeHabbit) {
     'habbit-days__item-comment'
   );
 
+  // ..здесь добавление onsubmit="" логики для формы, и name для инпута (важный момент)
   habbitDaysCommentItem.innerHTML = `<div class="habbit-days__label">День ${
     activeHabbit.days.length + 1
   }</div>
@@ -125,10 +127,19 @@ function rerenderHabbitDaysContentEl(activeHabbit) {
 
   docFragment.append(habbitDaysCommentItem);
   app['habbit-days'].list.append(docFragment); // и всё за раз на страницу/в DOM-дерево
+
+  // организация прослушки инпута/комментария для корректировки класса ошибки/обводки
+  const commentInput = document.getElementById('comment-input');
+  commentInput.addEventListener('input', () => {
+    if (commentInput.classList.contains('comment-error')) {
+      commentInput.classList.remove('comment-error');
+    }
+  });
 }
 
 // поиск/определение "активной" привычки.. запуск отрисовок элементов/переключение активностей
 function rerender(activeHabbitId) {
+  globalActiveHabbitId = activeHabbitId; // глобальная фиксация ID (т.е. какая привычка в данный момент активна)
   const activeHabbit = habbits.find((habbit) => habbit.id === activeHabbitId);
 
   if (!activeHabbit) {
@@ -142,12 +153,31 @@ function rerender(activeHabbitId) {
 
 // ** business **
 function addCommentDay(event) {
-  event.preventDefault(); // отмена default отправки/перезагрузки страницы
+  event.preventDefault(); // отмена default отправки формы, перезагрузки страницы
 
-  const formData = new FormData(event.target); // создание объекта данных/возможностей согласно искомой формы (полученной через onsubmit/event.target)
-  const comment = formData.get('comment-day'); // получение значения/комментария из инпута согласно его имени/name
+  const targetForm = event.target;
+  const commentInput = targetForm['comment-day']; // фиксация инпута
+  const formData = new FormData(targetForm); // создание объекта данных согласно искомой формы (получаемой через onsubmit/event.target логику)
+  const dayComment = formData.get('comment-day'); // получение значения/комментария из инпута согласно его имени/name
 
-  console.log(comment); // Уже лучше!
+  if (!dayComment) {
+    commentInput.classList.add('comment-error');
+  } else {
+    commentInput.classList.remove('comment-error');
+
+    habbits = habbits.map((habbit) => {
+      if (habbit.id === globalActiveHabbitId) {
+        return { ...habbit, days: habbit.days.concat({ comment: dayComment }) }; // создание новых объектов, на основе старых (с корректировкой поля days)
+      }
+      return habbit;
+    });
+
+    commentInput.classList.remove('comment-error'); // итоговая очистка инпута от обводки/ошибки (нужное дублирование)
+    targetForm['comment-day'].value = ''; // очистка поля инпута (после корректного "Готово")
+
+    rerender(globalActiveHabbitId); // перерисовка всего/content элемента
+    saveData(); // обновление/сохранение в localStorage
+  }
 }
 
 // init
