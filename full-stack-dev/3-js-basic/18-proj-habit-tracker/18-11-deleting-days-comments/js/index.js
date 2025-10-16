@@ -100,7 +100,7 @@ function rerenderHabbitDaysContentEl(activeHabbit) {
     }</div>
       <div class="habbit-days__comment-wrap">
         <div class="habbit-days__comment">${activeHabbit.days[i].comment}</div>
-        <button class="habbit-days__delete-btn" type="button" aria-label="Удалить день" title="Удалить день">
+        <button class="habbit-days__delete-btn" type="button" aria-label="Удалить день" title="Удалить день" onclick="deleteCommentDay(${i})">
           <img class="habbit-days__delete-icon" src="./images/trash-icon.svg" width="24" height="24"
             alt="Иконка: Мусорное ведро">
         </button>
@@ -167,7 +167,7 @@ function addCommentDay(event) {
 
     habbits = habbits.map((habbit) => {
       if (habbit.id === globalActiveHabbitId) {
-        return { ...habbit, days: habbit.days.concat({ comment: dayComment }) }; // создание новых объектов, на основе старых (с корректировкой поля days)
+        return { ...habbit, days: habbit.days.concat({ comment: dayComment }) }; // создание новых объектов, на основе старых (с корректировкой поля/массива days)
       }
       return habbit;
     });
@@ -178,6 +178,19 @@ function addCommentDay(event) {
     rerender(globalActiveHabbitId); // перерисовка всего/content элемента
     saveData(); // обновление/сохранение в localStorage
   }
+}
+
+function deleteCommentDay(index) {
+  habbits = habbits.map((habbit) => {
+    if (habbit.id === globalActiveHabbitId) {
+      habbit.days.splice(index, 1);
+      return { ...habbit, days: habbit.days }; // создание новых объектов, на основе старых (с корректировкой поля/массива days)
+    }
+    return habbit;
+  });
+
+  rerender(globalActiveHabbitId); // перерисовка всего/content элемента
+  saveData(); // обновление/сохранение в localStorage
 }
 
 // init
