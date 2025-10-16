@@ -1,0 +1,8 @@
+.app {
+  display: flex;
+  margin: 20px auto;
+  border: 2px solid var(--main-border-color, #E7EBFB);
+  border-radius: var(--default-br, 10px);
+  padding: var(--app-padding, 30px);
+  max-width: var(--app-max-width, 1440px);
+}
