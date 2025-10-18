@@ -1,6 +1,42 @@
 'use strict';
 
-let habbits = [];
+let habbits = [
+  {
+    id: 1,
+    icon: 'gantel-icon',
+    name: 'Гантеля',
+    title: 'Отжимания',
+    width: 23,
+    height: 23,
+    target: 10,
+    days: [
+      { comment: 'Первый подход всегда даётся тяжело..' },
+      { comment: 'Второй день немного легче!' },
+      { comment: 'Продолжаем!' },
+    ],
+  },
+  {
+    id: 2,
+    icon: 'water-icon',
+    name: 'Бутылка с водой',
+    title: 'Водный баланс',
+    width: 25,
+    height: 25,
+    target: 10,
+    days: [{ comment: 'Очень хотелось!' }, { comment: 'Супер!' }],
+  },
+  {
+    id: 3,
+    icon: 'food-icon',
+    name: 'Тарелка с едой',
+    title: 'Правильное питание',
+    width: 23,
+    height: 24,
+    target: 10,
+    days: [{ comment: 'Круто!' }],
+  },
+];
+
 let globalActiveHabbitId;
 const HABBITS_KEY = 'HABBITS';
 
@@ -22,7 +58,7 @@ function loadData() {
   const habbitsStr = localStorage.getItem(HABBITS_KEY);
   const habbitsArr = JSON.parse(habbitsStr);
 
-  if (Array.isArray(habbitsArr)) {
+  if (Array.isArray(habbitsArr) && habbitsArr.length) {
     habbits = habbitsArr;
   }
 }
@@ -121,8 +157,8 @@ function rerenderHabbitDaysContentEl(activeHabbit) {
     activeHabbit.days.length + 1
   }</div>
   <form class="habbit-days__form" id="comment-form" onsubmit="addCommentDay(event)">
-    <input class="habbit-days__form-input" id="comment-input" type="text" name="comment-day" placeholder="Комментарий">
-    <button class="habbit-days__form-btn" type="submit" title="Добавить комментарий">Готово</button>
+    <input class="habbit-days__form-input" id="comment-input" type="text" name="comment-day" placeholder="Комментарий" autocomplete="off">
+    <button class="habbit-days__form-btn" type="submit">Готово</button>
   </form>`;
 
   docFragment.append(habbitDaysCommentItem);

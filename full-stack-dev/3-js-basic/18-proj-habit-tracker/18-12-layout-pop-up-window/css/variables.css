@@ -42,6 +42,7 @@
   --default-br: 10px;
   --secondary-br: 14px;
   --icon-shadow: 0 8px 14px 0 rgba(62, 107, 224, 0.12);
+  --pop-up-cover: rgba(0, 0, 0, 0.25);
   --pop-up-shadow: 0 8px 14px 12px rgba(56, 56, 56, 0.05);
 
   /* transitions */
