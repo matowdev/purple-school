@@ -26,8 +26,8 @@
         <ul class="sidebar__nav-list" id="sidebar-list"></ul>
       </nav>
       <div class="sidebar__add-btn-wrap">
-        <button class="sidebar__add-btn" type="button" aria-label="Добавить привычку" aria-haspopup="true"
-          title="Добавить привычку">
+        <button class="sidebar__add-btn" id="sidebar-add-btn" type="button" aria-label="Добавить привычку"
+          aria-haspopup="true" title="Добавить привычку" onclick="togglePopup()">
           <img class="sidebar__add-btn-icon" src="./images/add-icon.svg" width="20" height="20"
             alt="Иконка: Знака плюс">
         </button>
@@ -55,7 +55,8 @@
       <div class="pop-up__element" id="pop-up">
         <div class="pop-up__heading">
           <h2 class="pop-up__title">Новая привычка</h2>
-          <button class="pop-up__close-btn" type="button" aria-label="Закрыть окно" title="Закрыть">
+          <button class="pop-up__close-btn" id="pop-up-close-btn" type="button" aria-label="Закрыть окно"
+            title="Закрыть" onclick="togglePopup()">
             <img class="pop-up__close-icon" src="./images/close-icon.svg" width="24" height="24"
               alt="Иконка: Перекрестие">
           </button>

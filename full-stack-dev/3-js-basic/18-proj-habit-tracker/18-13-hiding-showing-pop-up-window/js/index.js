@@ -51,6 +51,10 @@ const app = {
   'habbit-days': {
     list: document.getElementById('habbit-days-list'),
   },
+  'pop-up': {
+    popupCover: document.getElementById('pop-up-cover'),
+    popupElement: document.getElementById('pop-up'),
+  },
 };
 
 // ** utility **
@@ -65,6 +69,10 @@ function loadData() {
 
 function saveData() {
   localStorage.setItem(HABBITS_KEY, JSON.stringify(habbits));
+}
+
+function togglePopup() {
+  app['pop-up'].popupCover.classList.toggle('pop-up_cover-hidden');
 }
 
 // ** render **
