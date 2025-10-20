@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "icon": "gantel-icon",
+    "name": "Гантеля",
+    "title": "Отжимания",
+    "width": 23,
+    "height": 23,
+    "target": 10,
+    "days": [
+      { "comment": "Первый подход всегда даётся тяжело.." },
+      { "comment": "Второй день немного легче!" },
+      { "comment": "Продолжаем!" }
+    ]
+  },
+  {
+    "id": 2,
+    "icon": "water-icon",
+    "name": "Бутылка с водой",
+    "title": "Водный баланс",
+    "width": 25,
+    "height": 25,
+    "target": 10,
+    "days": [{ "comment": "Очень хотелось!" }, { "comment": "Супер!" }]
+  },
+  {
+    "id": 3,
+    "icon": "food-icon",
+    "name": "Тарелка с едой",
+    "title": "Правильное питание",
+    "width": 23,
+    "height": 24,
+    "target": 10,
+    "days": [{ "comment": "Круто!" }]
+  }
+]
