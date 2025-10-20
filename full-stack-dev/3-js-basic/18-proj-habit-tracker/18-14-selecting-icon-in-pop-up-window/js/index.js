@@ -54,6 +54,7 @@ const app = {
   'pop-up': {
     popupCover: document.getElementById('pop-up-cover'),
     popupElement: document.getElementById('pop-up'),
+    hiddenIconInput: document.getElementById('hidden-input'),
   },
 };
 
@@ -235,6 +236,16 @@ function deleteCommentDay(index) {
 
   rerender(globalActiveHabbitId); // перерисовка всего/content элемента
   saveData(); // обновление/сохранение в localStorage
+}
+
+function setHabbitIcon(context, iconName) {
+  app['pop-up'].hiddenIconInput.value = iconName; // обновление value у "скрытого" инпута
+  const activeIcon = document.querySelector(
+    '.pop-up__icons-btn.pop-up__icons-btn_active'
+  );
+
+  activeIcon.classList.remove('pop-up__icons-btn_active'); // у ранее "активной" удаление
+  context.classList.add('pop-up__icons-btn_active'); // текущей кнопке добавление, т.е. по котрой onclick=""
 }
 
 // init
