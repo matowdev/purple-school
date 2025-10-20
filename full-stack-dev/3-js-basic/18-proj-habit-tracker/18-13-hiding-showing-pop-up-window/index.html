@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habbit tracker</Title>
+  <link rel="icon" href="./images/favicon/favicon-96x96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="./images/favicon/favicon.svg" type="image/svg+xml" sizes="any">
+  <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" sizes="180x180">
+  <meta name="apple-mobile-web-app-title" content="HabitTracker">
+  <!-- <link rel="manifest" href="./site.webmanifest"> -->
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/index.js" defer></script>
+</head>
+
+<body class="page">
+  <div class="app page__app">
+    <aside class="sidebar app__sidebar" id="sidebar" aria-label="Боковая панель (навигация)">
+      <div class="sidebar__logo-wrap">
+        <img class="sidebar__logo" src="./images/logo.svg" width="66" height="71" alt="Логотип: Habit">
+      </div>
+      <nav class="sidebar__nav" aria-label="Навигация по привычкам">
+        <ul class="sidebar__nav-list" id="sidebar-list"></ul>
+      </nav>
+      <div class="sidebar__add-btn-wrap">
+        <button class="sidebar__add-btn" type="button" aria-label="Добавить привычку" aria-haspopup="true"
+          title="Добавить привычку">
+          <img class="sidebar__add-btn-icon" src="./images/add-icon.svg" width="20" height="20"
+            alt="Иконка: Знака плюс">
+        </button>
+      </div>
+    </aside>
+    <main class="content app__content" id="content" aria-label="Контент приложения">
+      <header class="content__header">
+        <h1 class="content__title" id="header-title"></h1>
+        <div class="progress-bar content__progress-bar">
+          <div class="progress-bar__heading-wrap">
+            <span class="progress-bar__text">Прогресс</span>
+            <span class="progress-bar__percent" id="progress-percent"></span>
+          </div>
+          <div class="progress-bar__scale-wrap">
+            <span class="progress-bar__scale"></span>
+            <span class="progress-bar__value" id="progress-value"></span>
+          </div>
+        </div>
+      </header>
+      <div class="habbit-days content__habbit-days" id="habbit-days">
+        <ul class="habbit-days__list" id="habbit-days-list"></ul>
+      </div>
+    </main>
+    <div class="pop-up pop-up_cover pop-up_cover-hidden app__pop-up" id="pop-up-cover">
+      <div class="pop-up__element" id="pop-up">
+        <div class="pop-up__heading">
+          <h2 class="pop-up__title">Новая привычка</h2>
+          <button class="pop-up__close-btn" type="button" aria-label="Закрыть окно" title="Закрыть">
+            <img class="pop-up__close-icon" src="./images/close-icon.svg" width="24" height="24"
+              alt="Иконка: Перекрестие">
+          </button>
+        </div>
+        <div class="pop-up__icons-wrap">
+          <span class="pop-up__icons-label">Иконка</span>
+          <ul class="pop-up__icons-list">
+            <li class="pop-up__icons-item">
+              <button class="pop-up__icons-btn" type="button" aria-label="Выбрать иконку" title="Спорт">
+                <img class="pop-up__icons-icon" src="./images/gantel-icon.svg" width="23" height="23"
+                  alt="Иконка: Гантеля">
+              </button>
+            </li>
+            <li class="pop-up__icons-item">
+              <button class="pop-up__icons-btn pop-up__icons-btn_active" type="button" aria-label="Выбрать иконку"
+                title="Жидкости">
+                <img class="pop-up__icons-icon" src="./images/water-icon.svg" width="25" height="25"
+                  alt="Иконка: Бутылка с водой">
+              </button>
+            </li>
+            <li class="pop-up__icons-item">
+              <button class="pop-up__icons-btn" type="button" aria-label="Выбрать иконку" title="Питание">
+                <img class="pop-up__icons-icon" src="./images/food-icon.svg" width="23" height="24"
+                  alt="Иконка: Тарелка с едой">
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="pop-up__form-wrap">
+          <form class="pop-up__form" id="pop-up-form">
+            <input class="pop-up__form-input" id="title-input" type="text" name="title-habbit" placeholder="Название"
+              autocomplete="off">
+            <input class="pop-up__form-input" id="target-input" type="number" name="target-habbit"
+              placeholder="Цель/дней" autocomplete="off">
+            <button class="pop-up__form-btn" type="submit">Добавить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

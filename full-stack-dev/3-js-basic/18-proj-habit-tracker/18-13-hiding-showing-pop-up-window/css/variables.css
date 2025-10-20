@@ -1,0 +1,58 @@
+:root {
+  /* sizes */
+  --page-min-width: 576px;
+  --app-max-width: 1440px;
+  --app-padding: 30px;
+
+  /* fonts */
+  --default-ff: "Comfortaa";
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semi-bold: 600;
+  --bold: 700;
+  --extra-bold: 800;
+  --default-fs: 14px;
+  --default-lh: 120%;
+
+  /* colors */
+  --main-color: #000;
+  --secondary-color: #23235F;
+  --bg-main-page: #F3F6FD;
+  --bg-aside: #FBFAFF;
+  --selection-color: #FBFAFF;
+  --selection-bg-color: #5051F9;
+  --main-border-color: #E7EBFB;
+  --secondary-border-color: #CAD5FF;
+  --add-color-0: #fff;
+  --add-color-1: #8899A8;
+  --add-color-2: #94A3BD;
+  --add-color-3: #768396;
+  --add-color-4: #EDECFE;
+  --add-color-5: #5051F9;
+  --add-color-6: #232360;
+  --add-color-7: #6A6AFB;
+  --add-color-8: #E7EBFB;
+  --add-color-9: #E6E9ED;
+  --add-color-10: #FBFAFF;
+  --add-color-11: #a87ae4;
+  --add-color-12: #bd0b22;
+
+  /* style */
+  --default-br: 10px;
+  --secondary-br: 14px;
+  --icon-shadow: 0 8px 14px 0 rgba(62, 107, 224, 0.12);
+  --pop-up-cover: rgba(0, 0, 0, 0.25);
+  --pop-up-shadow: 0 8px 14px 12px rgba(56, 56, 56, 0.05);
+
+  /* transitions */
+  --short: 0.3s;
+}
+
+/* media queries */
+
+@media (max-width: 768px) {
+  :root {
+    --app-padding: 10px;
+  }
+}
