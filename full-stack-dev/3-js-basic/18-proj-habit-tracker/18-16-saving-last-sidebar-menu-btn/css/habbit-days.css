@@ -1,0 +1,177 @@
+.habbit-days__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  width: 100%;
+}
+
+.habbit-days__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: var(--default-br, 10px);
+  min-height: 60px;
+  background: var(--add-color-0, #fff);
+  overflow: hidden;
+}
+
+.habbit-days__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  border-right: 1px solid var(--add-color-8, #E7EBFB);
+  padding: 15px;
+  width: 100%;
+  max-width: 130px;
+  font-weight: var(--medium, 500);
+  text-align: center;
+  background: var(--add-color-10, #FBFAFF);
+}
+
+.habbit-days__comment-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  padding: 15px 10px 15px 25px;
+  width: 100%;
+}
+
+.habbit-days__comment {
+  font-weight: var(--medium, 500);
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--secondary-color, #23235F);
+}
+
+.habbit-days__delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border: none;
+  border-radius: var(--main-br-radius, 10px);
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  transition-property: border-radius, background;
+  transition-duration: var(--short, 0.3s);
+  transition-timing-function: ease-in-out;
+  will-change: border-radius, background;
+}
+
+.habbit-days__delete-btn:focus-visible {
+  outline-color: var(--add-color-11, #a87ae4);
+}
+
+.habbit-days__form {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 15px 10px;
+  padding: 10px 15px 10px 25px;
+  width: 100%;
+}
+
+.habbit-days__form-input {
+  flex: 1;
+  border: 1px solid var(--main-border-color, #E7EBFB);
+  border-radius: var(--main-br-radius, 10px);
+  padding-right: 15px;
+  padding-left: 50px;
+  height: 100%;
+  font-family: var(--default-ff), sans-serif;
+  font-weight: var(--medium, 500);
+  font-size: 16px;
+  color: var(--secondary-color, #23235F);
+  background: url('../images/comment-icon.svg') no-repeat 22px center / 18px 18px;
+  caret-color: var(--add-color-11, #a87ae4);
+}
+
+.habbit-days__form-input::placeholder {
+  font-weight: var(--regular, 400);
+  font-size: 14px;
+  color: var(--add-color-1, #8899A8);
+}
+
+.habbit-days__form-input:focus-visible {
+  outline-color: var(--add-color-11, #a87ae4);
+}
+
+.comment-error {
+  outline: 2px solid var(--add-color-12, #bd0b22);
+}
+
+.habbit-days__form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border: none;
+  border-radius: var(--main-br-radius, 10px);
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 120px;
+  font-family: var(--default-ff), sans-serif;
+  font-weight: var(--medium, 500);
+  font-size: 13px;
+  line-height: normal;
+  text-align: center;
+  color: var(--add-color-5, #5051F9);
+  background: var(--add-color-4, #EDECFE);
+  cursor: pointer;
+  transition-property: color, background;
+  transition-duration: var(--short, 0.3s);
+  transition-timing-function: ease-in-out;
+  will-change: color, background;
+}
+
+.habbit-days__form-btn:focus-visible {
+  outline-color: var(--add-color-11, #a87ae4);
+}
+
+/* media queries, any-hover */
+
+@media (max-width: 992px) {
+  .habbit-days__label {
+    padding-right: 10px;
+    padding-left: 10px;
+    max-width: 110px;
+  }
+
+  .habbit-days__comment {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .habbit-days__item {
+    flex-direction: column;
+  }
+
+  .habbit-days__label {
+    border-right: none;
+    border-bottom: 1px solid var(--add-color-8, #E7EBFB);
+    max-width: 100%;
+  }
+
+  .habbit-days__form-input {
+    min-height: 40px;
+  }
+}
+
+@media (any-hover: hover) {
+  .habbit-days__delete-btn:hover {
+    border-radius: var(--main-br-radius, 10px);
+    background: var(--add-color-8, #E7EBFB);
+  }
+
+  .habbit-days__form-btn:hover {
+    color: var(--add-color-0, #fff);
+    background: var(--add-color-11, #a87ae4);
+  }
+}
