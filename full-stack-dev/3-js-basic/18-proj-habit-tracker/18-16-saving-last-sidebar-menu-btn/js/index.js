@@ -212,6 +212,8 @@ function rerender(activeHabbitId) {
     return;
   }
 
+  document.location.replace(document.location.pathname + '#' + activeHabbitId); // добавление хеш #id выбранной привычки к/в конец адресной строки/url
+
   rerenderMenu(activeHabbit);
   rerenderHeaderContentEl(activeHabbit);
   rerenderHabbitDaysContentEl(activeHabbit);
@@ -339,7 +341,14 @@ function addNewHabbit(event) {
 
   // запуск работы с sidebar/меню..
   if (habbits.length > 0) {
-    rerender(habbits[0].id); // пока.. принудительно передаёт
+    const hashIdFromURL = Number(document.location.hash.replace('#', '')); // получение из адресной строки "hash id" привычки
+    const habbit = habbits.find((habbit) => habbit.id === hashIdFromURL); // поиск соответствия
+
+    if (habbit) {
+      rerender(habbit.id); // отрисовка/передача привычки/id согласно хеша из url
+    } else {
+      rerender(habbits[0].id); // нет.. принудительная отрисовка/передача первой привычки согласно глобального habbits массива
+    }
   }
 
   // организация прослушек pop-up инпутов для корректировки классов ошибки (т.е. ввод данных, отмена обводки)
