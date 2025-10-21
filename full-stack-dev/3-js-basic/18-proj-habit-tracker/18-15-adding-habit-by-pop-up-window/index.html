@@ -66,21 +66,21 @@
           <ul class="pop-up__icons-list">
             <li class="pop-up__icons-item">
               <button class="pop-up__icons-btn" type="button" aria-label="Выбрать иконку" title="Спорт"
-                onclick="setHabbitIcon(this, 'gantel-icon')">
+                onclick="setHabbitIcon(this, 'gantel-icon', '23', '23', 'Гантеля')">
                 <img class="pop-up__icons-icon" src="./images/gantel-icon.svg" width="23" height="23"
                   alt="Иконка: Гантеля">
               </button>
             </li>
             <li class="pop-up__icons-item">
               <button class="pop-up__icons-btn pop-up__icons-btn_active" type="button" aria-label="Выбрать иконку"
-                title="Жидкости" onclick="setHabbitIcon(this, 'water-icon')">
+                title="Жидкости" onclick="setHabbitIcon(this, 'water-icon', '25', '25', 'Бутылка с водой')">
                 <img class="pop-up__icons-icon" src="./images/water-icon.svg" width="25" height="25"
                   alt="Иконка: Бутылка с водой">
               </button>
             </li>
             <li class="pop-up__icons-item">
               <button class="pop-up__icons-btn" type="button" aria-label="Выбрать иконку" title="Питание"
-                onclick="setHabbitIcon(this, 'food-icon')">
+                onclick="setHabbitIcon(this, 'food-icon', '23', '24', 'Тарелка с едой')">
                 <img class="pop-up__icons-icon" src="./images/food-icon.svg" width="23" height="24"
                   alt="Иконка: Тарелка с едой">
               </button>
@@ -88,11 +88,11 @@
           </ul>
         </div>
         <div class="pop-up__form-wrap">
-          <form class="pop-up__form" id="pop-up-form">
+          <form class="pop-up__form" id="pop-up-form" onsubmit="addNewHabbit(event)">
+            <input class="pop-up__form-input" id="hidden-input" type="text" name="icon-habbit" placeholder="Иконка"
+              autocomplete="off" value="water-icon" data-width='25' data-height='25' data-alt='Бутылка с водой' hidden>
             <input class="pop-up__form-input" id="title-input" type="text" name="title-habbit" placeholder="Название"
               autocomplete="off">
-            <input class="pop-up__form-input" id="hidden-input" type="text" name="icon-habbit" placeholder="Иконка"
-              autocomplete="off" value="water-icon" hidden>
             <input class="pop-up__form-input" id="target-input" type="number" name="target-habbit"
               placeholder="Цель/дней" autocomplete="off">
             <button class="pop-up__form-btn" type="submit">Добавить</button>

@@ -160,6 +160,10 @@
   outline-color: var(--add-color-11, #a87ae4);
 }
 
+.input-error {
+  outline: 2px solid var(--add-color-12, #bd0b22);
+}
+
 .pop-up__form-btn {
   align-self: center;
   border: none;

@@ -74,6 +74,27 @@ function saveData() {
 
 function togglePopup() {
   app['pop-up'].popupCover.classList.toggle('pop-up_cover-hidden');
+
+  // очистка формы/полей, возврат к по default выбранной иконке
+  if (!app['pop-up'].popupCover.classList.contains('pop-up_cover-hidden')) {
+    const form = app['pop-up'].popupElement.querySelector('.pop-up__form');
+
+    if (form) {
+      form.reset(); // сброс полей/значений
+      const titleInput = form['title-habbit'];
+      const targetInput = form['target-habbit'];
+      titleInput.classList.remove('input-error'); // снятие "красной" обводки
+      targetInput.classList.remove('input-error'); // ...
+
+      const defaultIcon = document.querySelector(
+        '.pop-up__icons-btn[title="Жидкости"]'
+      ); // фиксация default/иконки (по середине)
+
+      if (defaultIcon) {
+        defaultIcon.click(); // имитация её выбора (т.е. при новом открытии pop-up на неё перемещение, обновление скрытого инпута)
+      }
+    }
+  }
 }
 
 // ** render **
@@ -200,7 +221,7 @@ function rerender(activeHabbitId) {
 function addCommentDay(event) {
   event.preventDefault(); // отмена default отправки формы, перезагрузки страницы
 
-  const targetForm = event.target;
+  const targetForm = event.target; // фиксация формы
   const commentInput = targetForm['comment-day']; // фиксация инпута
   const formData = new FormData(targetForm); // создание объекта данных согласно искомой формы (получаемой через onsubmit/event.target логику)
   const dayComment = formData.get('comment-day'); // получение значения/комментария из инпута согласно его имени/name
@@ -238,14 +259,77 @@ function deleteCommentDay(index) {
   saveData(); // обновление/сохранение в localStorage
 }
 
-function setHabbitIcon(context, iconName) {
-  app['pop-up'].hiddenIconInput.value = iconName; // обновление value у "скрытого" инпута
+function setHabbitIcon(context, iconName, iconWidth, iconHeight, altText) {
+  app['pop-up'].hiddenIconInput.value = iconName; // обновление value/названия иконки у "скрытого" инпута
+  app['pop-up'].hiddenIconInput.dataset.width = iconWidth; // обновление width/иконки
+  app['pop-up'].hiddenIconInput.dataset.height = iconHeight; // обновление height/иконки
+  app['pop-up'].hiddenIconInput.dataset.alt = altText; // обновление alt/текста
+
+  // определение активной иконки/кнопки (какая выделена)
   const activeIcon = document.querySelector(
     '.pop-up__icons-btn.pop-up__icons-btn_active'
   );
+  activeIcon.classList.remove('pop-up__icons-btn_active'); // удаление "активности"
 
-  activeIcon.classList.remove('pop-up__icons-btn_active'); // у ранее "активной" удаление
-  context.classList.add('pop-up__icons-btn_active'); // текущей кнопке добавление, т.е. по котрой onclick=""
+  context.classList.add('pop-up__icons-btn_active'); // добавление "активности" текущей кнопке, т.е. по котрой onclick
+}
+
+function addNewHabbit(event) {
+  event.preventDefault(); // отмена default отправки формы, перезагрузки страницы
+
+  const targetForm = event.target; // фиксация формы
+  const titleInput = targetForm['title-habbit']; // фиксация названия привычки
+  const targetInput = targetForm['target-habbit']; // фиксация количества дней
+
+  // валидация полей формы через флаг (добавление соответствующей обводки)
+  let formIsValid = true;
+
+  if (!titleInput.value.trim()) {
+    titleInput.classList.add('input-error');
+    formIsValid = false;
+  } else {
+    titleInput.classList.remove('input-error');
+  }
+
+  if (!targetInput.value.trim()) {
+    targetInput.classList.add('input-error');
+    formIsValid = false;
+  } else {
+    targetInput.classList.remove('input-error');
+  }
+
+  if (!formIsValid) {
+    return; // если не валидна.. возврат
+  }
+
+  // а если форма валидна, фиксация данных добавление объекта привычки
+  const iconInput = targetForm['icon-habbit']; // фиксация выбранной иконки
+  const iconWidth = targetForm['icon-habbit'].dataset.width; // фиксация размера/width выбранной иконки
+  const iconHeight = targetForm['icon-habbit'].dataset.height; // фиксация размера/height выбранной иконки
+  const iconAlt = targetForm['icon-habbit'].dataset.alt; // фиксация alt/текста выбранной иконки
+
+  const maxId = habbits.reduce(
+    (acc, habbit) => (acc > habbit.id ? acc : habbit.id),
+    0
+  ); // формирование последующего id
+
+  habbits.push({
+    id: maxId + 1,
+    icon: iconInput.value,
+    name: iconAlt,
+    title: titleInput.value,
+    width: iconWidth,
+    height: iconHeight,
+    target: targetInput.value,
+    days: [],
+  });
+
+  saveData(); // обновление/сохранение в localStorage
+  togglePopup(); // закрытие pop-up окна
+
+  setTimeout(() => {
+    rerender(maxId + 1); // перерисовка всего/content элемента
+  }, 300); // замедление перерисовки
 }
 
 // init
@@ -257,4 +341,21 @@ function setHabbitIcon(context, iconName) {
   if (habbits.length > 0) {
     rerender(habbits[0].id); // пока.. принудительно передаёт
   }
+
+  // организация прослушек pop-up инпутов для корректировки классов ошибки (т.е. ввод данных, отмена обводки)
+  const form = app['pop-up'].popupElement.querySelector('.pop-up__form');
+  const titleInput = form['title-habbit'];
+  const targetInput = form['target-habbit'];
+
+  titleInput.addEventListener('input', () => {
+    if (titleInput.classList.contains('input-error')) {
+      titleInput.classList.remove('input-error');
+    }
+  });
+
+  targetInput.addEventListener('input', () => {
+    if (targetInput.classList.contains('input-error')) {
+      targetInput.classList.remove('input-error');
+    }
+  });
 })();
