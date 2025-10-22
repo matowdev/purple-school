@@ -19,7 +19,7 @@
 <body class="page">
   <div class="app page__app">
     <aside class="sidebar app__sidebar" id="sidebar" aria-label="Боковая панель (навигация)">
-      <div class="sidebar__logo-wrap">
+      <div class="sidebar__logo-wrap" id="logo-wrap">
         <img class="sidebar__logo" src="./images/logo.svg" width="66" height="71" alt="Логотип: Habit">
       </div>
       <nav class="sidebar__nav" aria-label="Навигация по привычкам">
@@ -35,7 +35,14 @@
     </aside>
     <main class="content app__content" id="content" aria-label="Контент приложения">
       <header class="content__header">
-        <h1 class="content__title" id="header-title"></h1>
+        <div class="content__title-wrap">
+          <h1 class="content__title" id="header-title"></h1>
+          <button class="content__delete-btn" id="delete-habbit-btn" type="button" aria-label="Удалить привычку"
+            title="Удалить привычку" onclick="deleteHabbit()">
+            <img class="content__delete-icon" src="./images/trash-icon.svg" width="24" height="24"
+              alt="Удалить привычку">
+          </button>
+        </div>
         <div class="progress-bar content__progress-bar">
           <div class="progress-bar__heading-wrap">
             <span class="progress-bar__text">Прогресс</span>

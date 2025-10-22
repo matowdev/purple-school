@@ -43,8 +43,10 @@ const HABBITS_KEY = 'HABBITS';
 // app
 const app = {
   'menu-list': document.getElementById('sidebar-list'),
+  'logo-wrap': document.getElementById('logo-wrap'),
   header: {
     title: document.getElementById('header-title'),
+    deleteBtn: document.getElementById('delete-habbit-btn'),
     progressPercent: document.getElementById('progress-percent'),
     progressValue: document.getElementById('progress-value'),
   },
@@ -63,7 +65,8 @@ function loadData() {
   const habbitsStr = localStorage.getItem(HABBITS_KEY);
   const habbitsArr = JSON.parse(habbitsStr);
 
-  if (Array.isArray(habbitsArr) && habbitsArr.length) {
+  // важная проверка.. т.е. при первичной загрузке в localStorage не будет HABBITS_KEY, соответственно придёт null, если так, то далее приложение начнёт работать/отрисовывать согласно существующего/глобального массива habbits.. но потом при взаимодействии (добавлении/удалении), это поменяется, т.е. после первой saveData() логика начнёт строится согласно localStorage
+  if (habbitsArr !== null && Array.isArray(habbitsArr)) {
     habbits = habbitsArr;
   }
 }
@@ -97,41 +100,40 @@ function togglePopup() {
   }
 }
 
+// DRY
+function addInputErrorListener(inputElement, errorClass) {
+  inputElement.addEventListener('input', () => {
+    if (inputElement.classList.contains(errorClass)) {
+      inputElement.classList.remove(errorClass);
+    }
+  });
+}
+
 // ** render **
 function rerenderMenu(activeHabbit) {
+  app['menu-list'].innerHTML = ''; // предварительная очистка "sidebar" списка (всё будет создаваться заново)
+
   for (const habbit of habbits) {
-    const existed = document.querySelector(`[menu-habbit-id="${habbit.id}"]`); // определение/флаг.. есть уже элемент (создавался) или нет
+    const habbitItem = document.createElement('li');
+    habbitItem.classList.add('sidebar__nav-item');
 
-    if (!existed) {
-      // если НЕТ.. создание li/элемента sidebar/меню.. привычки (согласно data)
-      const habbitItem = document.createElement('li');
-      habbitItem.classList.add('sidebar__nav-item');
+    const habbitBtn = document.createElement('button');
+    habbitBtn.classList.add('sidebar__nav-btn');
+    habbitBtn.setAttribute('type', 'button');
+    habbitBtn.setAttribute('aria-label', 'Выбрать привычку');
+    habbitBtn.setAttribute('title', habbit.title);
+    habbitBtn.setAttribute('menu-habbit-id', habbit.id);
+    habbitBtn.innerHTML = `<img class="sidebar__nav-icon" src="./images/${habbit.icon}.svg" width="${habbit.width}" height="${habbit.height}" alt="Иконка: ${habbit.name}">`;
 
-      const habbitBtn = document.createElement('button');
-      habbitBtn.classList.add('sidebar__nav-btn');
-      habbitBtn.setAttribute('type', 'button');
-      habbitBtn.setAttribute('aria-label', 'Выбрать привычку');
-      habbitBtn.setAttribute('title', habbit.title);
-      habbitBtn.setAttribute('menu-habbit-id', habbit.id);
-      habbitBtn.innerHTML = `<img class="sidebar__nav-icon" src="./images/${habbit.icon}.svg" width="${habbit.width}" height="${habbit.height}" alt="Иконка: ${habbit.name}">`;
+    habbitBtn.addEventListener('click', () => rerender(habbit.id)); // тонкий момент.. по сути "замыкание" для каждой кнопки/её ID.. потом передача именно его/себя в rerender()
 
-      habbitBtn.addEventListener('click', () => rerender(habbit.id)); // тонкий момент.. по сути "замыкание" для каждой кнопки/её ID.. потом передача именно его/себя в rerender()
-
-      // проверка на активность (при создании)
-      if (activeHabbit.id === habbit.id) {
-        habbitBtn.classList.add('sidebar__nav-btn_active');
-      }
-
-      habbitItem.append(habbitBtn);
-      app['menu-list'].append(habbitItem);
-    } else {
-      // если ЕСТЬ.. только обновление "активного" класса
-      if (activeHabbit.id === habbit.id) {
-        existed.classList.add('sidebar__nav-btn_active');
-      } else {
-        existed.classList.remove('sidebar__nav-btn_active');
-      }
+    // проверка на корректность и активность (при создании)
+    if (activeHabbit && activeHabbit.id === habbit.id) {
+      habbitBtn.classList.add('sidebar__nav-btn_active');
     }
+
+    habbitItem.append(habbitBtn);
+    app['menu-list'].append(habbitItem);
   }
 }
 
@@ -196,11 +198,20 @@ function rerenderHabbitDaysContentEl(activeHabbit) {
 
   // организация прослушки инпута/комментария для корректировки класса ошибки/обводки
   const commentInput = document.getElementById('comment-input');
-  commentInput.addEventListener('input', () => {
-    if (commentInput.classList.contains('comment-error')) {
-      commentInput.classList.remove('comment-error');
-    }
-  });
+  addInputErrorListener(commentInput, 'comment-error');
+}
+
+function renderEmptyState() {
+  app.header.title.textContent = 'Привычек нет';
+  app.header.progressPercent.textContent = '0%';
+  app.header.progressValue.setAttribute('style', 'width: 0%');
+  app.header.deleteBtn.style.display = 'none'; // скрытие кнопки удаления (при отсутствии привычек)
+  app['habbit-days'].list.innerHTML =
+    '<li class="habbit-days__item_empty">Нажмите "плюс", чтобы добавить первую!</li>';
+
+  app['logo-wrap'].style.marginBottom = '0'; // исключение отступа
+
+  rerenderMenu(null);
 }
 
 // поиск/определение "активной" привычки.. запуск отрисовок элементов/переключение активностей
@@ -212,6 +223,8 @@ function rerender(activeHabbitId) {
     return;
   }
 
+  app['logo-wrap'].style.marginBottom = '50px'; // добавление отступа
+  app.header.deleteBtn.style.display = 'flex'; // отображение кнопки "удалить привычку"
   document.location.replace(document.location.pathname + '#' + activeHabbitId); // добавление хеш #id выбранной привычки к/в конец адресной строки/url
 
   rerenderMenu(activeHabbit);
@@ -235,6 +248,12 @@ function addCommentDay(event) {
 
     habbits = habbits.map((habbit) => {
       if (habbit.id === globalActiveHabbitId) {
+        const target = Number(habbit.target); // фиксация цели/дней
+
+        if (target === habbit.days.length + 1) {
+          confirm(`Вы достигли цели! ${target} дней!`);
+        }
+
         return { ...habbit, days: habbit.days.concat({ comment: dayComment }) }; // создание новых объектов, на основе старых (с корректировкой поля/массива days)
       }
       return habbit;
@@ -334,6 +353,33 @@ function addNewHabbit(event) {
   }, 300); // замедление перерисовки
 }
 
+function deleteHabbit() {
+  const activeHabbit = habbits.find(
+    (habbit) => habbit.id === globalActiveHabbitId
+  );
+
+  if (!activeHabbit) {
+    return;
+  }
+
+  const isConfirmed = confirm(
+    `Вы уверены, что хотите удалить привычку "${activeHabbit.title}"?`
+  );
+
+  if (!isConfirmed) {
+    return; // если отмена удаления..
+  }
+
+  habbits = habbits.filter((habbit) => habbit.id !== globalActiveHabbitId); // исключение активной/удаляемой привычки
+  saveData(); // сохранение/обновление данных
+
+  if (habbits.length > 0) {
+    rerender(habbits[0].id); // отрисовка первой оставшейся привычки
+  } else {
+    renderEmptyState(); // если нет привычек, отрисовка "пустого" состояния
+  }
+}
+
 // init
 (() => {
   // загрузка данных.. по сути автоматическая/сразу (соответственно через IIFE)
@@ -349,6 +395,8 @@ function addNewHabbit(event) {
     } else {
       rerender(habbits[0].id); // нет.. принудительная отрисовка/передача первой привычки согласно глобального habbits массива
     }
+  } else {
+    renderEmptyState(); // если нет привычек, показ "пустого" состояния
   }
 
   // организация прослушек pop-up инпутов для корректировки классов ошибки (т.е. ввод данных, отмена обводки)
@@ -356,15 +404,6 @@ function addNewHabbit(event) {
   const titleInput = form['title-habbit'];
   const targetInput = form['target-habbit'];
 
-  titleInput.addEventListener('input', () => {
-    if (titleInput.classList.contains('input-error')) {
-      titleInput.classList.remove('input-error');
-    }
-  });
-
-  targetInput.addEventListener('input', () => {
-    if (targetInput.classList.contains('input-error')) {
-      targetInput.classList.remove('input-error');
-    }
-  });
+  addInputErrorListener(titleInput, 'input-error');
+  addInputErrorListener(targetInput, 'input-error');
 })();

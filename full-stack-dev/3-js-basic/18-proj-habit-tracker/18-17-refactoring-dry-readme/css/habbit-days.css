@@ -15,6 +15,11 @@
   overflow: hidden;
 }
 
+.habbit-days__item_empty {
+  padding-left: 8px;
+  font-size: 18px;
+}
+
 .habbit-days__label {
   display: flex;
   justify-content: center;

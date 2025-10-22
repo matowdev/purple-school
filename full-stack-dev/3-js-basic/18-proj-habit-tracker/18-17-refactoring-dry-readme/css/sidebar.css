@@ -9,10 +9,6 @@
   background: var(--bg-aside, #FBFAFF);
 }
 
-.sidebar__logo-wrap {
-  margin-bottom: 50px;
-}
-
 .sidebar__nav {
   margin-bottom: 25px;
 }
