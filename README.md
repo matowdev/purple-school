@@ -26,6 +26,12 @@
 
 ### Block: JS Basic
 
+- [**proj. Habbit tracker**](https://matowdev.github.io/purple-school/full-stack-dev/3-js-basic/18-proj-habit-tracker/18-17-refactoring-dry-readme)
+
+---
+
+### Block: JS Advanced
+
 - [**proj.**]()
 
 ---
