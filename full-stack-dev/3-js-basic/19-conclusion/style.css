@@ -1,1 +1,12 @@
+.todo-btn {
+  margin-left: 10px;
+  cursor: pointer;
+}
 
+.product-item {
+  cursor: pointer;
+}
+
+.selected {
+  text-decoration: line-through;
+}
