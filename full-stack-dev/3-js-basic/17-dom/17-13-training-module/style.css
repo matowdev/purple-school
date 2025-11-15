@@ -1,0 +1,31 @@
+.body {
+  font-family: "Roboto", sans-serif;
+}
+
+#username {
+  margin-bottom: 10px;
+}
+
+.temporary-banner {
+  margin-bottom: 10px;
+}
+
+.profile-card {
+  margin-bottom: 10px;
+}
+
+.styled-button,
+.plain-button {
+  border: none;
+  padding: 10px 15px;
+  background: lightblue;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  will-change: background;
+}
+
+.styled-button:hover,
+.plain-button:hover {
+  background: lightcyan;
+}
