@@ -2,7 +2,7 @@
 
 ### Career path: Full-stack developer.. React / Node.js
 
-Very high hopes.. intense training, practice.
+High hopes.. intense training, practice.
 
 - **20 projects**
 - **Individual lessons**
@@ -10,7 +10,7 @@ Very high hopes.. intense training, practice.
 
 ### Let's do it!
 
-### The journey into the world of Full-stack development.. starts **here**! 🚀
+The journey into the world of Full-stack development.. starts **here**! 🚀
 
 ---
 
