@@ -1,20 +1,20 @@
 # purple-school
 
-### Карьерный путь: Full-stack developer.. React / Node.js
+### Career path: Full-stack developer.. React / Node.js
 
-Очень большие надежды.. интенсивное обучение, практика.
+Very high hopes.. intense training, practice.
 
-- **20 проектов**
-- **Индивидуальные занятия**
-- **Командная работа**
+- **20 projects**
+- **Individual lessons**
+- **Teamwork**
 
 ### Let's do it!
 
-### Моё путешествие в мир Full-stack разработки.. начинается **здесь**! 🚀
+### The journey into the world of Full-stack development.. starts **here**! 🚀
 
 ---
 
-### Block: Git / основы, ветки, GitHub
+### Block: Git
 
 ### Block: Html & CSS
 
