@@ -18,21 +18,27 @@ The journey into the world of Full-stack development.. starts **here**! 🚀
 
 ### Block: Html & CSS
 
-- [**proj. Miro's clone (without @daptive)**](https://matowdev.github.io/purple-school/full-stack-dev/2-html-css/16-adaptive-layout/16-12-ex-create-clone-miro-5)
-- [**proj. PurpleSchool page**](https://matowdev.github.io/purple-school/full-stack-dev/2-html-css/22-proj-ps-page-part-2)
-- [**final proj. Finio**](https://matowdev.github.io/purple-school/full-stack-dev/2-html-css/23-proj-finio)
+#### Projects (one-page websites):
+
+- [**Miro's clone (without @daptive)**](https://matowdev.github.io/purple-school/full-stack-dev/2-html-css/16-adaptive-layout/16-12-ex-create-clone-miro-5) [/]() [code & readme](https://github.com/matowdev/purple-school/tree/main/full-stack-dev/2-html-css/16-adaptive-layout/16-12-ex-create-clone-miro-5)
+- [**PurpleSchool**](https://matowdev.github.io/purple-school/full-stack-dev/2-html-css/22-proj-ps-page-part-2) [/]() [code & readme](https://github.com/matowdev/purple-school/tree/main/full-stack-dev/2-html-css/22-proj-ps-page-part-2)
+- [**final work, Finio**](https://matowdev.github.io/purple-school/full-stack-dev/2-html-css/23-proj-finio) [/]() [code & readme](https://github.com/matowdev/purple-school/tree/main/full-stack-dev/2-html-css/23-proj-finio)
 
 ---
 
 ### Block: JS Basic
 
-- [**proj. Habbit tracker**](https://matowdev.github.io/purple-school/full-stack-dev/3-js-basic/18-proj-habit-tracker/18-17-refactoring-dry-readme)
+#### Projects:
+
+- [**Habbit tracker**](https://matowdev.github.io/purple-school/full-stack-dev/3-js-basic/18-proj-habit-tracker/18-17-refactoring-dry-readme) [/]() [code & readme](https://github.com/matowdev/purple-school/tree/main/full-stack-dev/3-js-basic/18-proj-habit-tracker/18-17-refactoring-dry-readme)
 
 ---
 
 ### Block: JS Advanced
 
-- [**proj.**]()
+#### Projects:
+
+- [...]()
 
 ---
 
